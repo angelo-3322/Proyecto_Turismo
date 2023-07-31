@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ListClientDTO>
+
+@{
+    ViewData["Title"] = "Tasks";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var client in Model)
+                    {
+                        <tr>
+                            <th scope="row">@client.Id</th>
+                            <td>@client.Nombre</td>
+                            <td>@client.Telefono</td>
+                            <td>@client.Email</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

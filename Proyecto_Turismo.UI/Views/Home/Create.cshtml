@@ -1,0 +1,33 @@
+﻿@model CreateFactureViewModel
+
+@{
+    var reservations = new SelectList(Model.Reservations, "Id", "Name");
+}
+
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <div class="col-7">
+                <label asp-for="Facture.IdReservaciones" class="form-label"></label>
+                <select asp-for="Facture.IdReservaciones" asp-items="reservations" class="form-select"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Facture.FechaEmision" class="form-label"></label>
+                <input type="text" class="form-control" asp-for="Facture.FechaEmision" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <label asp-for="Facture.Monto" class="form-label"></label>
+                <input type="text" class="form-control" asp-for="Facture.Monto" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

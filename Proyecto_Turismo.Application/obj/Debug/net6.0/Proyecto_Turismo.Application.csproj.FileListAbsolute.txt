@@ -1,0 +1,15 @@
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Application.deps.json
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Application.dll
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Application.pdb
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Domain.dll
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Domain.pdb
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.AssemblyReference.cache
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.AssemblyInfoInputs.cache
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.AssemblyInfo.cs
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.CoreCompileInputs.cache
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.CopyComplete
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.dll
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\refint\Proyecto_Turismo.Application.dll
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.pdb
+C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Application\obj\Debug\net6.0\ref\Proyecto_Turismo.Application.dll

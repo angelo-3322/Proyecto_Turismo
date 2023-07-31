@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "/uUEedScVwgMfLJlGnbdvlh2UD9Jviuf1f4ZwygoO9Lv+xc/Xw6c5sICMSy2FtZVg/ndE2U2Gr/8+H3TxHxF9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jorg1\\source\\repos\\Proyecto_Turismo.UI\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jorg1\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.9\\microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
