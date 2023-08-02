@@ -43,7 +43,9 @@ namespace Proyecto_Turismo.Application.Services
                     dto.Capacidad,
                     dto.TipoHabitacion,
                     dto.NumeroHabitaciones,
-                    dto.Precio
+                    dto.Precio,
+                    dto.Disponible,
+                    dto.Imagenes
                 );
 
             try

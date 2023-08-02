@@ -17,11 +17,15 @@ namespace Proyecto_Turismo.Persistence.Contexts
         public DbSet<Paquete> Paquetes { get; set; }
         public DbSet<Reservacion> Reservaciones { get; set; }
         public DbSet<Restaurante> Restaurante { get; set; }
-        public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<Menu> Menus { get; set; }
+        public DbSet<Producto> Productos { get; set; }
+        public DbSet<Imagen> Imagenes { get; set; }
+
+
 
         public void Save()
         {
             this.SaveChanges();
-    }
+        }
     }
 }

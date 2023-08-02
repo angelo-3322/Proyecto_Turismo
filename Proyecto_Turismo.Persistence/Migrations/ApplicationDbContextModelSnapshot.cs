@@ -17,10 +17,10 @@ namespace Proyecto_Turismo.Persistence.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.9")
+                .HasAnnotation("ProductVersion", "6.0.20")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Cliente", b =>
                 {
@@ -28,7 +28,7 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -54,7 +54,7 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<DateTime>("FechaEmision")
                         .HasColumnType("datetime2");
@@ -78,10 +78,13 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<int>("Capacidad")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Disponible")
+                        .HasColumnType("bit");
 
                     b.Property<int>("NumeroHabitaciones")
                         .HasColumnType("int");
@@ -99,18 +102,65 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.ToTable("Habitaciones");
                 });
 
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Imagen", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<byte[]>("DatosImagen")
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<int?>("HabitacionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdHabitacion")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HabitacionId");
+
+                    b.ToTable("Imagenes");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Menu", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Menus");
+                });
+
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Paquete", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(35)
+                        .HasColumnType("nvarchar(35)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<float>("Precio")
                         .HasColumnType("real");
@@ -120,13 +170,49 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.ToTable("Paquetes");
                 });
 
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Producto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Descripcion")
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<int>("IdMenu")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.Property<float>("Precio")
+                        .HasColumnType("real");
+
+                    b.Property<int?>("menuId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("menuId");
+
+                    b.ToTable("Productos");
+                });
+
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Reservacion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<bool>("Activa")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("FechaFin")
                         .HasColumnType("datetime2");
@@ -160,43 +246,24 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<DateTime>("Fecha")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("IdReservacion")
+                    b.Property<int>("IdMenu")
                         .HasColumnType("int");
-
-                    b.Property<float>("Monto")
-                        .HasColumnType("real");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdReservacion");
-
-                    b.ToTable("Restaurante");
-                });
-
-            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Servicio", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Nombre")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
-                    b.Property<float>("Precio")
-                        .HasColumnType("real");
+                    b.Property<int?>("menuId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Servicios");
+                    b.HasIndex("menuId");
+
+                    b.ToTable("Restaurante");
                 });
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Factura", b =>
@@ -208,6 +275,24 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Reservacion");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Imagen", b =>
+                {
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Habitacion", "Habitacion")
+                        .WithMany("Imagenes")
+                        .HasForeignKey("HabitacionId");
+
+                    b.Navigation("Habitacion");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Producto", b =>
+                {
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Menu", "menu")
+                        .WithMany()
+                        .HasForeignKey("menuId");
+
+                    b.Navigation("menu");
                 });
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Reservacion", b =>
@@ -239,13 +324,16 @@ namespace Proyecto_Turismo.Persistence.Migrations
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Restaurante", b =>
                 {
-                    b.HasOne("Proyecto_Turismo.Domain.Entities.Reservacion", "Reservacion")
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Menu", "menu")
                         .WithMany()
-                        .HasForeignKey("IdReservacion")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("menuId");
 
-                    b.Navigation("Reservacion");
+                    b.Navigation("menu");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Habitacion", b =>
+                {
+                    b.Navigation("Imagenes");
                 });
 #pragma warning restore 612, 618
         }

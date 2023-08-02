@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Proyecto_Turismo.Domain.Entities;
 
 namespace Proyecto_Turismo.Domain.DTOs.Restaurante
 {
@@ -13,12 +14,12 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
         public CreateRestaurantDTO() { }
 
         [Required]
-        public int IdReservacion { get; private set; }
+        [StringLength(30, MinimumLength = 5)]
+        public string Nombre { get; private set; }
 
-        [Required]
-        public DateTime Fecha { get; private set; }
+        [ForeignKey("Menu")]
+        public int IdMenu { get; private set; }
 
-        [Required]
-        public float Monto { get; private set; }
+        public Menu menu { get; private set; }
     }
 }

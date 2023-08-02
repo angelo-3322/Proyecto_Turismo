@@ -12,19 +12,20 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
     {
         public EditRestaurantDTO() { }
 
-        public EditRestaurantDTO(int id, DateTime fecha, float monto)
+        public EditRestaurantDTO(int id, string nombre, int idmenu)
             : this()
         {
             Id = id;
-            Fecha = fecha;
-            Monto = monto;
+            Nombre = nombre;
+            IdMenu = idmenu;
         }
         public int Id { get; set; }
 
         [Required]
-        public DateTime Fecha { get; private set; }
+        [StringLength(30, MinimumLength = 5)]
+        public string Nombre { get; set; }
 
-        [Required]
-        public float Monto { get; private set; }
+        [ForeignKey("Menu")]
+        public int IdMenu { get; set; }
     }
 }

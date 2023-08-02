@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Proyecto_Turismo.Domain.Entities
 {
@@ -27,13 +23,13 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public float Monto { get; private set; }
 
-        public static Factura Create(int idreservacion, DateTime fechaemision, float monto)
+        public static Factura Create(int idreservacion, float monto)
         {
             return
                 new Factura()
                 {
                     IdReservacion = idreservacion,
-                    FechaEmision = fechaemision,
+                    FechaEmision = DateTime.Now,
                     Monto = monto
                 };
         }

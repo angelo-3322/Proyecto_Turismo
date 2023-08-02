@@ -17,7 +17,6 @@ namespace Proyecto_Turismo.Application
             services.AddScoped<IPaqueteService, PaqueteService>();
             services.AddScoped<IReservacionService, ReservacionService>();
             services.AddScoped<IRestauranteService, RestauranteService>();
-            services.AddScoped<IServicioService, ServicioService>();
 
             return services;
         }

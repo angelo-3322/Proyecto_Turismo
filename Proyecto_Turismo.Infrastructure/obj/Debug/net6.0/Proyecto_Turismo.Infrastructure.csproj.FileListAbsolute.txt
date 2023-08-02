@@ -22,3 +22,15 @@ C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\obj
 C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\refint\Proyecto_Turismo.Infrastructure.dll
 C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.pdb
 C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\ref\Proyecto_Turismo.Infrastructure.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Infrastructure.deps.json
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Infrastructure.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Infrastructure.pdb
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.AssemblyInfo.cs
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\refint\Proyecto_Turismo.Infrastructure.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.pdb
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\ref\Proyecto_Turismo.Infrastructure.dll

@@ -16,6 +16,10 @@ namespace Proyecto_Turismo.Domain.DTOs.Paquetes
         public string Nombre { get; private set; }
 
         [Required]
+        [StringLength(35, MinimumLength = 10)]
+        public string Descripcion { get; private set; }
+
+        [Required]
         public float precio { get; private set; }
     }
 }

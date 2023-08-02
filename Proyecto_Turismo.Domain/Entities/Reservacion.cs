@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Proyecto_Turismo.Domain.Entities
 {
@@ -41,6 +37,9 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public DateTime FechaFin { get; private set; }
 
+        [Required]
+        public bool Activa { get; private set; }
+
         public static Reservacion Create(int idhabitaciones, int idpaquete, int idcliente, DateTime fechainicio, DateTime fechafin)
         {
             return
@@ -50,7 +49,8 @@ namespace Proyecto_Turismo.Domain.Entities
                     IdPaquete = idpaquete,
                     IdCliente = idcliente,
                     FechaInicio = fechainicio,
-                    FechaFin = fechafin
+                    FechaFin = fechafin,
+                    Activa = true
                 };
         }
     }

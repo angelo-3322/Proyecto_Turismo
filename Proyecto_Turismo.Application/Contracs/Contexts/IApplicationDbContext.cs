@@ -11,7 +11,12 @@ namespace Proyecto_Turismo.Application.Contracts.Contexts
         DbSet<Paquete> Paquetes { get; set;  }
         DbSet<Reservacion> Reservaciones { get; set;  }
         DbSet<Restaurante> Restaurante { get; set;  }
-        DbSet<Servicio> Servicios { get; set;  }
+        DbSet<Menu> Menus { get; set; }
+        DbSet<Producto> Productos { get; set; }
+        DbSet<Imagen> Imagenes { get; set; }
+
+
+
 
         void Save();
     }

@@ -40,6 +40,7 @@ namespace Proyecto_Turismo.Application.Services
                 Paquete.Create
                 (
                     dto.Nombre,
+                    dto.Descripcion,
                     dto.precio
                 );
 

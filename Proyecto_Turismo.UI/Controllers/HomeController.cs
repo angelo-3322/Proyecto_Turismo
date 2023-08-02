@@ -4,7 +4,6 @@ using Proyecto_Turismo.Application.Services;
 using Proyecto_Turismo.Domain.DTOs.Cliente;
 using Proyecto_Turismo.Domain.DTOs.Habitaciones;
 using Proyecto_Turismo.Domain.DTOs.Paquetes;
-using Proyecto_Turismo.Domain.DTOs.Servicios;
 using Proyecto_Turismo.Domain.Entities;
 using Proyecto_Turismo.UI.Models;
 using Proyecto_Turismo.UI.Models.ViewModels;
@@ -20,11 +19,9 @@ namespace Proyecto_Turismo.UI.Controllers
         private readonly IPaqueteService _paqueteService;
         private readonly IReservacionService _reservacionService;
         private readonly IRestauranteService _restauranteService;
-        private readonly IServicioService _servicioService;
 
         public HomeController(ILogger<HomeController> logger, IFacturaService facturaService, IHabitacionService habitacionService,
-            IPaqueteService paqueteService, IReservacionService reservacionService, IRestauranteService restauranteService,
-            IServicioService servicioService)
+            IPaqueteService paqueteService, IReservacionService reservacionService, IRestauranteService restauranteService)
         {
             _logger = logger;
             _facturaService = facturaService;
@@ -32,7 +29,6 @@ namespace Proyecto_Turismo.UI.Controllers
             _paqueteService = paqueteService;
             _reservacionService = reservacionService;
             _restauranteService = restauranteService;
-            _servicioService = servicioService;
         }
 
         public IActionResult Index()
@@ -68,38 +64,38 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpGet("//edit/{id}")]
-        public IActionResult Edit([FromRoute] int id)
-        {
-            var service = _servicioService.Get(id);
-            var model =
-                new EditServiceViewModel
-                {
-                    Nombre = service.Nombre,
-                    Precio = service.Precio,
+        //[HttpGet("//edit/{id}")]
+        //public IActionResult Edit([FromRoute] int id)
+        //{
+        //    var service = _servicioService.Get(id);
+        //    var model =
+        //        new EditServiceViewModel
+        //        {
+        //            Nombre = service.Nombre,
+        //            Precio = service.Precio,
 
-                };
+        //        };
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
-        [HttpPost("//edit/{id}")]
-        public IActionResult Edit([FromRoute] int id, EditServiceViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var service = new EditServicesDTO(id, model.Nombre, model.Precio);
-                var result = _servicioService.Edit(service);
+        //[HttpPost("//edit/{id}")]
+        //public IActionResult Edit([FromRoute] int id, EditServiceViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var service = new EditServicesDTO(id, model.Nombre, model.Precio);
+        //        var result = _servicioService.Edit(service);
 
-                if (result.IsSuccess)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+        //        if (result.IsSuccess)
+        //        {
+        //            return RedirectToAction(nameof(Index));
+        //        }
 
-                ModelState.AddModelError(string.Empty, result.Error);
-            }
-            return View(model);
-        }
+        //        ModelState.AddModelError(string.Empty, result.Error);
+        //    }
+        //    return View(model);
+        //}
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -41,7 +41,6 @@ namespace Proyecto_Turismo.Application.Services
                 Factura.Create
                 (
                     dto.IdReservacion,
-                    dto.FechaEmision,
                     dto.Monto
                 );
 

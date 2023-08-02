@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Turismo.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -21,5 +22,10 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
 
         [Required]
         public float Precio { get; private set; }
+
+        [Required]
+        public bool Disponible { get; private set; }
+
+        public List<byte[]> Imagenes { get; set; }
     }
 }

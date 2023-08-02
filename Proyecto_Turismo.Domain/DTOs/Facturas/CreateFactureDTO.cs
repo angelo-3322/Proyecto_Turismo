@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Proyecto_Turismo.Domain.Entities;
 
 namespace Proyecto_Turismo.Domain.DTOs.Facturas
 {
     public class CreateFactureDTO
     {
-        public CreateFactureDTO() { }
+        public CreateFactureDTO() 
+        {
+            FechaEmision = DateTime.Now;
+        }
 
         [Required]
-        public int IdReservacion { get;  set; }
+        [ForeignKey("Reservacion")]
+        public int IdReservacion { get; set; }
 
         [Required]
-        public DateTime FechaEmision { get;  set; }
+        public DateTime FechaEmision { get; set; }
 
         [Required]
         public float Monto { get;  set; }

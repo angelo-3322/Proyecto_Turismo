@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Proyecto_Turismo.Domain.Entities
 {
@@ -27,16 +22,29 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public float Precio { get; private set; }
 
-        public static Habitacion Create(int numerohabitaciones, string tipohabitacion, int capacidad,float precio)
+        [Required]
+        public bool Disponible { get; private set; }
+
+        public ICollection<Imagen> Imagenes { get; set; } = new List<Imagen>();
+
+        public static Habitacion Create(int numerohabitaciones, string tipohabitacion, int capacidad,float precio, bool disponible, List<byte[]> imagenes)
         {
-            return
+            var habitacion =
                 new Habitacion()
                 {
                     NumeroHabitaciones = numerohabitaciones,
                     TipoHabitacion = tipohabitacion,
                     Capacidad = capacidad,
-                    Precio = precio
+                    Precio = precio,
+                    Disponible = disponible
                 };
+            
+            foreach (var imagen in imagenes)
+            {
+                habitacion.Imagenes.Add(new Imagen { DatosImagen = imagen });
+            }
+
+            return habitacion;
         }
     }
 }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proyecto_Turismo.Domain.Entities
 {
@@ -16,25 +11,21 @@ namespace Proyecto_Turismo.Domain.Entities
         public int Id { get; private set; }
 
         [Required]
-        [ForeignKey("Reservacion")]
-        public int IdReservacion { get; private set; }
+        [StringLength(30, MinimumLength = 5)]
+        public string Nombre { get; private set; }
 
-        public Reservacion Reservacion { get; private set; }
+        [ForeignKey("Menu")]
+        public int IdMenu { get; private set; }
 
-        [Required]
-        public DateTime Fecha { get; private set; }
+        public Menu menu { get; private set; }
 
-        [Required]
-        public float Monto { get; private set; }
-
-        public static Restaurante Create(int idreservacion, DateTime fecha, float monto)
+        public static Restaurante Create(string nombre,int idmenu)
         {
             return
                 new Restaurante()
                 {
-                    IdReservacion = idreservacion,
-                    Fecha = fecha,
-                    Monto = monto
+                    Nombre = nombre,
+                    IdMenu = idmenu
                 };
         }
     }

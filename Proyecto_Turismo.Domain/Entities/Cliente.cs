@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace Proyecto_Turismo.Domain.Entities
 {
@@ -19,8 +14,8 @@ namespace Proyecto_Turismo.Domain.Entities
         [StringLength(20, MinimumLength = 2)]
         public string Nombre { get; private set; }
 
-        [Required]
-        [StringLength(30, MinimumLength = 2)]
+        [Required, EmailAddress]
+        [StringLength(30, MinimumLength = 10)]
         public string Email { get; private set; }
 
         [Required]
