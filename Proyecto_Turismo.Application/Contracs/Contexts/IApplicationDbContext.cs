@@ -6,7 +6,6 @@ namespace Proyecto_Turismo.Application.Contracts.Contexts
     public interface IApplicationDbContext
     {
         DbSet<Cliente> Clientes { get; set;  }
-        DbSet<Cuenta> Cuentas { get; set;  }
         DbSet<Factura> Facturas { get; set;  }
         DbSet<Habitacion> Habitaciones { get; set;  }
         DbSet<Paquete> Paquetes { get; set;  }

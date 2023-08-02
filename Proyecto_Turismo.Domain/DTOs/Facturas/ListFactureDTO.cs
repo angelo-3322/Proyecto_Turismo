@@ -12,11 +12,11 @@ namespace Proyecto_Turismo.Domain.DTOs.Facturas
     {
         public ListFactureDTO() {}
 
-        public ListFactureDTO(int id, string reservacion, string fechaemision, float monto)
+        public ListFactureDTO(int id, string reservacion, string fechaEmision, float monto)
         {
             Id = id;
             Reservacion = reservacion;
-            FechaEmision = fechaemision;
+            FechaEmision = fechaEmision;
             Monto = monto;
             
         }

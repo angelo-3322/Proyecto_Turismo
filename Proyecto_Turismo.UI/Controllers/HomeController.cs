@@ -2,7 +2,6 @@
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Services;
 using Proyecto_Turismo.Domain.DTOs.Cliente;
-using Proyecto_Turismo.Domain.DTOs.Cuenta;
 using Proyecto_Turismo.Domain.DTOs.Habitaciones;
 using Proyecto_Turismo.Domain.DTOs.Paquetes;
 using Proyecto_Turismo.Domain.DTOs.Servicios;
@@ -16,7 +15,6 @@ namespace Proyecto_Turismo.UI.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ICuentaService _cuentaService;
         private readonly IFacturaService _facturaService;
         private readonly IHabitacionService _habitacionService;
         private readonly IPaqueteService _paqueteService;
@@ -24,13 +22,11 @@ namespace Proyecto_Turismo.UI.Controllers
         private readonly IRestauranteService _restauranteService;
         private readonly IServicioService _servicioService;
 
-        public HomeController(ILogger<HomeController> logger,
-            ICuentaService cuentaService, IFacturaService facturaService, IHabitacionService habitacionService,
+        public HomeController(ILogger<HomeController> logger, IFacturaService facturaService, IHabitacionService habitacionService,
             IPaqueteService paqueteService, IReservacionService reservacionService, IRestauranteService restauranteService,
             IServicioService servicioService)
         {
             _logger = logger;
-            _cuentaService = cuentaService;
             _facturaService = facturaService;
             _habitacionService = habitacionService;
             _paqueteService = paqueteService;
@@ -41,24 +37,25 @@ namespace Proyecto_Turismo.UI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var facturas = _facturaService.GetAll();
+            return View(facturas);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            var model = new CreateHotelRoomViewModel();
-
+            var model = new CreateFactureViewModel();
+            model.Reservations = _reservacionService.GetAll().ToList();
 
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult Create(CreateServiceViewModel model)
+        public IActionResult Create(CreateFactureViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var result = _servicioService.Create(model.Services);
+                var result = _facturaService.Create(model.Facture);
                 if (result.IsSuccess)
                 {
                     return RedirectToAction(nameof(Index));
@@ -67,8 +64,7 @@ namespace Proyecto_Turismo.UI.Controllers
                 ModelState.AddModelError(string.Empty, result.Error);
             }
 
-
-
+            model.Reservations = _reservacionService.GetAll().ToList();
             return View(model);
         }
 

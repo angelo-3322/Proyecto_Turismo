@@ -48,32 +48,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.ToTable("Clientes");
                 });
 
-            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Cuenta", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Contrasena")
-                        .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("nvarchar(16)");
-
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Usuario")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Cuentas");
-                });
-
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Factura", b =>
                 {
                     b.Property<int>("Id")
@@ -85,13 +59,15 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.Property<DateTime>("FechaEmision")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdReservaciones")
+                    b.Property<int>("IdReservacion")
                         .HasColumnType("int");
 
                     b.Property<float>("Monto")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdReservacion");
 
                     b.ToTable("Facturas");
                 });
@@ -169,6 +145,12 @@ namespace Proyecto_Turismo.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IdCliente");
+
+                    b.HasIndex("IdHabitaciones");
+
+                    b.HasIndex("IdPaquete");
+
                     b.ToTable("Reservaciones");
                 });
 
@@ -183,13 +165,15 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdReservaciones")
+                    b.Property<int>("IdReservacion")
                         .HasColumnType("int");
 
                     b.Property<float>("Monto")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdReservacion");
 
                     b.ToTable("Restaurante");
                 });
@@ -213,6 +197,55 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Servicios");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Factura", b =>
+                {
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Reservacion", "Reservacion")
+                        .WithMany()
+                        .HasForeignKey("IdReservacion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Reservacion");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Reservacion", b =>
+                {
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Cliente", "Cliente")
+                        .WithMany()
+                        .HasForeignKey("IdCliente")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Habitacion", "Habitacion")
+                        .WithMany()
+                        .HasForeignKey("IdHabitaciones")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Paquete", "Paquete")
+                        .WithMany()
+                        .HasForeignKey("IdPaquete")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cliente");
+
+                    b.Navigation("Habitacion");
+
+                    b.Navigation("Paquete");
+                });
+
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Restaurante", b =>
+                {
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Reservacion", "Reservacion")
+                        .WithMany()
+                        .HasForeignKey("IdReservacion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Reservacion");
                 });
 #pragma warning restore 612, 618
         }

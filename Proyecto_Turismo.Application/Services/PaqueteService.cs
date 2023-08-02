@@ -2,7 +2,6 @@
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Contracts.Repositories;
 using Proyecto_Turismo.Domain.DTOs.Cliente;
-using Proyecto_Turismo.Domain.DTOs.Facturas;
 using Proyecto_Turismo.Domain.DTOs.Paquetes;
 using Proyecto_Turismo.Domain.Entities;
 
@@ -57,15 +56,16 @@ namespace Proyecto_Turismo.Application.Services
             return Result.Ok<int>(paquete.Id);
         }
 
+        public Result Edit(EditPackageDTO dto)
+        {
+            throw new NotImplementedException();
+        }
+
         public Result Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Result Edit(EditPackageDTO dto)
-        {
-            throw new NotImplementedException();
-        }
 
     }
 }

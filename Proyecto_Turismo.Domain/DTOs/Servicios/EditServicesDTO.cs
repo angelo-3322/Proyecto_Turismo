@@ -12,7 +12,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Servicios
         public EditServicesDTO() { }
 
         public EditServicesDTO(int id, string nombre, float precio)
-            :this()
+            : this()
         {
             Id = id;
             Nombre = nombre;

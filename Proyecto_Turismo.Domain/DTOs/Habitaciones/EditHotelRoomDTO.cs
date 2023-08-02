@@ -9,28 +9,31 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
 {
     public class EditHotelRoomDTO
     {
-        public EditHotelRoomDTO(){ }
+        public EditHotelRoomDTO() { }
 
         public EditHotelRoomDTO(int id, int numeroHabitacion, string tipoHabitacion, int capacidad, float precio)
-            :this()
+            : this()
         {
             Id = id;
             NumeroHabitaciones = numeroHabitacion;
             TipoHabitacion = tipoHabitacion;
             Capacidad = capacidad;
-            Precio = precio;   
+            Precio = precio;
         }
 
         public int Id { get; set; }
 
-
+        [Required]
         public int NumeroHabitaciones { get; private set; }
 
-
+        [Required]
+        [StringLength(20, MinimumLength = 2)]
         public string TipoHabitacion { get; private set; }
 
+        [Required]
         public int Capacidad { get; private set; }
 
+        [Required]
         public float Precio { get; private set; }
     }
 }

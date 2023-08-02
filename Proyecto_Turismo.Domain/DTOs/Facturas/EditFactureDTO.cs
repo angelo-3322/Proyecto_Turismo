@@ -10,20 +10,17 @@ namespace Proyecto_Turismo.Domain.DTOs.Facturas
 {
     public class EditFactureDTO
     {
-        public EditFactureDTO()
-        {
-            
-        }
+        public EditFactureDTO() { }
 
         public EditFactureDTO(int id, DateTime fechaEmision, float monto)
+            : this()
         {
             Id = id;
             FechaEmision = fechaEmision;
             Monto = monto;
         }
 
-        [Required]
-        public int Id { get; set; }
+        public int Id { get; private set; }
 
         [Required]
         public DateTime FechaEmision { get; private set; }

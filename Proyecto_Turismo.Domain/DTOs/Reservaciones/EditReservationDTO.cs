@@ -10,6 +10,18 @@ namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
 {
     public class EditReservationDTO
     {
+        public EditReservationDTO() { }
+
+        public EditReservationDTO(int id, DateTime fechaInicio, DateTime fechaFin)
+            : this()
+        {
+
+            Id = id;
+            FechaInicio = fechaInicio;
+            FechaFin = fechaFin;
+        }
+
+        public int Id { get; private set; }
 
         [Required]
         public DateTime FechaInicio { get; private set; }

@@ -1,8 +1,34 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<ListFactureDTO>
+
+@{
+    ViewData["Title"] = "Factures";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Fecha Reservacion</th>
+                        <th scope="col">Fecha Emision</th>
+                        <th scope="col">Monto</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var factures in Model)
+                    {
+                        <tr>
+                            <th scope="row">@factures.Id</th>
+                            <td>@factures.Reservacion</td>
+                            <td>@factures.FechaEmision</td>
+                            <td>@factures.Monto</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

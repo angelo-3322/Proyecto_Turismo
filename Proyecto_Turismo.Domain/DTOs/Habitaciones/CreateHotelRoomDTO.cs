@@ -9,8 +9,6 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
 {
     public class CreateHotelRoomDTO
     {
-        public CreateHotelRoomDTO(){ }
-
         [Required]
         public int NumeroHabitaciones { get; private set; }
 

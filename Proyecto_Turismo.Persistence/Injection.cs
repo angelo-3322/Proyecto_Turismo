@@ -29,9 +29,6 @@ namespace Proyecto_Turismo.Persistence
                 .AddRepository<Cliente, ClienteRepository>();
 
             services.AddUnitOfWork<ApplicationDbContext>()
-                .AddRepository<Cuenta, CuentaRepository>();
-
-            services.AddUnitOfWork<ApplicationDbContext>()
                 .AddRepository<Factura, FacturaRepository>();
 
             services.AddUnitOfWork<ApplicationDbContext>()
@@ -50,8 +47,6 @@ namespace Proyecto_Turismo.Persistence
                 .AddRepository<Servicio, ServicioRepository>();
 
             services.AddScoped<IClienteRepository, ClienteRepository>();
-
-            services.AddScoped<ICuentaRepository, CuentaRepository>();
 
             services.AddScoped<IFacturaRepository, FacturaRepository>();
 

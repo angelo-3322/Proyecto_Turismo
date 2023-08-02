@@ -55,13 +55,12 @@ namespace Proyecto_Turismo.Application.Services
 
             return Result.Ok<int>(task.Id);
         }
-
-        public Result Delete(int id)
+        public Result Edit(EditClientDTO dto)
         {
             throw new NotImplementedException();
         }
 
-        public Result Edit(EditClientDTO dto)
+        public Result Delete(int id)
         {
             throw new NotImplementedException();
         }

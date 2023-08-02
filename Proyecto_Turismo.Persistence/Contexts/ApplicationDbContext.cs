@@ -12,7 +12,6 @@ namespace Proyecto_Turismo.Persistence.Contexts
         }
 
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Cuenta> Cuentas { get; set; }
         public DbSet<Factura> Facturas { get; set; }
         public DbSet<Habitacion> Habitaciones { get; set; }
         public DbSet<Paquete> Paquetes { get; set; }

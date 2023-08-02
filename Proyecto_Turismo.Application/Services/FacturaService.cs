@@ -24,7 +24,6 @@ namespace Proyecto_Turismo.Application.Services
             return new EditFactureDTO(facture.Id, facture.FechaEmision, facture.Monto);
         }
 
-
         public IEnumerable<ListFactureDTO> GetAll()
         {
             List<Factura> facturas =
@@ -33,7 +32,7 @@ namespace Proyecto_Turismo.Application.Services
                     includes: i => i.Reservacion).ToList();
 
             return facturas.ConvertAll
-                (s => new ListFactureDTO(s.Id, s.Reservacion.ToString(), s.FechaEmision.ToString(), s.Monto));
+                (s => new ListFactureDTO(s.Id, s.Reservacion.FechaInicio.ToString(), s.FechaEmision.ToString(), s.Monto));
         }
 
         public Result<int> Create(CreateFactureDTO dto)
@@ -41,7 +40,7 @@ namespace Proyecto_Turismo.Application.Services
             Factura factura =
                 Factura.Create
                 (
-                    dto.IdReservaciones,
+                    dto.IdReservacion,
                     dto.FechaEmision,
                     dto.Monto
                 );

@@ -16,8 +16,10 @@ namespace Proyecto_Turismo.Domain.Entities
         public int Id { get; private set; }
 
         [Required]
-        [ForeignKey("Reservaciones")]
-        public int IdReservaciones { get; private set; }
+        [ForeignKey("Reservacion")]
+        public int IdReservacion { get; private set; }
+
+        public Reservacion Reservacion { get; private set; }
 
         [Required]
         public DateTime Fecha { get; private set; }
@@ -25,12 +27,12 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public float Monto { get; private set; }
 
-        public static Restaurante Create(int idreservaciones, DateTime fecha, float monto)
+        public static Restaurante Create(int idreservacion, DateTime fecha, float monto)
         {
             return
                 new Restaurante()
                 {
-                    IdReservaciones = idreservaciones,
+                    IdReservacion = idreservacion,
                     Fecha = fecha,
                     Monto = monto
                 };

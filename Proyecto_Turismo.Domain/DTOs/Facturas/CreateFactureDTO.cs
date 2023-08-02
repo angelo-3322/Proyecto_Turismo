@@ -10,10 +10,10 @@ namespace Proyecto_Turismo.Domain.DTOs.Facturas
 {
     public class CreateFactureDTO
     {
-        public CreateFactureDTO() {}
+        public CreateFactureDTO() { }
 
         [Required]
-        public int IdReservaciones { get;  set; }
+        public int IdReservacion { get;  set; }
 
         [Required]
         public DateTime FechaEmision { get;  set; }

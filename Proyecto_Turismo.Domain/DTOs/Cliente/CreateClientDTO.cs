@@ -13,13 +13,13 @@ namespace Proyecto_Turismo.Domain.DTOs.Cliente
 
         [Required]
         [StringLength(20, MinimumLength = 2)]
-        public string Nombre { get;  set; }
+        public string Nombre { get; private set; }
 
         [Required]
         [StringLength(30, MinimumLength = 2)]
-        public string Email { get;  set; }
+        public string Email { get; private set; }
 
         [Required]
-        public int Telefono { get;  set; }
+        public int Telefono { get; private set; }
     }
 }

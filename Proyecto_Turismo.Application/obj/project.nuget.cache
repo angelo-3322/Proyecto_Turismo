@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "x+7y7Iz2hjUmE1nPXfy1Hkx6KU+c2DlkxTJ2AkodUR/WSBXzvqMFd76ABjpR7En6hDlFg0KOGDJvR5wYXkOEwg==",
+  "dgSpecHash": "L2Y3yJ6HBpKmxnytnZ5iHupZWQBWQ4Csvs37ZtwzAUduclN3HdO8KIv23el0nupqb3USsjmvXNtO4bwQlF3+UA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jorg1\\source\\repos\\Proyecto_Turismo.UI\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
+  "projectFilePath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jorg1\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.9\\microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
     "C:\\Users\\jorg1\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.9\\microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",

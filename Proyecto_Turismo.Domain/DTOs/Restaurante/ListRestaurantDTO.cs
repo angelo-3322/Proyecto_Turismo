@@ -12,10 +12,10 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
     {
         public ListRestaurantDTO(){}
 
-        public ListRestaurantDTO(int id, int idreservaciones, string fecha, float monto)
+        public ListRestaurantDTO(int id, string reservacion, string fecha, float monto)
         {
             Id = id;
-            Id = idreservaciones;
+            Reservacion = reservacion;
             Fecha = fecha; 
             Monto = monto;
         }
@@ -23,7 +23,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
         public int Id { get;  set; }
 
 
-        public int IdReservaciones { get;  set; }
+        public string Reservacion { get;  set; }
 
 
         public string Fecha { get;  set; }

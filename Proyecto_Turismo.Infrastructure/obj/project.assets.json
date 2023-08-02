@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jorg1\\source\\repos\\Proyecto_Turismo.UI\\Proyecto_Turismo.Infrastructure\\Proyecto_Turismo.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Infrastructure\\Proyecto_Turismo.Infrastructure.csproj",
       "projectName": "Proyecto_Turismo.Infrastructure",
-      "projectPath": "C:\\Users\\jorg1\\source\\repos\\Proyecto_Turismo.UI\\Proyecto_Turismo.Infrastructure\\Proyecto_Turismo.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Infrastructure\\Proyecto_Turismo.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\jorg1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jorg1\\source\\repos\\Proyecto_Turismo.UI\\Proyecto_Turismo.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

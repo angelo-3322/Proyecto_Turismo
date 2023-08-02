@@ -12,7 +12,6 @@ namespace Proyecto_Turismo.Application
         {
 
             services.AddScoped<IClienteService, ClienteService>();
-            services.AddScoped<ICuentaService, CuentaService>();
             services.AddScoped<IFacturaService, FacturaService>();
             services.AddScoped<IHabitacionService, HabitacionService>();
             services.AddScoped<IPaqueteService, PaqueteService>();

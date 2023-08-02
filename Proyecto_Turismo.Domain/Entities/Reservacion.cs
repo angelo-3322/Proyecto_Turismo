@@ -16,18 +16,24 @@ namespace Proyecto_Turismo.Domain.Entities
         public int Id { get; private set; }
 
         [Required]
-        [ForeignKey("Habitaciones")]
+        [ForeignKey("Habitacion")]
         public int IdHabitaciones { get; private set; }
 
+        public Habitacion Habitacion { get; private set; }
+
 
         [Required]
-        [ForeignKey("Paquetes")]
+        [ForeignKey("Paquete")]
         public int IdPaquete { get; private set; }
 
+        public Paquete Paquete { get; private set; }
+
 
         [Required]
-        [ForeignKey("Clientes")]
+        [ForeignKey("Cliente")]
         public int IdCliente { get; private set; }
+
+        public Cliente Cliente { get; private set; }
 
         [Required]
         public DateTime FechaInicio { get; private set; }

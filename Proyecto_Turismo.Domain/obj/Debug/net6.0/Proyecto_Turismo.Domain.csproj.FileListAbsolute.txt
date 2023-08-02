@@ -10,3 +10,15 @@ C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Domain\obj\Debu
 C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Domain\obj\Debug\net6.0\refint\Proyecto_Turismo.Domain.dll
 C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.pdb
 C:\Users\jorg1\source\repos\Proyecto_Turismo.UI\Proyecto_Turismo.Domain\obj\Debug\net6.0\ref\Proyecto_Turismo.Domain.dll
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\bin\Debug\net6.0\Proyecto_Turismo.Domain.deps.json
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\bin\Debug\net6.0\Proyecto_Turismo.Domain.dll
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\bin\Debug\net6.0\Proyecto_Turismo.Domain.pdb
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.csproj.AssemblyReference.cache
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.AssemblyInfoInputs.cache
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.AssemblyInfo.cs
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.dll
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\refint\Proyecto_Turismo.Domain.dll
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\Proyecto_Turismo.Domain.pdb
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Domain\obj\Debug\net6.0\ref\Proyecto_Turismo.Domain.dll

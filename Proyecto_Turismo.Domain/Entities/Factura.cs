@@ -13,11 +13,11 @@ namespace Proyecto_Turismo.Domain.Entities
         public Factura() { }
 
         [Key]
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
         [Required]
-        [ForeignKey("Reservaciones")]
-        public int IdReservaciones { get; private set; }
+        [ForeignKey("Reservacion")]
+        public int IdReservacion { get; private set; }
 
         public Reservacion Reservacion { get; private set; }
 
@@ -27,12 +27,12 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public float Monto { get; private set; }
 
-        public static Factura Create(int idReservaciones, DateTime fechaemision, float monto)
+        public static Factura Create(int idreservacion, DateTime fechaemision, float monto)
         {
             return
                 new Factura()
                 {
-                    IdReservaciones = idReservaciones,
+                    IdReservacion = idreservacion,
                     FechaEmision = fechaemision,
                     Monto = monto
                 };

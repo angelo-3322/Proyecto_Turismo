@@ -10,8 +10,10 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
 {
     public class CreateRestaurantDTO
     {
+        public CreateRestaurantDTO() { }
+
         [Required]
-        public int IdReservaciones { get; private set; }
+        public int IdReservacion { get; private set; }
 
         [Required]
         public DateTime Fecha { get; private set; }

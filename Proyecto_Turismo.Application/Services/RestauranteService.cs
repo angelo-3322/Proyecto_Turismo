@@ -19,15 +19,21 @@ namespace Proyecto_Turismo.Application.Services
             _repository = repository;
         }
 
+        public EditRestaurantDTO Get(int id)
+        {
+            Restaurante restaurant = _repository.Get(s => s.Id == id);
+            return new EditRestaurantDTO(restaurant.Id, restaurant.Fecha, restaurant.Monto);
+        }
+
         public IEnumerable<ListRestaurantDTO> GetAll()
         {
             List<Restaurante> restaurantes =
                 _repository.GetAll
                     (s => s.Fecha.Date >= DateTime.Now.Date.AddMonths(-1) || string.IsNullOrEmpty(s.Monto.ToString()),
-                    includes: i => i.IdReservaciones).ToList();
+                    includes: i => i.Reservacion).ToList();
 
             return restaurantes.ConvertAll
-                (s => new ListRestaurantDTO(s.Id, s.IdReservaciones, s.Fecha.ToString(), s.Monto));
+                (s => new ListRestaurantDTO(s.Id, s.Reservacion.FechaInicio.ToString(), s.Fecha.ToString(), s.Monto));
         }
 
         public Result<int> Create(CreateRestaurantDTO dto)
@@ -35,7 +41,7 @@ namespace Proyecto_Turismo.Application.Services
             Restaurante restaurante =
                 Restaurante.Create
                 (
-                    dto.IdReservaciones,
+                    dto.IdReservacion,
                     dto.Fecha,
                     dto.Monto
                 );

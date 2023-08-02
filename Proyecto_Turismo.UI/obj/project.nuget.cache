@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "S+TnZM9DXprETaZas80ySYKQrSOJfdS4Dyt5s2+5Kvy0sF3Io+rYdjMypf5CcsexIy0+jmmowgP7lFcRO5gAQA==",
+  "dgSpecHash": "bl6Pt4oApot5uhlXZTHnbbtB8KVWWCgkFra9iOtfT/fHHj/UtYOQBFE46OG/Q4huB6vOCMlwkm9tL9FIMH7+4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jorg1\\source\\repos\\Proyecto_Turismo.UI\\Proyecto_Turismo.UI\\Proyecto_Turismo.UI.csproj",
+  "projectFilePath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\Proyecto_Turismo.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jorg1\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jorg1\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
