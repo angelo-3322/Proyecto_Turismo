@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Turismo.Domain.DTOs.Cliente
 {
-    public class EditClientDTO
+    public class EditClienteDTO
     {
-        public EditClientDTO() { }
+        public EditClienteDTO() { }
 
-        public EditClientDTO(int id, string nombre, string email, int telefono)
+        public EditClienteDTO(int id, string nombre, string email, int telefono)
             : this()
         {
             Id = id;
@@ -25,8 +25,8 @@ namespace Proyecto_Turismo.Domain.DTOs.Cliente
         [StringLength(20, MinimumLength = 2)]
         public string Nombre { get; private set; }
 
-        [Required]
-        [StringLength(30, MinimumLength = 2)]
+        [Required, EmailAddress]
+        [StringLength(30, MinimumLength = 10)]
         public string Email { get; private set; }
 
         [Required]

@@ -20,23 +20,35 @@ namespace Proyecto_Turismo.Application.Services
 
         public EditHotelRoomDTO Get(int id)
         {
-            Habitacion room = _repository.Get(s => s.Id == id);
-            return new EditHotelRoomDTO(room.Id, room.NumeroHabitaciones, room.TipoHabitacion, room.Capacidad, room.Precio);
+            Habitacion room = _repository.Get(s => s.Id == id, includes: i => i.Imagenes);
+
+             // Mapear la lista de Imagen a una lista de byte[]
+             List<byte[]> imagenes = room.Imagenes.Select(i => i.DatosImagen).ToList();
+
+            return new EditHotelRoomDTO(room.Id, room.NumeroHabitaciones, room.TipoHabitacion, room.Capacidad, room.Precio,room.Disponible, imagenes);
         }
 
         public IEnumerable<ListHotelRoomDTO> GetAll()
         {
             List<Habitacion> habitaciones =
                 _repository.GetAll
-                    (s => !string.IsNullOrEmpty(s.NumeroHabitaciones.ToString()) || !string.IsNullOrEmpty(s.TipoHabitacion)
-                    || string.IsNullOrEmpty(s.Capacidad.ToString()) || string.IsNullOrEmpty(s.Precio.ToString())).ToList();
+                    (s => !string.IsNullOrEmpty(s.NumeroHabitaciones.ToString()), includes: s => s.Imagenes).ToList();
 
-            return habitaciones.ConvertAll
-                (s => new ListHotelRoomDTO(s.Id, s.NumeroHabitaciones, s.TipoHabitacion, s.Capacidad, s.Precio)); ;
+            return habitaciones.Select(s =>
+        new ListHotelRoomDTO(
+            s.Id,
+            s.NumeroHabitaciones,
+            s.TipoHabitacion,
+            s.Capacidad,
+            s.Precio,
+            s.Disponible,
+            s.Imagenes.Select(i => i.DatosImagen).ToList()
+        ));
         }
 
         public Result<int> Create(CreateHotelRoomDTO dto)
         {
+            
             Habitacion habitacion =
                 Habitacion.Create
                 (

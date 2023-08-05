@@ -17,25 +17,25 @@ namespace Proyecto_Turismo.Application.Services
             _repository = repository;
         }
 
-        public EditClientDTO Get(int id)
+        public EditClienteDTO Get(int id)
         {
             Cliente client = _repository.Get(s => s.Id == id);
-            return new EditClientDTO(client.Id, client.Nombre, client.Email, client.Telefono);
+            return new EditClienteDTO(client.Id, client.Nombre, client.Email, client.Telefono);
         }
 
-        public IEnumerable<ListClientDTO> GetAll()
+        public IEnumerable<ListClienteDTO> GetAll()
         {
             List<Cliente> clients =
                 _repository.GetAll
                     (s => !string.IsNullOrEmpty(s.Nombre) || string.IsNullOrEmpty(s.Email) || string.IsNullOrEmpty(s.Telefono.ToString())).ToList();
 
             return clients.ConvertAll
-                (s => new ListClientDTO(s.Id, s.Nombre, s.Email, s.Telefono));
+                (s => new ListClienteDTO(s.Id, s.Nombre, s.Email, s.Telefono));
         }
 
-        public Result<int> Create(CreateClientDTO dto)
+        public Result<int> Create(CreateClienteDTO dto)
         {
-            Cliente task = 
+            Cliente client = 
                 Cliente.Create
                 (
                     dto.Nombre, 
@@ -45,7 +45,7 @@ namespace Proyecto_Turismo.Application.Services
 
             try
             {
-                _repository.Instert(task);
+                _repository.Instert(client);
                 _repository.Save();
             }
             catch
@@ -53,9 +53,9 @@ namespace Proyecto_Turismo.Application.Services
                 return Result.Fail<int>("Internal server error.");
             }
 
-            return Result.Ok<int>(task.Id);
+            return Result.Ok<int>(client.Id);
         }
-        public Result Edit(EditClientDTO dto)
+        public Result Edit(EditClienteDTO dto)
         {
             throw new NotImplementedException();
         }

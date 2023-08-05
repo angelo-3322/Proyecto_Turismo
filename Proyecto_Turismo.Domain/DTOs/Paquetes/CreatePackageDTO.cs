@@ -9,17 +9,18 @@ namespace Proyecto_Turismo.Domain.DTOs.Paquetes
 {
     public class CreatePackageDTO
     {
-        public CreatePackageDTO() { }
+        public CreatePackageDTO() { } 
 
         [Required]
-        [StringLength(20, MinimumLength = 2)]
-        public string Nombre { get; private set; }
+        [StringLength(30, MinimumLength = 10)]
+        public string Nombre { get; set; }
 
         [Required]
         [StringLength(35, MinimumLength = 10)]
-        public string Descripcion { get; private set; }
+        public string Descripcion { get; set; }
 
         [Required]
-        public float precio { get; private set; }
+        public float Precio { get; set; }
+
     }
 }

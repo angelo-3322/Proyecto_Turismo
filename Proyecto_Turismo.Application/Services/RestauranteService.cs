@@ -60,12 +60,47 @@ namespace Proyecto_Turismo.Application.Services
 
         public Result Delete(int id)
         {
-            throw new NotImplementedException();
+            var restaurante = _repository.Get(m => m.Id == id);
+            if (restaurante == null)
+            {
+                return Result.Fail("restaurante not found");
+            }
+
+            try
+            {
+                _repository.Delete(restaurante);
+                _repository.Save();
+
+                return Result.Ok();
+            }
+            catch
+            {
+                return Result.Fail("Internal server error.");
+            }
         }
 
         public Result Edit(EditRestaurantDTO dto)
         {
-            throw new NotImplementedException();
+            var restaurante = _repository.Get(m => m.Id == dto.Id);
+            if (restaurante == null)
+            {
+                return Result.Fail("restaurante not found");
+            }
+
+            restaurante.Nombre = dto.Nombre;
+            restaurante.IdMenu = dto.IdMenu;
+
+            try
+            {
+                _repository.Update(restaurante);
+                _repository.Save();
+
+                return Result.Ok();
+            }
+            catch
+            {
+                return Result.Fail("Internal server error.");
+            }
         }
 
 

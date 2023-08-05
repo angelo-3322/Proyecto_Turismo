@@ -64,22 +64,22 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpPost("//edit/{id}")]
-        public IActionResult Edit([FromRoute] int id, EditPackageViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var client = new EditPackageDTO(id, model.Nombre, model.Precio);
-                var result = _paqueteService.Edit(client);
+        //[HttpPost("//edit/{id}")]
+        //public IActionResult Edit([FromRoute] int id, EditPackageViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var client = new EditPackageDTO(id, model.Nombre, model.Precio);
+        //        var result = _paqueteService.Edit(client);
 
-                if (result.IsSuccess)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+        //        if (result.IsSuccess)
+        //        {
+        //            return RedirectToAction(nameof(Index));
+        //        }
 
-                ModelState.AddModelError(string.Empty, result.Error);
-            }
-            return View(model);
-        }
+        //        ModelState.AddModelError(string.Empty, result.Error);
+        //    }
+        //    return View(model);
+        //}
     }
 }

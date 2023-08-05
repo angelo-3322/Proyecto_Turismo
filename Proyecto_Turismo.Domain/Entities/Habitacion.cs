@@ -36,7 +36,8 @@ namespace Proyecto_Turismo.Domain.Entities
                     TipoHabitacion = tipohabitacion,
                     Capacidad = capacidad,
                     Precio = precio,
-                    Disponible = disponible
+                    Disponible = disponible,
+                    Imagenes = new List<Imagen>()
                 };
             
             foreach (var imagen in imagenes)

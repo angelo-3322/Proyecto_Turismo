@@ -6,10 +6,10 @@ namespace Proyecto_Turismo.UI.Models.ViewModels
     {
         public CreateClientViewModel()
         {
-            Clients = new CreateClientDTO();
+            Clients = new CreateClienteDTO();
         }
 
 
-        public CreateClientDTO Clients { get; set; }
+        public CreateClienteDTO Clients { get; set; }
     }
 }

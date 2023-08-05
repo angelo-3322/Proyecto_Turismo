@@ -13,32 +13,32 @@ namespace Proyecto_Turismo.Domain.Entities
 
         [Required]
         [ForeignKey("Habitacion")]
-        public int IdHabitaciones { get; private set; }
+        public int IdHabitaciones { get; set; }
 
         public Habitacion Habitacion { get; private set; }
 
 
         [Required]
         [ForeignKey("Paquete")]
-        public int IdPaquete { get; private set; }
+        public int IdPaquete { get; set; }
 
         public Paquete Paquete { get; private set; }
 
 
         [Required]
         [ForeignKey("Cliente")]
-        public int IdCliente { get; private set; }
+        public int IdCliente { get; set; }
 
         public Cliente Cliente { get; private set; }
 
         [Required]
-        public DateTime FechaInicio { get; private set; }
+        public DateTime FechaInicio { get; set; }
 
         [Required]
-        public DateTime FechaFin { get; private set; }
+        public DateTime FechaFin { get; set; }
 
         [Required]
-        public bool Activa { get; private set; }
+        public bool Activa { get; set; }
 
         public static Reservacion Create(int idhabitaciones, int idpaquete, int idcliente, DateTime fechainicio, DateTime fechafin)
         {

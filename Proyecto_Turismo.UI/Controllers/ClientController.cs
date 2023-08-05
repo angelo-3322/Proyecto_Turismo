@@ -67,7 +67,7 @@ namespace Proyecto_Turismo.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var client = new EditClientDTO(id, model.Nombre, model.Email, model.Telefono);
+                var client = new EditClienteDTO(id, model.Nombre, model.Email, model.Telefono);
                 var result = _clienteService.Edit(client);
 
                 if (result.IsSuccess)

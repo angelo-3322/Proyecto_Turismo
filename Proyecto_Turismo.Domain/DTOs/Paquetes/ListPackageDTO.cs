@@ -11,17 +11,16 @@ namespace Proyecto_Turismo.Domain.DTOs.Paquetes
     {
         public ListPackageDTO(){}
 
-        public ListPackageDTO(int id, string nombre, float precio)
+        public ListPackageDTO(int id, string nombre, float precio, string descripcion)
         {
             Id = id;
             Nombre = nombre;
             Precio = precio;
+            Descripcion = descripcion;
         }
         public int Id { get;  set; }
-
-
         public string Nombre { get;  set; }
-
+        public string Descripcion { get; set; }
         public float Precio { get;  set; }
     }
 }

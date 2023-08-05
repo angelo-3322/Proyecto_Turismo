@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Turismo.Domain.DTOs.Cliente
 {
-    public class ListClientDTO
+    public class ListClienteDTO
     {
-        public ListClientDTO() {}
+        public ListClienteDTO() {}
 
-        public ListClientDTO(int id, string nombre, string email, int telefono)
+        public ListClienteDTO(int id, string nombre, string email, int telefono)
         {
 
             Id = id;

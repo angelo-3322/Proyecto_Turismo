@@ -67,15 +67,15 @@ namespace Proyecto_Turismo.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var room = new EditHotelRoomDTO(id, model.NumeroHabitaciones, model.TipoHabitacion, model.Capacidad, model.Precio);
-                var result = _habitacionService.Edit(room);
+                //var room = new EditHotelRoomDTO(id, model.NumeroHabitaciones, model.TipoHabitacion, model.Capacidad,model.Precio);
+                //var result = _habitacionService.Edit(room);
 
-                if (result.IsSuccess)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+                //if (result.IsSuccess)
+                //{
+                //    return RedirectToAction(nameof(Index));
+                //}
 
-                ModelState.AddModelError(string.Empty, result.Error);
+                //ModelState.AddModelError(string.Empty, result.Error);
             }
             return View(model);
         }

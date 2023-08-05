@@ -15,7 +15,8 @@ namespace Proyecto_Turismo.Application.Contracts.Repositories
         // bool => s.Id == 100
         T Get(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includes);
 
-        IEnumerable<T> GetAll(Expression<Func<T, bool>> predicate = null, params Expression<Func<T, object>>[] includes);
+        IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, params Expression<Func<T, object>>[] includes);
+
 
         void Instert(T entity);
 

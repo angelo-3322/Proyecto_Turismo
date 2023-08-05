@@ -22,18 +22,26 @@ namespace Proyecto_Turismo.Application.Services
         public EditReservationDTO Get(int id)
         {
             Reservacion reservation = _repository.Get(s => s.Id == id);
-            return new EditReservationDTO(reservation.Id, reservation.FechaInicio, reservation.FechaFin);
+            return new EditReservationDTO(reservation.Id,reservation.IdPaquete ,reservation.IdCliente,reservation.FechaInicio, reservation.FechaFin,reservation.Activa);
         }
 
         public IEnumerable<ListReservationDTO> GetAll()
         {
             List<Reservacion> reservaciones =
                 _repository.GetAll
-                    (s => s.FechaInicio.Date >= DateTime.Now.Date.AddMonths(-1) || s.FechaFin.Date >= DateTime.Now.Date.AddMonths(-1),
-                    includes: i => i.Cliente ).ToList();
+                    (r => r.Activa,
+                     r => r.Cliente,
+                     r => r.Paquete,
+                     r => r.Habitacion).ToList();
 
             return reservaciones.ConvertAll
-                (s => new ListReservationDTO(s.Id, s.FechaInicio.ToString(), s.FechaFin.ToString()));
+                (s => new ListReservationDTO(
+                s.Id,s.IdHabitaciones,
+                s.IdPaquete,
+                s.IdCliente,
+                s.FechaInicio, 
+                s.FechaFin,
+                s.Activa));
         }
 
         public Result<int> Create(CreateReservationDTO dto)
@@ -63,12 +71,50 @@ namespace Proyecto_Turismo.Application.Services
 
         public Result Delete(int id)
         {
-            throw new NotImplementedException();
+            var reservacion = _repository.Get(m => m.Id == id);
+            if (reservacion == null)
+            {
+                return Result.Fail("Reservacion not found");
+            }
+
+            try
+            {
+                _repository.Delete(reservacion);
+                _repository.Save();
+
+                return Result.Ok();
+            }
+            catch
+            {
+                return Result.Fail("Internal server error.");
+            }
         }
 
         public Result Edit(EditReservationDTO dto)
         {
-            throw new NotImplementedException();
+            var reservacion = _repository.Get(m => m.Id == dto.Id);
+            if (reservacion == null)
+            {
+                return Result.Fail("reservacion not found");
+            }
+
+            reservacion.IdHabitaciones = dto.IdHabitaciones;
+            reservacion.IdPaquete = dto.IdPaquete;
+            reservacion.FechaInicio = dto.FechaInicio;
+            reservacion.FechaFin = dto.FechaFin;
+            reservacion.Activa = dto.Activa;
+
+            try
+            {
+                _repository.Update(reservacion);
+                _repository.Save();
+
+                return Result.Ok();
+            }
+            catch
+            {
+                return Result.Fail("Internal server error.");
+            }
         }
 
     }

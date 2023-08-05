@@ -8,6 +8,7 @@ namespace Proyecto_Turismo.Persistence.Contexts.Repositories
         public ClienteRepository(ApplicationDbContext dbContext) 
             : base(dbContext)
         {
+
         }
     }
 }

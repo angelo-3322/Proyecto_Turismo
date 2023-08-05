@@ -15,11 +15,9 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
 
         [Required]
         [StringLength(30, MinimumLength = 5)]
-        public string Nombre { get; private set; }
+        public string Nombre { get;  set; }
 
         [ForeignKey("Menu")]
-        public int IdMenu { get; private set; }
-
-        public Menu menu { get; private set; }
+        public int IdMenu { get;  set; }
     }
 }

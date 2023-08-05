@@ -1,32 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Proyecto_Turismo.Domain.Entities;
 
 namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
 {
     public class EditReservationDTO
     {
-        public EditReservationDTO() { }
+        public EditReservationDTO() { } 
 
-        public EditReservationDTO(int id, DateTime fechaInicio, DateTime fechaFin)
+        public EditReservationDTO(int idhabitaciones, int idpaquete, int idcliente, DateTime fechainicio, DateTime fechafin, bool activo)
             : this()
         {
 
-            Id = id;
-            FechaInicio = fechaInicio;
-            FechaFin = fechaFin;
+            IdHabitaciones = idhabitaciones;
+            IdPaquete = idpaquete;
+            IdCliente = idcliente;
+            FechaInicio = fechainicio;
+            FechaFin = fechafin;
+            Activa = activo;
         }
 
         public int Id { get; private set; }
 
         [Required]
-        public DateTime FechaInicio { get; private set; }
+        [ForeignKey("Habitacion")]
+        public int IdHabitaciones { get;  set; }
+
 
         [Required]
-        public DateTime FechaFin { get; private set; }
+        [ForeignKey("Paquete")]
+        public int IdPaquete { get;  set; }
+
+
+        [Required]
+        [ForeignKey("Cliente")]
+        public int IdCliente { get;  set; }
+
+        [Required]
+        public DateTime FechaInicio { get;  set; }
+
+        [Required]
+        public DateTime FechaFin { get;  set; }
+
+        [Required]
+        public bool Activa { get;  set; }
     }
 }

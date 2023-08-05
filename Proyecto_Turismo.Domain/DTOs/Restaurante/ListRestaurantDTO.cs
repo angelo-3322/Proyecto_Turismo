@@ -29,8 +29,6 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
         [ForeignKey("Menu")]
         public int IdMenu { get; set; }
 
-        public Menu menu { get; set; }
-
 
     }
 }

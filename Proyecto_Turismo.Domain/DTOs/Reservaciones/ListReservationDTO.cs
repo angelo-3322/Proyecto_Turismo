@@ -15,18 +15,29 @@ namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
             
         }
 
-        public ListReservationDTO(int id, string fechainicio, string fechafin)
+        public ListReservationDTO(int id,int idhabitaciones, int idpaquete, int idcliente, DateTime fechainicio, DateTime fechafin, bool activo)
         {
             Id = id;
+            IdHabitaciones = idhabitaciones;
+            IdPaquete = idpaquete;
+            IdCliente = idcliente;
             FechaInicio = fechainicio;
             FechaFin = fechafin;
-        }
+            Activa = activo;
+        } 
 
         public int Id { get;  set; }
 
+        [ForeignKey("Habitacion")]
+        public int IdHabitaciones { get;  set; }
 
-        public string FechaInicio { get;  set; }
+        [ForeignKey("Paquete")]
+        public int IdPaquete { get;  set; }
 
-        public string FechaFin { get;  set; }
+        [ForeignKey("Cliente")]
+        public int IdCliente { get;  set; }
+        public DateTime FechaInicio { get;  set; }
+        public DateTime FechaFin { get;  set; }
+        public bool Activa { get;  set; }
     }
 }

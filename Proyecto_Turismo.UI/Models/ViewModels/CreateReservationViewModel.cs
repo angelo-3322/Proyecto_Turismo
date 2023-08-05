@@ -12,12 +12,12 @@ namespace Proyecto_Turismo.UI.Models.ViewModels
             Reservations = new CreateReservationDTO();
             Rooms = new List<ListHotelRoomDTO>();
             Packages = new List<ListPackageDTO>();
-            Clients = new List<ListClientDTO>();
+            Clients = new List<ListClienteDTO>();
         }
 
         public List<ListHotelRoomDTO> Rooms { get; set; }
         public List<ListPackageDTO> Packages { get; set; }
-        public List<ListClientDTO> Clients { get; set; }
+        public List<ListClienteDTO> Clients { get; set; }
 
         public CreateReservationDTO Reservations { get; set; }
     }

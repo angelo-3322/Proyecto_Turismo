@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Proyecto_Turismo.Domain.DTOs.Imagen;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
 {
@@ -11,7 +8,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
     {
         public EditHotelRoomDTO() { }
 
-        public EditHotelRoomDTO(int id, int numeroHabitacion, string tipoHabitacion, int capacidad, float precio)
+        public EditHotelRoomDTO(int id, int numeroHabitacion, string tipoHabitacion, int capacidad, float precio,bool activo , List<byte[]> imagenes)
             : this()
         {
             Id = id;
@@ -19,21 +16,28 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
             TipoHabitacion = tipoHabitacion;
             Capacidad = capacidad;
             Precio = precio;
+            Disponible = activo;
+            Imagenes = imagenes;
         }
 
         public int Id { get; set; }
 
         [Required]
-        public int NumeroHabitaciones { get; private set; }
+        public int NumeroHabitaciones { get;  set; }
 
         [Required]
         [StringLength(20, MinimumLength = 2)]
-        public string TipoHabitacion { get; private set; }
+        public string TipoHabitacion { get;  set; }
 
         [Required]
-        public int Capacidad { get; private set; }
+        public int Capacidad { get;  set; }
 
         [Required]
-        public float Precio { get; private set; }
+        public float Precio { get;  set; }
+
+        [Required]
+        public bool Disponible { get; private set; }
+
+        public List<byte[]> Imagenes { get; set; }
     }
 }

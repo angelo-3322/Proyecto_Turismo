@@ -1,7 +1,6 @@
 ﻿using Proyecto_Turismo.Application.Components;
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Contracts.Repositories;
-using Proyecto_Turismo.Domain.DTOs.Cliente;
 using Proyecto_Turismo.Domain.DTOs.Paquetes;
 using Proyecto_Turismo.Domain.Entities;
 
@@ -21,17 +20,17 @@ namespace Proyecto_Turismo.Application.Services
         public EditPackageDTO Get(int id)
         {
             Paquete package = _repository.Get(s => s.Id == id);
-            return new EditPackageDTO(package.Id, package.Nombre, package.Precio);
+            return new EditPackageDTO(package.Id, package.Nombre,package.Precio,package.Descripcion);
         }
 
         public IEnumerable<ListPackageDTO> GetAll()
         {
             List<Paquete> paquetes =
                 _repository.GetAll
-                    (s => !string.IsNullOrEmpty(s.Nombre) || string.IsNullOrEmpty(s.Precio.ToString())).ToList();
+                    (s => !string.IsNullOrEmpty(s.Nombre) || string.IsNullOrEmpty(s.Descripcion) || string.IsNullOrEmpty(s.Precio.ToString())).ToList();
 
             return paquetes.ConvertAll
-                (s => new ListPackageDTO(s.Id, s.Nombre, s.Precio));
+                (s => new ListPackageDTO(s.Id, s.Nombre, s.Precio, s.Descripcion));
         }
 
         public Result<int> Create(CreatePackageDTO dto)
@@ -41,7 +40,7 @@ namespace Proyecto_Turismo.Application.Services
                 (
                     dto.Nombre,
                     dto.Descripcion,
-                    dto.precio
+                    dto.Precio
                 );
 
             try
