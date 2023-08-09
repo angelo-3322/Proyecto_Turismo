@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

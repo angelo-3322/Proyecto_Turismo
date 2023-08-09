@@ -264,3 +264,8 @@ C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Pr
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\obj\Debug\net6.0\Proyecto_Turismo.UI.genruntimeconfig.cache
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\obj\Debug\net6.0\ref\Proyecto_Turismo.UI.dll
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
