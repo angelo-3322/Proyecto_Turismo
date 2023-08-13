@@ -47,5 +47,15 @@ namespace Proyecto_Turismo.Domain.Entities
 
             return habitacion;
         }
+
+        public void Update(int numerohabitaciones, string tipohabitacion, int capacidad, float precio, bool disponble)
+        {
+            NumeroHabitaciones = numerohabitaciones;
+            TipoHabitacion = tipohabitacion;
+            Capacidad = capacidad;
+            Precio = precio;
+            Disponible = disponble;
+
+        }
     }
 }

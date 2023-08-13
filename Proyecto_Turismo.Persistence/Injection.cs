@@ -1,12 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Proyecto_Turismo.Application.Contracs.Repositories;
 using Proyecto_Turismo.Application.Contracts.Contexts;
 using Proyecto_Turismo.Application.Contracts.Repositories;
 using Proyecto_Turismo.Domain.Entities;
 using Proyecto_Turismo.Persistence.Contexts;
 using Proyecto_Turismo.Persistence.Contexts.Repositories;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -50,6 +52,10 @@ namespace Proyecto_Turismo.Persistence
             services.AddScoped<IHabitacionRepository, HabitacionRepository>();
 
             services.AddScoped<IPaqueteRepository, PaqueteRepository>();
+
+            services.AddScoped<IMenuRepository, MenuRepository>();
+
+            services.AddScoped<IProductoRepository, ProductoRepository>();
 
             services.AddScoped<IReservacionRepository, ReservacionRepository>();
 

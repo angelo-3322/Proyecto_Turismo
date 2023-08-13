@@ -79,7 +79,7 @@ namespace Proyecto_Turismo.Application.Services
         public EditProductoDTO Get(int id)
         {
             Producto prod = _repository.Get(s => s.Id == id);
-            return new EditProductoDTO(prod.Id, prod.Nombre,prod.Descripcion,prod.Precio,prod.IdMenu);
+            return new EditProductoDTO(prod.Id, prod.Nombre,prod.Descripcion,prod.Precio);
         }
 
         public IEnumerable<ListProductoDTO> GetAll()

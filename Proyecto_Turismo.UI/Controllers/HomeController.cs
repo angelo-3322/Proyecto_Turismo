@@ -3,7 +3,9 @@ using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Services;
 using Proyecto_Turismo.Domain.DTOs.Cliente;
 using Proyecto_Turismo.Domain.DTOs.Habitaciones;
+using Proyecto_Turismo.Domain.DTOs.Menu;
 using Proyecto_Turismo.Domain.DTOs.Paquetes;
+using Proyecto_Turismo.Domain.DTOs.Producto;
 using Proyecto_Turismo.Domain.Entities;
 using Proyecto_Turismo.UI.Models;
 using Proyecto_Turismo.UI.Models.ViewModels;
@@ -19,9 +21,11 @@ namespace Proyecto_Turismo.UI.Controllers
         private readonly IPaqueteService _paqueteService;
         private readonly IReservacionService _reservacionService;
         private readonly IRestauranteService _restauranteService;
+        private readonly IMenuService _menuService;
+        private readonly IProductoService _productoService;
 
         public HomeController(ILogger<HomeController> logger, IFacturaService facturaService, IHabitacionService habitacionService,
-            IPaqueteService paqueteService, IReservacionService reservacionService, IRestauranteService restauranteService)
+            IPaqueteService paqueteService, IReservacionService reservacionService, IRestauranteService restauranteService, IMenuService menuService, IProductoService productoService)
         {
             _logger = logger;
             _facturaService = facturaService;
@@ -29,63 +33,63 @@ namespace Proyecto_Turismo.UI.Controllers
             _paqueteService = paqueteService;
             _reservacionService = reservacionService;
             _restauranteService = restauranteService;
+            _menuService = menuService;
+            _productoService = productoService;
         }
 
         public IActionResult Index()
         {
-            var facturas = _facturaService.GetAll();
-            return View(facturas);
+            return View();
         }
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            var model = new CreateFactureViewModel();
-            model.Reservations = _reservacionService.GetAll().ToList();
+        //[HttpGet]
+        //public IActionResult Create()
+        //{
+        //    var model = new CreateMenuViewModel();
+            
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
-        [HttpPost]
-        public IActionResult Create(CreateFactureViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = _facturaService.Create(model.Facture);
-                if (result.IsSuccess)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+        //[HttpPost]
+        //public IActionResult Create(CreateMenuViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var result = _menuService.Create(model.Menus);
+        //        if (result.IsSuccess)
+        //        {
+        //            return RedirectToAction(nameof(Index));
+        //        }
 
-                ModelState.AddModelError(string.Empty, result.Error);
-            }
+        //        ModelState.AddModelError(string.Empty, result.Error);
+        //    }
 
-            model.Reservations = _reservacionService.GetAll().ToList();
-            return View(model);
-        }
+            
+        //    return View(model);
+        //}
 
-        //[HttpGet("//edit/{id}")]
+        //[HttpGet("/menu/edit/{id}")]
         //public IActionResult Edit([FromRoute] int id)
         //{
-        //    var service = _servicioService.Get(id);
+        //    var menu = _menuService.Get(id);
         //    var model =
-        //        new EditServiceViewModel
+        //        new EditMenuViewModel
         //        {
-        //            Nombre = service.Nombre,
-        //            Precio = service.Precio,
+        //            Nombre = menu.Nombre,
 
         //        };
 
         //    return View(model);
         //}
 
-        //[HttpPost("//edit/{id}")]
-        //public IActionResult Edit([FromRoute] int id, EditServiceViewModel model)
+        //[HttpPost("/menu/edit/{id}")]
+        //public IActionResult Edit([FromRoute] int id, EditMenuViewModel model)
         //{
         //    if (ModelState.IsValid)
         //    {
-        //        var service = new EditServicesDTO(id, model.Nombre, model.Precio);
-        //        var result = _servicioService.Edit(service);
+        //        var menus = new EditMenuDTO(id, model.Nombre);
+        //        var result = _menuService.Edit(menus);
 
         //        if (result.IsSuccess)
         //        {

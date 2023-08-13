@@ -49,7 +49,7 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpGet("//edit/{id}")]
+        [HttpGet("/package/edit/{id}")]
         public IActionResult Edit([FromRoute] int id)
         {
             var package = _paqueteService.Get(id);

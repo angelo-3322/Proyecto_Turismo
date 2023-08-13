@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Threading;
 
 
 namespace Proyecto_Turismo.Domain.Entities
@@ -30,6 +31,14 @@ namespace Proyecto_Turismo.Domain.Entities
                     Email = email,
                     Telefono = telefono
                 };
+        }
+
+        public void Update(string nombre, string email, int telefono)
+        {
+            Nombre = Nombre;
+            Email = email;
+            Telefono = telefono;
+
         }
     }
 }

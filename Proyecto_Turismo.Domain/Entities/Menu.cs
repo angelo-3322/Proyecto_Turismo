@@ -12,7 +12,7 @@ namespace Proyecto_Turismo.Domain.Entities
 
         [Required]
         [StringLength(20, MinimumLength = 2)]
-        public string Nombre { get; set; }
+        public string Nombre { get;  set; }
 
         public static Menu Create(string nombre)
         {

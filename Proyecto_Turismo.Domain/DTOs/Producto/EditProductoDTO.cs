@@ -12,7 +12,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Producto
     {
         public EditProductoDTO() { }
 
-        public EditProductoDTO(int id, string nombre, string descripcion, float precio, int idmenu)
+        public EditProductoDTO(int id, string nombre, string descripcion, float precio)
             : this()
         {
 
@@ -20,7 +20,6 @@ namespace Proyecto_Turismo.Domain.DTOs.Producto
             Nombre = nombre;
             Descripcion = descripcion;
             Precio = precio;
-            IdMenu = idmenu;
 
         }
         public int Id { get; private set; }
@@ -35,8 +34,5 @@ namespace Proyecto_Turismo.Domain.DTOs.Producto
         [Required]
         public float Precio { get; set; }
 
-        [Required]
-        [ForeignKey("Menu")]
-        public int IdMenu { get; set; }
     }
 }

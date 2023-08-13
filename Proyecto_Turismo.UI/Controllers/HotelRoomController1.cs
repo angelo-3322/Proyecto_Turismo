@@ -46,7 +46,7 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpGet("//edit/{id}")]
+        [HttpGet("/hotelroom/edit/{id}")]
         public IActionResult Edit([FromRoute] int id)
         {
             var room = _habitacionService.Get(id);
@@ -62,7 +62,7 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpPost("//edit/{id}")]
+        [HttpPost("/hotelroom/edit/{id}")]
         public IActionResult Edit([FromRoute] int id, EditHotelRoomViewModel model)
         {
             if (ModelState.IsValid)

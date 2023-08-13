@@ -10,18 +10,18 @@ namespace Proyecto_Turismo.Domain.Entities
 
         [Required]
         [StringLength(25, MinimumLength = 5)]
-        public string Nombre { get; set; }
+        public string Nombre { get;  set; }
 
         [StringLength(30, MinimumLength = 7)]
-        public string Descripcion { get; set; }
+        public string Descripcion { get;  set; }
 
         [Required]
-        public float Precio { get; set; }
+        public float Precio { get;  set; }
 
         [Required]
         [ForeignKey("Menu")]
-        public int IdMenu { get; set; }
-        public Menu menu { get;  private set; }
+        public int IdMenu { get;  set; }
+        public Menu menu { get;   set; }
         public static Producto Create(string nombre, string descripcion, float precio,int idmenu)
         {
             return

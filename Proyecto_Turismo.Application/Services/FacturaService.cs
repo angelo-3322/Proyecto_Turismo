@@ -57,14 +57,21 @@ namespace Proyecto_Turismo.Application.Services
             return Result.Ok<int>(factura.Id);
         }
 
+        public Result Edit(EditFactureDTO dto)
+        {
+            Factura existingFacture = _repository.GetAll().FirstOrDefault(t => t.Id == dto.Id);
+
+            existingFacture.Update(dto.FechaEmision, dto.Monto);
+
+            _repository.Save();
+
+            return Result.Ok();
+        }
+
         public Result Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Result Edit(EditFactureDTO dto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

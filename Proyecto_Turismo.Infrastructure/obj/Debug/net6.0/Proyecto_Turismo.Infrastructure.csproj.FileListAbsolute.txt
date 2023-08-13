@@ -39,3 +39,8 @@ C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Pr
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Application.pdb
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Domain.pdb
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.csproj.CopyComplete
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Application.dll
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Domain.dll
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Application.pdb
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\bin\Debug\net6.0\Proyecto_Turismo.Domain.pdb
+C:\Users\jorg1\Source\Repos\Proyecto_Turismo\Proyecto_Turismo.Infrastructure\obj\Debug\net6.0\Proyecto_Turismo.Infrastructure.csproj.CopyComplete

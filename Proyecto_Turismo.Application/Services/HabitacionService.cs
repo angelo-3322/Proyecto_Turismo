@@ -73,15 +73,23 @@ namespace Proyecto_Turismo.Application.Services
             return Result.Ok<int>(habitacion.Id);
         }
 
+        public Result Edit(EditHotelRoomDTO dto)
+        {
+            Habitacion existingHotelRoom = _repository.GetAll().FirstOrDefault(t => t.Id == dto.Id);
+
+            existingHotelRoom.Update(dto.NumeroHabitaciones, dto.TipoHabitacion, dto.Capacidad, dto.Precio, dto.Disponible);
+
+            _repository.Save();
+
+            return Result.Ok();
+        }
+
         public Result Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Result Edit(EditHotelRoomDTO dto)
-        {
-            throw new NotImplementedException();
-        }
+        
 
 
     }

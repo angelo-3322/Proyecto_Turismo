@@ -33,5 +33,12 @@ namespace Proyecto_Turismo.Domain.Entities
                     Precio = precio
                 };
         }
+        public void Update(string nombre, string descripcion, float precio)
+        {
+            Nombre = Nombre;
+            Descripcion = descripcion;
+            Precio = precio;
+
+        }
     }
 }

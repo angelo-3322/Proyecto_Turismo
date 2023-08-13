@@ -58,7 +58,13 @@ namespace Proyecto_Turismo.Application.Services
 
         public Result Edit(EditPackageDTO dto)
         {
-            throw new NotImplementedException();
+            Paquete existingPackage= _repository.GetAll().FirstOrDefault(t => t.Id == dto.Id);
+
+            existingPackage.Update(dto.Nombre, dto.Descripcion, dto.Precio);
+
+            _repository.Save();
+
+            return Result.Ok();
         }
 
         public Result Delete(int id)

@@ -33,5 +33,12 @@ namespace Proyecto_Turismo.Domain.Entities
                     Monto = monto
                 };
         }
+
+        public void Update(DateTime fechaEmision, float monto)
+        {
+            FechaEmision = fechaEmision;
+            Monto = monto;
+
+        }
     }
 }

@@ -57,7 +57,13 @@ namespace Proyecto_Turismo.Application.Services
         }
         public Result Edit(EditClienteDTO dto)
         {
-            throw new NotImplementedException();
+            Cliente existingClient = _repository.GetAll().FirstOrDefault(t => t.Id == dto.Id);
+
+            existingClient.Update(dto.Nombre, dto.Email, dto.Telefono);
+
+            _repository.Save();
+
+            return Result.Ok();
         }
 
         public Result Delete(int id)
