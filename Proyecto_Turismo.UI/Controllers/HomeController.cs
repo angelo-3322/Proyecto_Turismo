@@ -42,11 +42,16 @@ namespace Proyecto_Turismo.UI.Controllers
             return View();
         }
 
+        public IActionResult Restaurant()
+        {
+            return View();
+        }
+
         //[HttpGet]
         //public IActionResult Create()
         //{
         //    var model = new CreateMenuViewModel();
-            
+
 
         //    return View(model);
         //}
@@ -65,7 +70,7 @@ namespace Proyecto_Turismo.UI.Controllers
         //        ModelState.AddModelError(string.Empty, result.Error);
         //    }
 
-            
+
         //    return View(model);
         //}
 

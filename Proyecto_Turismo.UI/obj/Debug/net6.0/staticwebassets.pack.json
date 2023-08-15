@@ -1,247 +1,359 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Proyecto_Turismo.UI.bundle.scp.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Proyecto_Turismo.UI.bundle.scp.css",
       "PackagePath": "staticwebassets\\Proyecto_Turismo.UI.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Alone.jpeg",
+      "PackagePath": "staticwebassets\\IMG\\Alone.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Business.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Business.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\CanaTicoDark.png",
+      "PackagePath": "staticwebassets\\IMG\\CanaTicoDark.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\CanaTicoLight.png",
+      "PackagePath": "staticwebassets\\IMG\\CanaTicoLight.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Couples.jpeg",
+      "PackagePath": "staticwebassets\\IMG\\Couples.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Familiar.jpeg",
+      "PackagePath": "staticwebassets\\IMG\\Familiar.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Camarones.png",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Camarones.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Churrasco.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Churrasco.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Costilla.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Costilla.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Fajitas.png",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Fajitas.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Fish.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Fish.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Pollo.png",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Pollo.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Steak.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Steak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Tuna.png",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Tuna.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\Vino.png",
+      "PackagePath": "staticwebassets\\IMG\\Food\\Vino.png"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\beer.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Food\\beer.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Food\\cocktail.jpg",
+      "PackagePath": "staticwebassets\\IMG\\Food\\cocktail.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\Menu.jpeg",
+      "PackagePath": "staticwebassets\\IMG\\Menu.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\pexels-asad-photo-maldives-2549018.jpg",
+      "PackagePath": "staticwebassets\\IMG\\pexels-asad-photo-maldives-2549018.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\pexels-colon-freld-2373201.jpg",
+      "PackagePath": "staticwebassets\\IMG\\pexels-colon-freld-2373201.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\pexels-elina-sazonova-1838554.jpg",
+      "PackagePath": "staticwebassets\\IMG\\pexels-elina-sazonova-1838554.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\IMG\\pexels-rachel-claire-6127330.jpg",
+      "PackagePath": "staticwebassets\\IMG\\pexels-rachel-claire-6127330.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\Views\\Shared\\_Layout.cshtml.css",
+      "PackagePath": "staticwebassets\\Views\\Shared\\_Layout.cshtml.css"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\packages.css",
+      "PackagePath": "staticwebassets\\css\\packages.css"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\restaurant.css",
+      "PackagePath": "staticwebassets\\css\\restaurant.css"
+    },
+    {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

@@ -1,0 +1,27 @@
+﻿@model CreateClientViewModel
+
+<div class="container">
+    <form method="post">
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="Clients.Nombre" class="form-label"></label>
+                <input type="text" class="form-control" asp-for="Clients.Nombre" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label asp-for="Clients.Email" class="form-label"></label>
+                <input type="text" class="form-control" asp-for="Clients.Email" />
+            </div>
+            <div class="col-4">
+                <label asp-for="Clients.Telefono " class="form-label"></label>
+                <input type="text" class="form-control" asp-for="Clients.Telefono" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

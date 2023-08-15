@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj": {}
+    "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj": {
+    "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
+        "projectUniqueName": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
         "projectName": "Proyecto_Turismo.Application",
-        "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
-        "packagesPath": "C:\\Users\\jorg1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\obj\\",
+        "projectPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
+        "packagesPath": "C:\\Users\\kemta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorg1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kemta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj": {
-                "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj"
+              "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj": {
+                "projectPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj"
               }
             }
           }
@@ -78,21 +73,17 @@
         }
       }
     },
-    "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj": {
+    "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
         "projectName": "Proyecto_Turismo.Domain",
-        "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
-        "packagesPath": "C:\\Users\\jorg1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\obj\\",
+        "projectPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
+        "packagesPath": "C:\\Users\\kemta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorg1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kemta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,7 +91,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -144,21 +134,17 @@
         }
       }
     },
-    "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj": {
+    "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj",
         "projectName": "Proyecto_Turismo.Persistence",
-        "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj",
-        "packagesPath": "C:\\Users\\jorg1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj",
+        "packagesPath": "C:\\Users\\kemta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Persistence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\jorg1\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\kemta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -166,18 +152,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj": {
-                "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj"
+              "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj": {
+                "projectPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj"
               },
-              "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj": {
-                "projectPath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj"
+              "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj": {
+                "projectPath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj"
               }
             }
           }

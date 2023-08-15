@@ -1,0 +1,46 @@
+﻿@model RegisterInputModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+<link rel="stylesheet" href="~/css/register.css" />
+
+<div class="container-fluid register_container">
+    <h1>Registrarse</h1>
+    <p>Ya tienes una cuenta? <a asp-area="" asp-controller="Account" asp-action="Login">Iniciar Sesión</a></p>
+    <div class="input_content">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-3">
+                    <input type="email" class="form-control input_email" asp-for="@Model.Email" placeholder="Email" />
+                    <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <input type="password" asp-for="@Model.Password" class="form-control input_password" placeholder="Password" />
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <input type="password" asp-for="@Model.ConfirmPassword" class="form-control input_password" placeholder="Confirm Password" />
+                    <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button id="btn_register" type="submit" class="btn btn-success">
+                        <i class="fa-solid fa-floppy-disk"></i> Registrarse
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

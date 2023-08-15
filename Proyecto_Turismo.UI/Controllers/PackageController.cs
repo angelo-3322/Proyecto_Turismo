@@ -21,6 +21,11 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(Package);
         }
 
+        public IActionResult Packages()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Create()
         {

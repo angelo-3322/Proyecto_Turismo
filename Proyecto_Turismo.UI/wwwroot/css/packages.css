@@ -1,0 +1,14 @@
+﻿.packages_container{
+    width: 55rem;
+    margin-top: 3rem;
+}
+
+.packages_content > h1 {
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.row_card {
+    margin-bottom: 1.5rem;
+}

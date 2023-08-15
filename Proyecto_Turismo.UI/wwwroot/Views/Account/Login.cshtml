@@ -1,0 +1,65 @@
+﻿@model LoginInputModel
+
+<link href="~/css/login.css" rel="stylesheet" />
+<div class="container-fluid login_container"> 
+    <h1>Iniciar Sesión</h1>
+    <p>No tienes una cuenta aún? <a asp-area="" asp-controller="Account" asp-action="Register">Registrarse</a></p>
+    <div class="input_content">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <input asp-for="Email" type="email" class="form-control input_email" placeholder="Email" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <input asp-for="Password" type="password" class="form-control input_password" placeholder="Password" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+                <div class="col col_check">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" checked />
+                        <label class="form-check-label"> Remember me </label>
+                    </div>
+                </div>
+
+                <div class="col col_password">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="signIn" class="btn btn-primary btn-block mb-4">Iniciar Sesión</button>
+
+            <!-- Register buttons -->
+                @*<p>or sign up with:</p>
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+                </button>*@
+        </form>
+    </div> 
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

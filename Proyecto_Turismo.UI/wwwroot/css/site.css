@@ -1,4 +1,7 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*html {
   font-size: 14px;
 }
 
@@ -11,8 +14,68 @@ html {
 html {
   position: relative;
   min-height: 100%;
+}*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-body {
-  margin-bottom: 60px;
+a {
+    text-decoration: none;
+    vertical-align: middle;
 }
+
+.navbar_container > a {
+    background: linear-gradient(to right, blue, white, red, red, white, blue);
+    color: black;
+    font-family: 'Playfair Display', serif;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-style: italic;
+    padding: 15px;
+    margin-left: 10px;
+}
+
+.navbar_container {
+    height: 5rem
+}
+
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+    color: black;
+}
+
+.navbar-scroll {
+    background-color: #81c9fa;
+}
+
+.navbar-scrolled {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-size: unset;
+    height: 3.5rem;
+}
+
+.nav-item > a.nav-link {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    position: relative;
+    left: 17rem;
+}
+
+#sign, #register {
+    padding: 9px;
+    position: relative;
+    left: 18rem;
+    color: white;
+    font-size: 16px;
+    background-color: black;
+}
+

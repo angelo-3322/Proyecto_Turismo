@@ -1,0 +1,50 @@
+﻿.register_container {
+    width: 35rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 17rem;
+}
+
+.register_container > h1 {
+        font: 36px 'Montserrat', sans-serif;
+        font-weight: 900;
+        line-height: 60px;
+        letter-spacing: 0em;
+        text-align: center;
+}
+
+.register_container > p {
+        font: 16px 'Roboto', sans-serif;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: center;
+}
+
+.input_content{
+    margin: 3rem 2rem;
+}
+
+.input_password::placeholder, .input_email::placeholder {
+    color: #C4C4C4;
+}
+
+.input_email, .input_password {
+    border: 1px solid #F1F1F1;
+    box-shadow: 0px 2px 6px 0px #00000026 inset;
+    border-radius: 8px;
+    width: 508.4427490234375px;
+    height: 57.91188430786133px;
+    padding-left: 1.5rem;
+}
+
+.input_email, .input_password {
+    margin-bottom: 1.5rem;
+}
+
+#btn_register{
+    width: 32rem;
+    height: 44px;
+    position:relative;
+    margin-top: 30px;
+}
