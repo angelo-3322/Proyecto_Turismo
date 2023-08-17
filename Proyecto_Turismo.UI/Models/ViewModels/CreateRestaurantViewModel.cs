@@ -1,4 +1,5 @@
 ﻿using Proyecto_Turismo.Domain.DTOs.Facturas;
+using Proyecto_Turismo.Domain.DTOs.Menu;
 using Proyecto_Turismo.Domain.DTOs.Reservaciones;
 using Proyecto_Turismo.Domain.DTOs.Restaurante;
 
@@ -9,10 +10,10 @@ namespace Proyecto_Turismo.UI.Models.ViewModels
         public CreateRestaurantViewModel()
         {
             Restaurants = new CreateRestaurantDTO();
-            Reservations = new List<ListReservationDTO>();
+            menus = new List<ListMenuDTO>();
         }
 
-        public List<ListReservationDTO> Reservations { get; set; }
+        public List<ListMenuDTO> menus { get; set; }
 
         public CreateRestaurantDTO Restaurants { get; set; }
     }

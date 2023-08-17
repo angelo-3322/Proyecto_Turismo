@@ -22,7 +22,7 @@ namespace Proyecto_Turismo.Application.Services
         public EditRestaurantDTO Get(int id)
         {
             Restaurante restaurant = _repository.Get(s => s.Id == id);
-            return new EditRestaurantDTO(restaurant.Id, restaurant.Nombre,restaurant.IdMenu);
+            return new EditRestaurantDTO(restaurant.Id, restaurant.Nombre);
         }
 
         public IEnumerable<ListRestaurantDTO> GetAll()
@@ -30,10 +30,10 @@ namespace Proyecto_Turismo.Application.Services
             List<Restaurante> restaurantes =
                 _repository.GetAll
                     (s => string.IsNullOrEmpty(s.Nombre.ToString()),
-                    includes: i => i.menu).ToList();
+                    includes: i => i.Menu).ToList();
 
             return restaurantes.ConvertAll
-                (s => new ListRestaurantDTO(s.Id,s.Nombre,s.IdMenu));
+                (s => new ListRestaurantDTO(s.Id, s.Nombre, s.Menu.Nombre));
         }
 
         public Result<int> Create(CreateRestaurantDTO dto)
@@ -88,7 +88,6 @@ namespace Proyecto_Turismo.Application.Services
             }
 
             restaurante.Nombre = dto.Nombre;
-            restaurante.IdMenu = dto.IdMenu;
 
             try
             {

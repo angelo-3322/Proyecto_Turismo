@@ -1,5 +1,6 @@
 ﻿using Proyecto_Turismo.Application.Components;
 using Proyecto_Turismo.Domain.DTOs.Cliente;
+using Proyecto_Turismo.Domain.DTOs.Reservaciones;
 using Proyecto_Turismo.Domain.DTOs.Restaurante;
 using Proyecto_Turismo.Domain.Entities;
 using System;
@@ -12,6 +13,8 @@ namespace Proyecto_Turismo.Application.Contracs.Services
 {
     public interface IRestauranteService
     {
+        EditRestaurantDTO Get(int id);
+
         IEnumerable<ListRestaurantDTO> GetAll();
 
         Result<int> Create(CreateRestaurantDTO dto);

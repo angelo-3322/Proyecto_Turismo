@@ -17,7 +17,7 @@ namespace Proyecto_Turismo.Domain.Entities
         [ForeignKey("Menu")]
         public int IdMenu { get; set; }
 
-        public Menu menu { get; private set; }
+        public Menu Menu { get; private set; }
 
         public static Restaurante Create(string nombre,int idmenu)
         {

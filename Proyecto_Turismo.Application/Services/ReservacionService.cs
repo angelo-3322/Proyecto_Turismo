@@ -22,26 +22,19 @@ namespace Proyecto_Turismo.Application.Services
         public EditReservationDTO Get(int id)
         {
             Reservacion reservation = _repository.Get(s => s.Id == id);
-            return new EditReservationDTO(reservation.Id,reservation.IdPaquete ,reservation.IdCliente,reservation.FechaInicio, reservation.FechaFin,reservation.Activa);
+            return new EditReservationDTO(reservation.Id,reservation.FechaInicio, reservation.FechaFin,reservation.Activa);
         }
 
         public IEnumerable<ListReservationDTO> GetAll()
         {
             List<Reservacion> reservaciones =
                 _repository.GetAll
-                    (r => r.Activa,
-                     r => r.Cliente,
-                     r => r.Paquete,
-                     r => r.Habitacion).ToList();
+                    (s => s.FechaInicio.Date >= DateTime.Now.Date.AddMonths(-1) || s.FechaFin.Date >= DateTime.Now.Date.AddMonths(-1),
+                    includes: new Expression<Func<Reservacion, object>>[] { i => i.Habitacion, i => i.Cliente, i => i.Paquete }).ToList();
+
 
             return reservaciones.ConvertAll
-                (s => new ListReservationDTO(
-                s.Id,s.IdHabitaciones,
-                s.IdPaquete,
-                s.IdCliente,
-                s.FechaInicio, 
-                s.FechaFin,
-                s.Activa));
+                (s => new ListReservationDTO(s.Id,  s.Cliente.Nombre, s.Paquete.Nombre,s.Habitacion.TipoHabitacion, s.FechaInicio, s.FechaFin, s.Activa));
         }
 
         public Result<int> Create(CreateReservationDTO dto)
@@ -98,8 +91,6 @@ namespace Proyecto_Turismo.Application.Services
                 return Result.Fail("reservacion not found");
             }
 
-            reservacion.IdHabitaciones = dto.IdHabitaciones;
-            reservacion.IdPaquete = dto.IdPaquete;
             reservacion.FechaInicio = dto.FechaInicio;
             reservacion.FechaFin = dto.FechaFin;
             reservacion.Activa = dto.Activa;

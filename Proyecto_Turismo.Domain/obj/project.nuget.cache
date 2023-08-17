@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yaFwXBdhZCobIYG+qdTgCuoNABTTBs32ZPK74yAsBm0OIqRaE70lmcDiT8ojOfbtqfTi0V54xEms401HisiAxg==",
+  "dgSpecHash": "uyD7wNs82bYCxFW/6mmwKFc/QK5WAuHdFSuDgdcWmQwzOcGuC9lvooF+q/83Q38JdFOGthuHxP2i1u+r0CGTRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
+  "projectFilePath": "C:\\Users\\jorg1\\Source\\Repos\\Proyecto_Turismo\\Proyecto_Turismo.Domain\\Proyecto_Turismo.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\kemta\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.20\\microsoft.entityframeworkcore.abstractions.6.0.20.nupkg.sha512"
+    "C:\\Users\\jorg1\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.20\\microsoft.entityframeworkcore.abstractions.6.0.20.nupkg.sha512"
   ],
   "logs": []
 }

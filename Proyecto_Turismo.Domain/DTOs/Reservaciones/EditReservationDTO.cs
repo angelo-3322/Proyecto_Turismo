@@ -6,15 +6,12 @@ namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
 {
     public class EditReservationDTO
     {
-        public EditReservationDTO() { } 
+        public EditReservationDTO() { }
 
-        public EditReservationDTO(int idhabitaciones, int idpaquete, int idcliente, DateTime fechainicio, DateTime fechafin, bool activo)
+        public EditReservationDTO(int id, DateTime fechainicio, DateTime fechafin, bool activo)
             : this()
         {
 
-            IdHabitaciones = idhabitaciones;
-            IdPaquete = idpaquete;
-            IdCliente = idcliente;
             FechaInicio = fechainicio;
             FechaFin = fechafin;
             Activa = activo;
@@ -22,27 +19,14 @@ namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
 
         public int Id { get; private set; }
 
-        [Required]
-        [ForeignKey("Habitacion")]
-        public int IdHabitaciones { get;  set; }
-
 
         [Required]
-        [ForeignKey("Paquete")]
-        public int IdPaquete { get;  set; }
-
+        public DateTime FechaInicio { get; set; }
 
         [Required]
-        [ForeignKey("Cliente")]
-        public int IdCliente { get;  set; }
+        public DateTime FechaFin { get; set; }
 
         [Required]
-        public DateTime FechaInicio { get;  set; }
-
-        [Required]
-        public DateTime FechaFin { get;  set; }
-
-        [Required]
-        public bool Activa { get;  set; }
+        public bool Activa { get; set; }
     }
 }
