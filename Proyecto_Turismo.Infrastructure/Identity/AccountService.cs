@@ -9,12 +9,15 @@ namespace Proyecto_Turismo.Infrastructure.Identity
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public AccountService(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            SignInManager<IdentityUser> signInManager,
+            RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
         }
         public async Task<Result> Login(string email, string password)
         {
@@ -31,6 +34,10 @@ namespace Proyecto_Turismo.Infrastructure.Identity
 
         public async Task<Result> Register(string email, string password, string role)
         {
+            if (!(role == "Comun" || role == "Admin"))
+            {
+                return Result.Fail("Rol no válido.");
+            }
             var user = new IdentityUser { UserName = email, Email = email,};
             var result = await _userManager.CreateAsync(user, password);
 
@@ -43,18 +50,21 @@ namespace Proyecto_Turismo.Infrastructure.Identity
                 }
                 return Result.Fail(builder.ToString());
             }
-            if (role == "Comun" || role == "Admin") // roles permitidos
+            // Verificar si el rol ya existe
+            if (!await _roleManager.RoleExistsAsync(role))
             {
-                var roleResult = await _userManager.AddToRoleAsync(user, role);
+                // Si no existe, crearlo
+                var roleResult = await _roleManager.CreateAsync(new IdentityRole(role));
                 if (!roleResult.Succeeded)
                 {
-                    // Manejar el error si la asignación del rol falla
-                    return Result.Fail("Error al asignar el rol.");
+                    return Result.Fail("Error al crear el rol.");
                 }
             }
-            else
+            // Asignar el rol al usuario
+            var addToRoleResult = await _userManager.AddToRoleAsync(user, role);
+            if (!addToRoleResult.Succeeded)
             {
-                return Result.Fail("Rol no válido.");
+                return Result.Fail("Error al asignar el rol.");
             }
             return Result.Ok();
         }

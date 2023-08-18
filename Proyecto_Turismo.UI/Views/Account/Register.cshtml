@@ -27,6 +27,7 @@
                 <div class="col-3">
                     <input type="password" asp-for="@Model.ConfirmPassword" class="form-control input_password" placeholder="Confirm Password" />
                     <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
+@*                    <button id="viewPassword" type="button" class="btn btn-default"><i class="fa-solid fa-eye"></i></button>*@
                 </div>
             </div>
             <div class="row">
@@ -36,6 +37,7 @@
                     </button>
                 </div>
             </div>
+            <input type="hidden" asp-for="@Model.Role" value="Comun" />
         </form>
     </div>
 </div>
@@ -44,3 +46,17 @@
 {
     <partial name="_ValidationScriptsPartial" />
 }
+<script>
+    $(document).ready(function(){
+        $("#viewPassword").click(function(){
+            var input = $("#passwordField");
+            if (input.attr("type") === "password") {
+                input.attr("type", "text");
+                $(this).text("Ocultar");
+            } else {
+                input.attr("type", "password");
+                $(this).text("Mostrar");
+            }
+        });
+    });
+</script>

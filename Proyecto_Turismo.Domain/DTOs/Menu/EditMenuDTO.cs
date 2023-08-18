@@ -21,6 +21,6 @@ namespace Proyecto_Turismo.Domain.DTOs.Menu
 
         [Required]
         [StringLength(20, MinimumLength = 2)]
-        public string Nombre { get; private set; }
+        public string Nombre { get; set; }
     }
 }
