@@ -10,6 +10,7 @@ namespace Proyecto_Turismo.UI.Models.ViewModels
             Rooms = new CreateHotelRoomDTO();
         }
         public CreateHotelRoomDTO Rooms { get; set; }
+        public IFormFile ImageFile { get; set; } // tipo formulario para la imagen
     }
 
 }

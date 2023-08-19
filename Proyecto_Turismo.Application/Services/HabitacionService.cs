@@ -48,9 +48,9 @@ namespace Proyecto_Turismo.Application.Services
             Habitacion habitacion =
                 Habitacion.Create
                 (
-                    dto.Capacidad,
-                    dto.TipoHabitacion,
                     dto.NumeroHabitaciones,
+                    dto.TipoHabitacion,
+                    dto.Capacidad,
                     dto.Precio,
                     dto.Disponible,
                     dto.Imagen

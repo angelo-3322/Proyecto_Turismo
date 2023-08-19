@@ -29,14 +29,23 @@ namespace Proyecto_Turismo.UI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CreateHotelRoomViewModel model)
+        public async  Task<IActionResult> Create(CreateHotelRoomViewModel model)
         {
             if (ModelState.IsValid)
             {
+                if (model.ImageFile != null)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await model.ImageFile.CopyToAsync(memoryStream);
+                        model.Rooms.Imagen = memoryStream.ToArray();
+                    }
+                }
+
                 var result = _habitacionService.Create(model.Rooms);
                 if (result.IsSuccess)
                 {
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Index", "HotelRoom");
                 }
 
                 ModelState.AddModelError(string.Empty, result.Error);
@@ -52,31 +61,64 @@ namespace Proyecto_Turismo.UI.Controllers
             var model =
                 new EditHotelRoomViewModel
                 {
+                    Id = room.Id,
                     NumeroHabitaciones = room.NumeroHabitaciones,
                     TipoHabitacion = room.TipoHabitacion,
                     Capacidad = room.Capacidad,
                     Precio = room.Precio,
+                    Disponible = room.Disponible,
+                    Imagen = room.Imagen,
+                    ImageSrc = "data:image/jpeg;base64," + Convert.ToBase64String(room.Imagen)
                 };
 
             return View(model);
         }
 
+
         [HttpPost("/hotelroom/edit/{id}")]
-        public IActionResult Edit([FromRoute] int id, EditHotelRoomViewModel model)
+        public async Task<IActionResult> Edit([FromRoute] int id, EditHotelRoomViewModel model)
         {
             if (ModelState.IsValid)
             {
-                //var room = new EditHotelRoomDTO(id, model.NumeroHabitaciones, model.TipoHabitacion, model.Capacidad,model.Precio);
-                //var result = _habitacionService.Edit(room);
+                byte[] imageBytes = null;
 
-                //if (result.IsSuccess)
-                //{
-                //    return RedirectToAction(nameof(Index));
-                //}
+                if (model.ImageFile != null && model.ImageFile.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await model.ImageFile.CopyToAsync(memoryStream);
+                        imageBytes = memoryStream.ToArray();
+                    }
+                }
+                else
+                {
+                    imageBytes = model.Imagen; // Usar la imagen actual si no se ha proporcionado una nueva.
+                }
 
-                //ModelState.AddModelError(string.Empty, result.Error);
+                // Asegurarse de que se pasen los bytes de imagen correctos al DTO.
+                var room = new EditHotelRoomDTO(id, model.NumeroHabitaciones, model.TipoHabitacion, model.Capacidad, model.Precio, model.Disponible, imageBytes);
+                var result = _habitacionService.Edit(room);
+
+                if (result.IsSuccess)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+
+                ModelState.AddModelError(string.Empty, result.Error);
             }
             return View(model);
         }
+
+        [HttpDelete("/hotelroom/delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            var result = _habitacionService.Delete(id);
+            if (result.IsSuccess)
+            {
+                return Json(new { success = true });
+            }
+            return Json(new { success = false });
+        }
+
     }
 }
