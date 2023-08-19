@@ -27,21 +27,60 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="" asp-action="">Reservaciones</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Package" asp-action="Packages">Paquetes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Restaurant">Restaurante</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="HotelRoom" asp-action="Index">Habitaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="" asp-action="">Reservaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="" asp-action="">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="" asp-action="">Restaurante</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="" asp-action="">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-dark ms-3" id="sign" asp-area="" asp-controller="Account" asp-action="Logout">Cerrar Sesión</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="" asp-action="">Mis Reservaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="" asp-action="">Reservaciones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Package" asp-action="Packages">Paquetes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Restaurant">Restaurante</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Principal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link btn btn-dark ms-3" id="sign" asp-area="" asp-controller="Account" asp-action="Logout">Cerrar Sesión</a>
+                                </li>
+                            }
+                        }
+                        else
+                        {                
                         <li class="nav-item">
                             <a class="nav-link btn btn-dark ms-3" id="sign" asp-area="" asp-controller="Account" asp-action="Login">Iniciar Sesión</a>
                         </li>
-                        @*<li class="nav-item">
-                        <a class="nav-link btn btn-dark ms-3" id="register" asp-area="" asp-controller="Account" asp-action="Register">Registrarse</a>
-                        </li>*@
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-dark ms-3" id="register" asp-area="" asp-controller="Account" asp-action="Register">Registrarse</a>
+                        </li>
+                        }
                     </ul>
                 </div>
             </div>

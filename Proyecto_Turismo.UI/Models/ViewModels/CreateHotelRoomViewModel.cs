@@ -8,11 +8,10 @@ namespace Proyecto_Turismo.UI.Models.ViewModels
         public CreateHotelRoomViewModel()
         {
             Rooms = new CreateHotelRoomDTO();
-
         }
-
-
         public CreateHotelRoomDTO Rooms { get; set; }
+
+        public List<IFormFile> Images { get; set; }
     }
 
 }

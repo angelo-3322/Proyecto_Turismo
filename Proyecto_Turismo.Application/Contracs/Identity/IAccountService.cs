@@ -7,5 +7,6 @@ namespace Proyecto_Turismo.Application.Contracs.Identity
     {
         Task<Result> Register(string email, string password, string role);
         Task<Result> Login(string email, string password);
+        Task<Result> Logout();
     }
 }

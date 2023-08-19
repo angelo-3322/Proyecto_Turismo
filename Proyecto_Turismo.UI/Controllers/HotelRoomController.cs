@@ -6,11 +6,11 @@ using Proyecto_Turismo.UI.Models.ViewModels;
 
 namespace Proyecto_Turismo.UI.Controllers
 {
-    public class HotelRoomController1 : Controller
+    public class HotelRoomController : Controller
     {
         private readonly IHabitacionService _habitacionService;
 
-        public HotelRoomController1(IHabitacionService habitacionService)
+        public HotelRoomController(IHabitacionService habitacionService)
         {
             _habitacionService = habitacionService;
         }
@@ -25,7 +25,6 @@ namespace Proyecto_Turismo.UI.Controllers
         public IActionResult Create()
         {
             var model = new CreateHotelRoomViewModel();
-
             return View(model);
         }
 

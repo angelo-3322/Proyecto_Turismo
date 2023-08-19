@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Proyecto_Turismo.Application.Contracs.Identity;
 using Proyecto_Turismo.UI.Models.ViewModels.AccountModels;
 
@@ -30,7 +31,7 @@ namespace ToDo.IU.Controllers
 
                     if (result.IsSuccess)
                     {
-                       return LocalRedirect("/home/index");
+                       return RedirectToAction("Index", "Home");
                     }
                     
                 }
@@ -55,14 +56,27 @@ namespace ToDo.IU.Controllers
 
                     if (result.IsSuccess)
                     {
-                        return LocalRedirect("/home/index");
-                    }
+                        return RedirectToAction("Index", "Home");
+                }
 
                 
                 ModelState.AddModelError(string.Empty, result.Error);
             }
 
             return View(inputModel);
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            var result = await _accountService.Logout();
+
+            if (result.IsSuccess)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return StatusCode(500);
         }
     }
 }

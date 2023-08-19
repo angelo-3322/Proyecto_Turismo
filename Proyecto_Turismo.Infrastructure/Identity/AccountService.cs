@@ -68,5 +68,10 @@ namespace Proyecto_Turismo.Infrastructure.Identity
             }
             return Result.Ok();
         }
+        public async Task<Result> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return Result.Ok();
+        }
     }
 }
