@@ -3,6 +3,7 @@ using Proyecto_Turismo.Application.Contracs.Repositories;
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Domain.DTOs.Producto;
 using Proyecto_Turismo.Domain.Entities;
+using System.Linq.Expressions;
 
 namespace Proyecto_Turismo.Application.Services
 {
@@ -62,6 +63,7 @@ namespace Proyecto_Turismo.Application.Services
             prod.Nombre = dto.Nombre;
             prod.Descripcion = dto.Descripcion;
             prod.Precio = dto.Precio;
+            prod.IdMenu = dto.IdMenu;
 
             try
             {
@@ -79,7 +81,7 @@ namespace Proyecto_Turismo.Application.Services
         public EditProductoDTO Get(int id)
         {
             Producto prod = _repository.Get(s => s.Id == id);
-            return new EditProductoDTO(prod.Id, prod.Nombre,prod.Descripcion,prod.Precio);
+            return new EditProductoDTO(prod.Id, prod.Nombre,prod.Descripcion,prod.Precio,prod.IdMenu);
         }
 
         public IEnumerable<ListProductoDTO> GetAll()

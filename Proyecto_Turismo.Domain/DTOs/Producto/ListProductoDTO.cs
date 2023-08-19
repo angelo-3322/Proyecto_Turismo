@@ -31,5 +31,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Producto
 
         [ForeignKey("Menu")]
         public int IdMenu { get; set; }
+
+        //public string NombreMenu { get; set; }
     }
 }

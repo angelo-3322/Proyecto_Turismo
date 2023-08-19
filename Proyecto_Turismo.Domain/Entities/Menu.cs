@@ -14,6 +14,8 @@ namespace Proyecto_Turismo.Domain.Entities
         [StringLength(20, MinimumLength = 2)]
         public string Nombre { get; set; }
 
+        public List<Producto> Productos { get; set; }
+
         public static Menu Create(string nombre)
         {
             return

@@ -1,17 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Proyecto_Turismo.Domain.DTOs.Menu;
+using Proyecto_Turismo.Domain.DTOs.Producto;
+using System.ComponentModel.DataAnnotations;
 
 namespace Proyecto_Turismo.UI.Models.ViewModels
 {
     public class EditProductViewModel
     {
-        [Required]
-        [StringLength(25, MinimumLength = 5)]
-        public string Nombre { get; set; }
+        public EditProductViewModel()
+        {
+            Menus = new List<ListMenuDTO>();
+        }
 
-        [StringLength(30, MinimumLength = 7)]
-        public string Descripcion { get; set; }
-
-        [Required]
-        public float Precio { get; set; }
+        public EditProductoDTO Product { get; set; }
+        public List<ListMenuDTO> Menus { get; set; }
     }
 }
+

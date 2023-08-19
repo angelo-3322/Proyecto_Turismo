@@ -1,0 +1,37 @@
+﻿@model CreateProductViewModel
+@{
+    ViewBag.Title = "Crear Producto";
+}
+
+<h2>Crear Producto</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Nombre">Nombre:</label>
+        <input asp-for="Products.Nombre" class="form-control" id="Nombre" required />
+        <span asp-validation-for="Products.Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Descripcion">Descripción:</label>
+        <input asp-for="Products.Descripcion" class="form-control" id="Descripcion" required />
+        <span asp-validation-for="Products.Descripcion" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Precio">Precio:</label>
+        <input asp-for="Products.Precio" class="form-control" id="Precio" required />
+        <span asp-validation-for="Products.Precio" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="IdMenu">Menú:</label>
+        <select asp-for="Products.IdMenu" asp-items="@(new SelectList(Model.Menus, "Id", "Nombre"))" class="form-control" id="IdMenu" required>
+            <option value="">Selecciona un menú</option>
+        </select>
+        <span asp-validation-for="Products.IdMenu" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

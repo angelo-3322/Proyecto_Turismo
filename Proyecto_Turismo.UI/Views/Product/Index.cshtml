@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProductoViewModel>
+@{
+    ViewData["Title"] = "Productos";
+}
+
+<h1>Productos</h1>
+
+<a href="@Url.Action("Create", "Product")" class="btn btn-primary mb-3">Agregar Nuevo Producto</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Menú</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var productViewModel in Model)
+        {
+            <tr id="row-@productViewModel.Producto.Id">
+                <td>@productViewModel.Producto.Nombre</td>
+                <td>@productViewModel.Producto.Descripcion</td>
+                <td>@productViewModel.Producto.Precio</td>
+                <td>@productViewModel.NombreMenu</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Product", new { id = productViewModel.Producto.Id })" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <button onclick="deleteProduct(@productViewModel.Producto.Id)" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function deleteProduct(id) {
+        if (window.confirm("¿Estás seguro de que deseas eliminar este producto?")) {
+            fetch(`/product/delete/${id}`, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Producto eliminado con éxito");
+                        // eliminando la fila del producto.
+                        document.getElementById(`row-${id}`).remove();
+                    } else {
+                        alert("Error al eliminar el producto");
+                    }
+                });
+        }
+    }
+</script>
