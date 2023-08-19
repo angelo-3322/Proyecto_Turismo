@@ -25,9 +25,9 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public bool Disponible { get; private set; }
 
-        public ICollection<Imagen> Imagenes { get; set; } = new List<Imagen>();
+        public byte[] Imagen { get; private set; }
 
-        public static Habitacion Create(int numerohabitaciones, string tipohabitacion, int capacidad,float precio, bool disponible, List<byte[]> imagenes)
+        public static Habitacion Create(int numerohabitaciones, string tipohabitacion, int capacidad,float precio, bool disponible, byte[] imagenes)
         {
             var habitacion =
                 new Habitacion()
@@ -37,24 +37,20 @@ namespace Proyecto_Turismo.Domain.Entities
                     Capacidad = capacidad,
                     Precio = precio,
                     Disponible = disponible,
-                    Imagenes = new List<Imagen>()
+                    Imagen = imagenes
                 };
             
-            foreach (var imagen in imagenes)
-            {
-                habitacion.Imagenes.Add(new Imagen { DatosImagen = imagen });
-            }
-
             return habitacion;
         }
 
-        public void Update(int numerohabitaciones, string tipohabitacion, int capacidad, float precio, bool disponble)
+        public void Update(int numerohabitaciones, string tipohabitacion, int capacidad, float precio, bool disponble, byte[] imagenes)
         {
             NumeroHabitaciones = numerohabitaciones;
             TipoHabitacion = tipohabitacion;
             Capacidad = capacidad;
             Precio = precio;
             Disponible = disponble;
+            Imagen = imagenes;
 
         }
     }

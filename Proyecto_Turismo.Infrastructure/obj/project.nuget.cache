@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kZUM90Wn5r3bijy7tiK5BoHAdBFR/b7hRe7Ml9eikx79l9ers/izsSbiZMKUqa5AIu/xoz0bx2FbkGLnazE73g==",
+  "dgSpecHash": "q5/D+JLoxfulR19ETyCd2Gmr9LkeaZRyCAxwmBWmvixPShKDG8Hj7wwLbLt8nlQ79Oea28zOwsGAm09cZaAXgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto-V2\\Proyecto_Turismo.Infrastructure\\Proyecto_Turismo.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.Infrastructure\\Proyecto_Turismo.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andiel\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\Andiel\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

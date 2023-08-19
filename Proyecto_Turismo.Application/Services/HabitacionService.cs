@@ -20,19 +20,15 @@ namespace Proyecto_Turismo.Application.Services
 
         public EditHotelRoomDTO Get(int id)
         {
-            Habitacion room = _repository.Get(s => s.Id == id, includes: i => i.Imagenes);
-
-             // Mapear la lista de Imagen a una lista de byte[]
-             List<byte[]> imagenes = room.Imagenes.Select(i => i.DatosImagen).ToList();
-
-            return new EditHotelRoomDTO(room.Id, room.NumeroHabitaciones, room.TipoHabitacion, room.Capacidad, room.Precio,room.Disponible, imagenes);
+            Habitacion room = _repository.Get(s => s.Id == id);
+            return new EditHotelRoomDTO(room.Id, room.NumeroHabitaciones, room.TipoHabitacion, room.Capacidad, room.Precio,room.Disponible,room.Imagen);
         }
 
         public IEnumerable<ListHotelRoomDTO> GetAll()
         {
             List<Habitacion> habitaciones =
                 _repository.GetAll
-                    (s => !string.IsNullOrEmpty(s.NumeroHabitaciones.ToString()), includes: s => s.Imagenes).ToList();
+                    (s => !string.IsNullOrEmpty(s.NumeroHabitaciones.ToString())).ToList();
 
             return habitaciones.Select(s =>
         new ListHotelRoomDTO(
@@ -42,7 +38,7 @@ namespace Proyecto_Turismo.Application.Services
             s.Capacidad,
             s.Precio,
             s.Disponible,
-            s.Imagenes.Select(i => i.DatosImagen).ToList()
+            s.Imagen
         ));
         }
 
@@ -57,7 +53,7 @@ namespace Proyecto_Turismo.Application.Services
                     dto.NumeroHabitaciones,
                     dto.Precio,
                     dto.Disponible,
-                    dto.Imagenes
+                    dto.Imagen
                 );
 
             try
@@ -77,7 +73,7 @@ namespace Proyecto_Turismo.Application.Services
         {
             Habitacion existingHotelRoom = _repository.GetAll().FirstOrDefault(t => t.Id == dto.Id);
 
-            existingHotelRoom.Update(dto.NumeroHabitaciones, dto.TipoHabitacion, dto.Capacidad, dto.Precio, dto.Disponible);
+            existingHotelRoom.Update(dto.NumeroHabitaciones, dto.TipoHabitacion, dto.Capacidad, dto.Precio, dto.Disponible,dto.Imagen);
 
             _repository.Save();
 
@@ -86,10 +82,27 @@ namespace Proyecto_Turismo.Application.Services
 
         public Result Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Habitacion habitacion = _repository.Get(s => s.Id == id);
+                if (habitacion == null)
+                {
+                    return Result.Fail("Habitación no encontrada.");
+                }
+
+                _repository.Delete(habitacion);
+                _repository.Save();
+
+                return Result.Ok();
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail($"Error al eliminar la habitación. Detalles: {ex.Message}");
+            }
         }
 
-        
+
+
 
 
     }

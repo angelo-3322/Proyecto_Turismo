@@ -19,7 +19,6 @@ namespace Proyecto_Turismo.Persistence.Contexts
         public DbSet<Restaurante> Restaurante { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Producto> Productos { get; set; }
-        public DbSet<Imagen> Imagenes { get; set; }
 
 
 

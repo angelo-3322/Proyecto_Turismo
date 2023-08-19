@@ -5,7 +5,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
     {
         public ListHotelRoomDTO() {}
 
-        public ListHotelRoomDTO(int id, int numerohabitaciones, string tipohabitacion, int capacidad, float precio,bool disponible , List<byte[]> imagenes)
+        public ListHotelRoomDTO(int id, int numerohabitaciones, string tipohabitacion, int capacidad, float precio,bool disponible , byte[] imagenes)
         {
             Id = id;
             NumeroHabitaciones = numerohabitaciones;
@@ -13,7 +13,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
             Capacidad = capacidad;
             Precio = precio;
             Disponible = disponible;
-            Imagenes = imagenes;
+            Imagen = imagenes;
         }
 
         public int Id { get; set; }
@@ -27,6 +27,6 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
         public float Precio { get; set; }
         public bool Disponible { get; set; }
 
-        public List<byte[]> Imagenes { get; set; }
+        public byte[] Imagen { get; set; }
     }
 }

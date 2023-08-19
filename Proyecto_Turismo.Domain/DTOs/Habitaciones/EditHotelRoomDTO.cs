@@ -1,5 +1,4 @@
-﻿using Proyecto_Turismo.Domain.DTOs.Imagen;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 
 namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
@@ -8,7 +7,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
     {
         public EditHotelRoomDTO() { }
 
-        public EditHotelRoomDTO(int id, int numeroHabitacion, string tipoHabitacion, int capacidad, float precio,bool activo , List<byte[]> imagenes)
+        public EditHotelRoomDTO(int id, int numeroHabitacion, string tipoHabitacion, int capacidad, float precio,bool activo , byte[] imagenes)
             : this()
         {
             Id = id;
@@ -17,7 +16,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
             Capacidad = capacidad;
             Precio = precio;
             Disponible = activo;
-            Imagenes = imagenes;
+            Imagen = imagenes;
         }
 
         public int Id { get; set; }
@@ -36,8 +35,8 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
         public float Precio { get;  set; }
 
         [Required]
-        public bool Disponible { get; private set; }
+        public bool Disponible { get; set; }
 
-        public List<byte[]> Imagenes { get; set; }
+        public byte[] Imagen { get; set; }
     }
 }

@@ -21,6 +21,6 @@ namespace Proyecto_Turismo.Domain.DTOs.Habitaciones
         [Required]
         public bool Disponible { get;  set; }
 
-        public List<byte[]> Imagenes { get; set; } = new List<byte[]>();
+        public byte[] Imagen { get; set; }
     }
 }

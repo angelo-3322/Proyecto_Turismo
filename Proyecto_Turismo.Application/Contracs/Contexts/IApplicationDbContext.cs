@@ -13,7 +13,6 @@ namespace Proyecto_Turismo.Application.Contracts.Contexts
         DbSet<Restaurante> Restaurante { get; set;  }
         DbSet<Menu> Menus { get; set; }
         DbSet<Producto> Productos { get; set; }
-        DbSet<Imagen> Imagenes { get; set; }
 
 
 

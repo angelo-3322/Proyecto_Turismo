@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sUQBGmzETWL9UyGkFYre6mKYcOwEeK6UrMap9ABeN+Ktp73yptmfbSUf1YZgz2YJnhjdCFCqe4KWKioLWimSkg==",
+  "dgSpecHash": "eGwKwt1JU2yHeo9LqtjDtULTYEr6lNB689kGIOWAU6CEUCiqm19sLKzIzVAG9ltUYAUDe/jg9HpLjln12oNAdQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto-V2\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.Persistence\\Proyecto_Turismo.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andiel\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Andiel\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

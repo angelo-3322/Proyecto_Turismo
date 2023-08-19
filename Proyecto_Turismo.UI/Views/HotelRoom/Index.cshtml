@@ -26,14 +26,11 @@
                 <td>@room.Precio</td>
                 <td>@room.Disponible</td>
                 <td>
-                    @if (room.Imagenes != null && room.Imagenes.Count > 0)
+                    @if (room.Imagen != null)
                     {
-                        foreach (var image in room.Imagenes)
-                        {
-                            var imageBase64 = Convert.ToBase64String(image);
-                            var imgSrc = String.Format("data:image/gif;base64,{0}", imageBase64);
-                            <img src="@imgSrc" width="100" height="100" />
-                        }
+                        var imageBase64 = Convert.ToBase64String(room.Imagen);
+                        var imgSrc = String.Format("data:image/jpeg;base64,{0}", imageBase64);
+                        <img src="@imgSrc" width="100" height="100" />
                     }
                 </td>
                 <td>

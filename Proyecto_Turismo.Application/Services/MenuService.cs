@@ -1,7 +1,6 @@
 ﻿using Proyecto_Turismo.Application.Components;
 using Proyecto_Turismo.Application.Contracs.Repositories;
 using Proyecto_Turismo.Application.Contracs.Services;
-using Proyecto_Turismo.Domain.DTOs.Imagen;
 using Proyecto_Turismo.Domain.DTOs.Menu;
 using Proyecto_Turismo.Domain.Entities;
 
