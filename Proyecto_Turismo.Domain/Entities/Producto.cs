@@ -20,8 +20,8 @@ namespace Proyecto_Turismo.Domain.Entities
 
         [Required]
         [ForeignKey("Menu")]
-        public int IdMenu { get;  set; }
-        public Menu menu { get;   set; }
+        public int IdMenu { get; set; }
+        public Menu menu { get; set; }
         public static Producto Create(string nombre, string descripcion, float precio,int idmenu)
         {
             return

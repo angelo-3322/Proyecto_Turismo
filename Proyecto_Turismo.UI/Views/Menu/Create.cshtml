@@ -1,0 +1,15 @@
+﻿@model CreateMenuViewModel
+
+<h1>Crear Menú</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Menus.Nombre">Nombre del Menú</label>
+        <input asp-for="Menus.Nombre" class="form-control" />
+        <span asp-validation-for="Menus.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Crear" class="btn btn-primary" />
+        <a href="@Url.Action("Index", "Menu")" class="btn btn-secondary">Volver al Menú</a>
+    </div>
+</form>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ListMenuDTO>
+
+<h1>Menús del Restaurante</h1>
+
+<a href="@Url.Action("Create", "Menu")" class="btn btn-primary mb-3">Crear Menú</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombre del Menú</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var menu in Model)
+        {
+            <tr id="row-@menu.Id">
+                <td>@menu.Nombre</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Menu", new { id = menu.Id })" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <button onclick="deleteMenu(@menu.Id)" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        function deleteMenu(id) {
+            if (window.confirm("¿Estás seguro de que deseas eliminar este menú?")) {
+                fetch(`/menu/delete/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert("Menú eliminado con éxito");
+                            // eliminando la fila del menú.
+                            document.getElementById(`row-${id}`).remove();
+                        } else {
+                            alert("Error al eliminar el menú");
+                        }
+                    });
+            }
+        }
+    </script>
+}

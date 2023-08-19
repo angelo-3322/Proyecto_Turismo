@@ -77,5 +77,18 @@ namespace Proyecto_Turismo.UI.Controllers
             }
             return View(model);
         }
+
+        [HttpDelete("/menu/delete/{id}")]
+        public IActionResult Delete([FromRoute] int id)
+        {
+            var result = _menuService.Delete(id);
+            if (result.IsSuccess)
+            {
+                return Json(new { success = true });
+            }
+            return Json(new { success = false, error = result.Error });
+        }
+
+
     }
 }

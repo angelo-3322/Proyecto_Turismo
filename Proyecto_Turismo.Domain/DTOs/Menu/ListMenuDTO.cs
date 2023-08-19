@@ -1,6 +1,4 @@
-﻿
-
-namespace Proyecto_Turismo.Domain.DTOs.Menu
+﻿namespace Proyecto_Turismo.Domain.DTOs.Menu
 {
     public class ListMenuDTO
     {
