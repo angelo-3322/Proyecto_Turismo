@@ -1,19 +1,29 @@
 ﻿@model EditMenuViewModel
 
-<h1>Editar Menú</h1>
+@{
+    ViewData["Title"] = "Editar Menú";
+}
 
-<form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="Id" />
+<link href="~/css/menu.css" rel="stylesheet" />
 
-    <div class="form-group">
-        <label asp-for="Nombre">Nombre del Menú</label>
-        <input asp-for="Nombre" class="form-control" />
-        <span asp-validation-for="Nombre" class="text-danger"></span>
-    </div>
+<div class="container edit_container">
+    <h1>Editar Menú</h1>
 
-    <div class="form-group">
-        <input type="submit" value="Guardar Cambios" class="btn btn-primary" />
-        <a href="@Url.Action("Index", "Menu")" class="btn btn-secondary">Volver al Menú</a>
-    </div>
-</form>
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group input_edit">
+            <label asp-for="Nombre">Nombre del Menú</label>
+            <input asp-for="Nombre" class="form-control" />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar Cambios" class="btn btn-outline-success" />
+            <a href="@Url.Action("Index", "Menu")" class="btn btn-outline-secondary">Volver al Menú</a>
+        </div>
+    </form>
+</div>
+
+
 

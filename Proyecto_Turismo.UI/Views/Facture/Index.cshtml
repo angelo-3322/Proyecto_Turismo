@@ -4,7 +4,11 @@
     ViewData["Title"] = "Factures";
 }
 
-<div class="container-fluid">
+<link href="~/css/facture.css" rel="stylesheet" />
+
+<div class="container read_container">
+    <h1> Facturas </h1>
+    <a href="@Url.Action("Create", "Facture")" class="btn btn-outline-success mb-3">Crear Factura</a>
     <div class="row">
         <div class="col-12">
             <table class="table">
