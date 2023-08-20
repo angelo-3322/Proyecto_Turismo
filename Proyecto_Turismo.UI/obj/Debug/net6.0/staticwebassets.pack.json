@@ -133,6 +133,10 @@
       "PackagePath": "staticwebassets\\css\\restaurant.css"
     },
     {
+      "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\restaurant2.css",
+      "PackagePath": "staticwebassets\\css\\restaurant2.css"
+    },
+    {
       "Id": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

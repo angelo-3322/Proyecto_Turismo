@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IOi3ILhQ8QpJqVeROGLvp+uKToqOPc1qu+6kDHrh0Z8=",
+  "Hash": "aVeXK+p3l3hIzCeZUWyuSLbcbxsGQoQJR1WGcGjCxW0=",
   "Source": "Proyecto_Turismo.UI",
   "BasePath": "_content/Proyecto_Turismo.UI",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\restaurant.css"
+    },
+    {
+      "Identity": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\restaurant2.css",
+      "SourceId": "Proyecto_Turismo.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\",
+      "BasePath": "_content/Proyecto_Turismo.UI",
+      "RelativePath": "css/restaurant2.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\restaurant2.css"
     },
     {
       "Identity": "C:\\Users\\kemta\\OneDrive\\Documentos\\GitHub\\Proyecto_Turismo\\Proyecto_Turismo.UI\\wwwroot\\css\\site.css",

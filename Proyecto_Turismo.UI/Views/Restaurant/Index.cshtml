@@ -1,33 +1,40 @@
 ﻿@model List<RestauranteViewModel>
+
 @{
-    ViewData["Title"] = "Lista de Restaurantes";
+    ViewData["Title"] = "Restaurantes";
 }
 
-<h1>@ViewData["Title"]</h1>
+<link rel="stylesheet" href="~/css/restaurant2.css" />
 
-<table class="table table-bordered table-striped">
-    <thead class="table-dark">
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Menú</th>
-            <th scope="col">Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+<div class="container read_container">
+    <h1 style="padding-bottom: 1rem;">@ViewData["Title"]</h1>
+
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
             <tr>
-                <td>@item.Restaurante.Nombre</td>
-                <td>@item.NombreMenu</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Restaurante.Id" class="btn btn-warning btn-sm">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.Restaurante.Id" class="btn btn-danger btn-sm">Eliminar</a>
-                </td>
+                <th scope="col">Nombre</th>
+                <th scope="col">Menú</th>
+                <th scope="col">Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Restaurante.Nombre</td>
+                    <td>@item.NombreMenu</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Restaurante.Id" class="btn btn-outline-primary btn-sm">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@item.Restaurante.Id" class="btn btn-outline-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<div class="d-flex justify-content-between mt-3">
-    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Restaurante</a>
+    <div class="d-flex justify-content-between mt-3">
+        <a asp-action="Create" class="btn btn-outline-success">Crear Restaurante</a>
+    </div>
 </div>
+
+
