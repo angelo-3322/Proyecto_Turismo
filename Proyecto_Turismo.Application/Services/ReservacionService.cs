@@ -30,11 +30,11 @@ namespace Proyecto_Turismo.Application.Services
             List<Reservacion> reservaciones =
                 _repository.GetAll
                     (s => s.FechaInicio.Date >= DateTime.Now.Date.AddMonths(-1) || s.FechaFin.Date >= DateTime.Now.Date.AddMonths(-1),
-                    includes: new Expression<Func<Reservacion, object>>[] { i => i.Habitacion, i => i.Cliente, i => i.Paquete }).ToList();
+                    includes: new Expression<Func<Reservacion, object>>[] { i => i.Habitacion, i => i.Paquete }).ToList();
 
 
             return reservaciones.ConvertAll
-                (s => new ListReservationDTO(s.Id,  s.Cliente.Nombre, s.Paquete.Nombre,s.Habitacion.TipoHabitacion, s.FechaInicio, s.FechaFin, s.Activa));
+                (s => new ListReservationDTO(s.Id,  /*s.UserId,*/ s.Paquete.Nombre,s.Habitacion.TipoHabitacion, s.FechaInicio, s.FechaFin, s.Activa));
         }
 
         public Result<int> Create(CreateReservationDTO dto)
@@ -42,9 +42,9 @@ namespace Proyecto_Turismo.Application.Services
             Reservacion reservaciones =
                 Reservacion.Create
                 (
-                    dto.IdCliente,
-                    dto.IdPaquete,
                     dto.IdHabitaciones,
+                    dto.IdPaquete,
+                    //dto.UserId,
                     dto.FechaInicio,
                     dto.FechaFin
                 );

@@ -1,35 +1,27 @@
 ﻿@model CreateClientViewModel
 
-@{
-    ViewData["Title"] = "Crear Clientes";
-}
-
-<link href="~/css/client.css" rel="stylesheet" />
-
-<div class="container create_container">
-    <h1>Crear Cliente</h1>
+<div class="container">
     <form method="post">
         <div class="row">
-            <div class="col-4 input_create">
+            <div class="col-4">
                 <label asp-for="Clients.Nombre" class="form-label"></label>
                 <input type="text" class="form-control" asp-for="Clients.Nombre" />
             </div>
         </div>
         <div class="row">
-            <div class="col-4 input_create">
+            <div class="col-4">
                 <label asp-for="Clients.Email" class="form-label"></label>
                 <input type="text" class="form-control" asp-for="Clients.Email" />
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4 input_create">
-                <label asp-for="Clients.Telefono" class="form-label"></label>
+            <div class="col-4">
+                <label asp-for="Clients.Telefono " class="form-label"></label>
                 <input type="text" class="form-control" asp-for="Clients.Telefono" />
             </div>
         </div>
-        <div class="form-group">
-            <input type="submit" value="Crear Cliente" class="btn btn-outline-success" />
-            <a href="@Url.Action("Index", "Client")" class="btn btn-outline-secondary">Volver al Menú</a>
+        <div class="row">
+            <div class="col-7">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
         </div>
     </form>
 </div>

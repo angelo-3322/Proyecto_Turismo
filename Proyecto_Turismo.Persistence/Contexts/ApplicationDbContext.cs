@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Proyecto_Turismo.Application.Contracts.Contexts;
 using Proyecto_Turismo.Domain.Entities;
 
@@ -19,7 +20,6 @@ namespace Proyecto_Turismo.Persistence.Contexts
         public DbSet<Restaurante> Restaurante { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Producto> Productos { get; set; }
-
 
 
         public void Save()

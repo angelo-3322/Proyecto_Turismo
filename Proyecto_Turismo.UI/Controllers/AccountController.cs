@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Proyecto_Turismo.Application.Contracs.Identity;
+using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.UI.Models.ViewModels.AccountModels;
 
 namespace ToDo.IU.Controllers
@@ -8,6 +9,7 @@ namespace ToDo.IU.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountService _accountService;
+        //private readonly IClienteService _clienteService;
 
         public AccountController(IAccountService accountService)
         {

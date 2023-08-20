@@ -2666,7 +2666,8 @@
       },
       "Proyecto_Turismo.Domain/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.20"
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.20",
+          "Microsoft.Extensions.Identity.Stores": "6.0.20"
         },
         "runtime": {
           "Proyecto_Turismo.Domain.dll": {}

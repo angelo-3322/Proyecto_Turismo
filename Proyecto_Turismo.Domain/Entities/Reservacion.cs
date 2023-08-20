@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -26,10 +27,8 @@ namespace Proyecto_Turismo.Domain.Entities
 
 
         [Required]
-        [ForeignKey("Cliente")]
-        public int IdCliente { get; set; }
+        public string UserId { get; set; }
 
-        public Cliente Cliente { get; private set; }
 
         [Required]
         public DateTime FechaInicio { get; set; }
@@ -40,14 +39,14 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public bool Activa { get; set; }
 
-        public static Reservacion Create(int idhabitaciones, int idpaquete, int idcliente, DateTime fechainicio, DateTime fechafin)
+        public static Reservacion Create(int idhabitaciones, int idpaquete, /*string userid,*/ DateTime fechainicio, DateTime fechafin)
         {
             return
                 new Reservacion()
                 {
                     IdHabitaciones = idhabitaciones,
                     IdPaquete = idpaquete,
-                    IdCliente = idcliente,
+                    //UserId = userid,
                     FechaInicio = fechainicio,
                     FechaFin = fechafin,
                     Activa = true

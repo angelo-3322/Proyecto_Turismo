@@ -14,8 +14,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
         public int IdPaquete { get;  set; }
 
         [Required]
-        [ForeignKey("Cliente")]
-        public int IdCliente { get;  set; }
+        public string UserId { get; set; }
 
         [Required]
         public DateTime FechaInicio { get;  set; }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Proyecto_Turismo.Application.Contracs.Contexts;
 using Proyecto_Turismo.Application.Contracts.Contexts;
+using Proyecto_Turismo.Domain.Entities;
 
 namespace Proyecto_Turismo.Infrastructure.Contexts
 {
@@ -13,5 +14,6 @@ namespace Proyecto_Turismo.Infrastructure.Contexts
         {
             
         }
+
     }
 }

@@ -1,42 +1,33 @@
 ﻿@model IEnumerable<ListMenuDTO>
 
-@{
-    ViewData["Title"] = "Menús";
-}
+<h1>Menús del Restaurante</h1>
 
-<link href="~/css/menu.css" rel="stylesheet" />
+<a href="@Url.Action("Create", "Menu")" class="btn btn-primary mb-3">Crear Menú</a>
 
-<div class="container read_container">
-    <h1>Menús del Restaurante</h1>
-
-    <a href="@Url.Action("Create", "Menu")" class="btn btn-outline-success mb-3">Crear Menú</a>
-
-    <table class="table table-bordered table-striped">
-        <thead>
-            <tr>
-                <th>Nombre del Menú</th>
-                <th>Acciones</th>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Nombre del Menú</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var menu in Model)
+        {
+            <tr id="row-@menu.Id">
+                <td>@menu.Nombre</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Menu", new { id = menu.Id })" class="btn btn-warning">
+                        <i class="fas fa-edit"></i> Editar
+                    </a>
+                    <button onclick="deleteMenu(@menu.Id)" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
+                </td>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var menu in Model)
-            {
-                <tr id="row-@menu.Id">
-                    <td>@menu.Nombre</td>
-                    <td>
-                        <a href="@Url.Action("Edit", "Menu", new { id = menu.Id })" class="btn btn-outline-primary">
-                            <i class="fas fa-edit"></i> Editar
-                        </a>
-                        <button onclick="deleteMenu(@menu.Id)" class="btn btn-outline-danger">
-                            <i class="fas fa-trash"></i> Eliminar
-                        </button>
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-</div>
-
+        }
+    </tbody>
+</table>
 
 @section Scripts {
     <script>
