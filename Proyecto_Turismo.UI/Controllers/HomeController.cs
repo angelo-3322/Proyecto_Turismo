@@ -82,38 +82,38 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpGet("/reservation/edit/{id}")]
-        public IActionResult Edit([FromRoute] int id)
-        {
-            var restaurant = _restauranteService.Get(id);
-            var model =
-                new EditRestaurantViewModel
-                {
+        //[HttpGet("/reservation/edit/{id}")]
+        //public IActionResult Edit([FromRoute] int id)
+        //{
+        //    var restaurant = _restauranteService.Get(id);
+        //    var model =
+        //        new EditRestaurantViewModel
+        //        {
                     
-                    Nombre = restaurant.Nombre,
+        //            Nombre = restaurant.Nombre,
 
-                };
+        //        };
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
-        [HttpPost("/reservation/edit/{id}")]
-        public IActionResult Edit([FromRoute] int id, EditRestaurantViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var restaurant = new EditRestaurantDTO(id, model.Nombre);
-                var result = _restauranteService.Edit(restaurant);
+        //[HttpPost("/reservation/edit/{id}")]
+        //public IActionResult Edit([FromRoute] int id, EditRestaurantViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var restaurant = new EditRestaurantDTO(id, model.Nombre,model.IdMenu);
+        //        var result = _restauranteService.Edit(restaurant);
 
-                if (result.IsSuccess)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+        //        if (result.IsSuccess)
+        //        {
+        //            return RedirectToAction(nameof(Index));
+        //        }
 
-                ModelState.AddModelError(string.Empty, result.Error);
-            }
-            return View(model);
-        }
+        //        ModelState.AddModelError(string.Empty, result.Error);
+        //    }
+        //    return View(model);
+        //}
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

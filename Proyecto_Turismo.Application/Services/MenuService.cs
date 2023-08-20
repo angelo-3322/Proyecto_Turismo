@@ -81,7 +81,7 @@ namespace Proyecto_Turismo.Application.Services
         public EditMenuDTO Get(int id)
         {
             Menu menu = _repository.Get(s => s.Id == id);
-            return new EditMenuDTO(menu.Id,menu.Nombre);
+            return new EditMenuDTO(menu.Id, menu.Nombre);
         }
 
         public IEnumerable<ListMenuDTO> GetAll()

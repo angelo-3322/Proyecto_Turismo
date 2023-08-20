@@ -13,20 +13,23 @@ namespace Proyecto_Turismo.Domain.DTOs.Restaurante
     {
         public ListRestaurantDTO(){}
 
-        public ListRestaurantDTO(int id, string menu, string nombre)
+        public ListRestaurantDTO(int id,string nombre,int idmenu)
         {
             Id = id;
             Nombre = nombre;
-            Menu = menu;
+            IdMenu = idmenu;
         }
 
-        public int Id { get;  set; }
+        public int Id { get;  set; } 
 
-        public string Menu { get; set; }
+        //public string Menu { get; set; }
 
         public string Nombre { get; set; }
 
-        
+        [ForeignKey("Menu")]
+        public int IdMenu { get; set; }
+
+
 
 
     }

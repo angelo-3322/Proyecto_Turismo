@@ -15,6 +15,8 @@ namespace Proyecto_Turismo.Domain.Entities
         public string Nombre { get; set; }
 
         public List<Producto> Productos { get; set; }
+        public List<Restaurante> Restaurantes { get; set; }
+
 
         public static Menu Create(string nombre)
         {

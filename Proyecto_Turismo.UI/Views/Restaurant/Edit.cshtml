@@ -1,0 +1,27 @@
+﻿@model EditRestaurantViewModel
+@{
+    ViewBag.Title = "Editar Restaurante";
+}
+
+<h2>Edit Restaurante</h2>
+<br />
+<div class="container">
+    <form asp-action="Edit" asp-route-id="@Model.Restaurante.Id" method="post">
+        <input type="hidden" asp-for="@Model.Restaurante.Id" />
+        <div class="form-group">
+            <label for="Nombre">Nombre del Restaurante:</label>
+            <input type="text" class="form-control" id="Nombre" name="Restaurante.Nombre" value="@Model.Restaurante.Nombre" required maxlength="30" minlength="5" />
+        </div>
+        <div class="form-group">
+            <label for="IdMenu">Menu</label>
+            <select asp-for="Restaurante.IdMenu" asp-items="@(new SelectList(Model.Menus, "Id", "Nombre"))" class="form-control">
+            </select>
+            <span asp-validation-for="Restaurante.IdMenu" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    </form>
+    <br />
+    <a href="@Url.Action("Index", "Restaurant")" class="btn btn-secondary">Volver al Listado</a>
+</div>
+
+

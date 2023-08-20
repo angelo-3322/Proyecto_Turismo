@@ -11,7 +11,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Menu
     {
         public EditMenuDTO() { }
 
-        public EditMenuDTO(int id, string nombre)
+        public EditMenuDTO(int id, string nombre) 
             : this()
         {
             Id = id;
