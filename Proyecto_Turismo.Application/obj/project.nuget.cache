@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qlJK0BoOcX9HaVg5GYhiEO38eDyCL0jcYBAKPGUCBdlQmyhVtYBQFGmVkwxZdQghXNATf34LjER9kYHo7H9f0Q==",
+  "dgSpecHash": "4Qbp73FoJMCEg8ZWyBsWmHfyIozmwdO21zA5skYtQI4AwVBozrX+nzlxa6gridN6xLVOCB0RrqYGsKxnAIBsuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto-Gits\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
+  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.Application\\Proyecto_Turismo.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andiel\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.20\\microsoft.aspnetcore.cryptography.internal.6.0.20.nupkg.sha512",
     "C:\\Users\\Andiel\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.20\\microsoft.aspnetcore.cryptography.keyderivation.6.0.20.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6xg4gZ/JWUT/YXiBn+dNQSVQys3vCNCnqtOv8if5eLNyWRDLkSojNF3x7dIxTMsO2ytaZm2g3ldUYdeSJbm8lg==",
+  "dgSpecHash": "747crhdwtmTxZhaz9iyNGdnPPSAer8Q2EFOR+vJR9LohpxUo6ZbLRd1gquqpN6pyZZdEMIhmUm0kkVj0iodl4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto-Gits\\Proyecto_Turismo.UI\\Proyecto_Turismo.UI.csproj",
+  "projectFilePath": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\Proyecto_Turismo.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andiel\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Andiel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

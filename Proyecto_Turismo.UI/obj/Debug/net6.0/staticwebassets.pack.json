@@ -101,8 +101,24 @@
       "PackagePath": "staticwebassets\\css\\Index.css"
     },
     {
+      "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\client.css",
+      "PackagePath": "staticwebassets\\css\\client.css"
+    },
+    {
+      "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\facture.css",
+      "PackagePath": "staticwebassets\\css\\facture.css"
+    },
+    {
+      "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\hotelRoom.css",
+      "PackagePath": "staticwebassets\\css\\hotelRoom.css"
+    },
+    {
       "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\menu.css",
+      "PackagePath": "staticwebassets\\css\\menu.css"
     },
     {
       "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\packages.css",
@@ -115,6 +131,10 @@
     {
       "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\restaurant.css",
       "PackagePath": "staticwebassets\\css\\restaurant.css"
+    },
+    {
+      "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\restaurant2.css",
+      "PackagePath": "staticwebassets\\css\\restaurant2.css"
     },
     {
       "Id": "C:\\Users\\Andiel\\Documents\\Trabajos_de_la_U\\cuatrimestre#7\\Progra-avanzada-web\\Proyecto\\Turismo-Canatico-prototipo\\Proyecto_Turismo.UI\\wwwroot\\css\\site.css",

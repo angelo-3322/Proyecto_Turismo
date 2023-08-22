@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ListPackageDTO>
+
+@{
+    ViewBag.Title = "Paquetes";
+}
+
+<h2>Paquetes</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Paquete</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr id="row-@item.Id">
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Precio</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                    <button onclick="deletePaquete(@item.Id)" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function deletePaquete(id) {
+        if (window.confirm("¿Estás seguro de que deseas eliminar este paquete?")) {
+            fetch(`/package/Delete/${id}`, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Paquete eliminado con éxito");
+                        // Eliminando la fila del paquete.
+                        document.getElementById(`row-${id}`).remove();
+                    } else {
+                        alert("Error al eliminar el paquete");
+                    }
+                });
+        }
+    }
+</script>

@@ -12,8 +12,8 @@ using Proyecto_Turismo.Persistence.Contexts;
 namespace Proyecto_Turismo.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230820051350_ManytoMany2")]
-    partial class ManytoMany2
+    [Migration("20230821215014_pru")]
+    partial class pru
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -201,18 +201,17 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdHabitaciones")
                         .HasColumnType("int");
 
                     b.Property<int>("IdPaquete")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("IdCliente");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdHabitaciones");
 
@@ -266,12 +265,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Reservacion", b =>
                 {
-                    b.HasOne("Proyecto_Turismo.Domain.Entities.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("IdCliente")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Proyecto_Turismo.Domain.Entities.Habitacion", "Habitacion")
                         .WithMany()
                         .HasForeignKey("IdHabitaciones")
@@ -283,8 +276,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .HasForeignKey("IdPaquete")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Cliente");
 
                     b.Navigation("Habitacion");
 

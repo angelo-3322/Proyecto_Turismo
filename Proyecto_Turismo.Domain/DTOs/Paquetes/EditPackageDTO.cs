@@ -13,11 +13,11 @@ namespace Proyecto_Turismo.Domain.DTOs.Paquetes
 
         public EditPackageDTO(int id, string nombre, float precio,string descripcion)
             : this()
-        {
+        { 
             Id = id;
             Nombre = nombre;
-            Precio = precio;
             Descripcion = descripcion;
+            Precio = precio;
         }
 
         public int Id { get; private set; }

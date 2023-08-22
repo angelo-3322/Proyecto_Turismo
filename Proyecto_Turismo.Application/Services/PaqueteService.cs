@@ -69,7 +69,28 @@ namespace Proyecto_Turismo.Application.Services
 
         public Result Delete(int id)
         {
-            throw new NotImplementedException();
+            // Busca el paquete en la base de datos por ID
+            Paquete existingPackage = _repository.Get(p => p.Id == id);
+            if (existingPackage == null)
+            {
+                // No se encontró el paquete con el ID especificado
+                return Result.Fail("Paquete no encontrado.");
+            }
+
+            try
+            {
+                // Elimina el paquete de la base de datos
+                _repository.Delete(existingPackage);
+                _repository.Save();
+            }
+            catch (Exception ex)
+            {
+                // Ocurrió un error al intentar eliminar el paquete
+                return Result.Fail($"Error al eliminar el paquete: {ex.Message}");
+            }
+
+            // El paquete se eliminó correctamente
+            return Result.Ok();
         }
 
 

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Proyecto_Turismo.Application.Contracs.Services;
-using Proyecto_Turismo.Application.Services;
 using Proyecto_Turismo.Domain.DTOs.Paquetes;
 using Proyecto_Turismo.UI.Models.ViewModels;
 
@@ -29,9 +28,7 @@ namespace Proyecto_Turismo.UI.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            var model = new CreateHotelRoomViewModel();
-
-
+            var model = new CreatePackageViewModel();
             return View(model);
         }
 
@@ -62,6 +59,7 @@ namespace Proyecto_Turismo.UI.Controllers
                 new EditPackageViewModel
                 {
                     Nombre = package.Nombre,
+                    Descripcion = package.Descripcion,
                     Precio = package.Precio,
 
                 };
@@ -69,22 +67,41 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        //[HttpPost("//edit/{id}")]
-        //public IActionResult Edit([FromRoute] int id, EditPackageViewModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var client = new EditPackageDTO(id, model.Nombre, model.Precio);
-        //        var result = _paqueteService.Edit(client);
+        [HttpPost("/package/edit/{id}")]
+        public IActionResult Edit([FromRoute] int id, EditPackageViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var client = new EditPackageDTO(id,model.Nombre,model.Precio,model.Descripcion);
+                var result = _paqueteService.Edit(client);
 
-        //        if (result.IsSuccess)
-        //        {
-        //            return RedirectToAction(nameof(Index));
-        //        }
+                if (result.IsSuccess)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
 
-        //        ModelState.AddModelError(string.Empty, result.Error);
-        //    }
-        //    return View(model);
-        //}
+                ModelState.AddModelError(string.Empty, result.Error);
+            }
+            return View(model);
+        }
+
+        [HttpDelete("/package/Delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            if (id <= 0)
+            {
+                return Json(new { success = false, message = "ID inválido." });
+            }
+
+            var result = _paqueteService.Delete(id);
+
+            if (!result.IsSuccess)
+            {
+                return Json(new { success = false, message = result.Error });
+            }
+
+            return Json(new { success = true });
+        }
+
     }
 }

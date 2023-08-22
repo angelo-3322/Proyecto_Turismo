@@ -34,7 +34,7 @@ namespace Proyecto_Turismo.Application.Services
 
 
             return reservaciones.ConvertAll
-                (s => new ListReservationDTO(s.Id,  /*s.UserId,*/ s.Paquete.Nombre,s.Habitacion.TipoHabitacion, s.FechaInicio, s.FechaFin, s.Activa));
+                (s => new ListReservationDTO(s.Id, s.UserId, s.Habitacion.NumeroHabitaciones,s.Paquete.Nombre, s.FechaInicio, s.FechaFin, s.Activa));
         }
 
         public Result<int> Create(CreateReservationDTO dto)
@@ -44,7 +44,7 @@ namespace Proyecto_Turismo.Application.Services
                 (
                     dto.IdHabitaciones,
                     dto.IdPaquete,
-                    //dto.UserId,
+                    dto.UserId,
                     dto.FechaInicio,
                     dto.FechaFin
                 );

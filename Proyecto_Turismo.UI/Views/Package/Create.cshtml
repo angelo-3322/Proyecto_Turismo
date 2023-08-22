@@ -1,0 +1,39 @@
+﻿@model CreatePackageViewModel
+
+@{
+    ViewBag.Title = "Crear Paquete";
+}
+
+<h2>Crear Paquete</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Packages.Nombre">Nombre</label>
+        <input asp-for="@Model.Packages.Nombre" class="form-control" />
+        <span asp-validation-for="@Model.Packages.Nombre" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Packages.Descripcion">Descripción</label>
+        <textarea asp-for="@Model.Packages.Descripcion" class="form-control"></textarea>
+        <span asp-validation-for="@Model.Packages.Descripcion" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Packages.Precio">Precio</label>
+        <input asp-for="@Model.Packages.Precio" class="form-control" />
+        <span asp-validation-for="@Model.Packages.Precio" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Crear" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Regresar a la lista</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

@@ -35,7 +35,7 @@ namespace Proyecto_Turismo.Domain.Entities
         }
         public void Update(string nombre, string descripcion, float precio)
         {
-            Nombre = Nombre;
+            Nombre = nombre;
             Descripcion = descripcion;
             Precio = precio;
 

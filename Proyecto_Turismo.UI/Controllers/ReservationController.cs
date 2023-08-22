@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Services;
 using Proyecto_Turismo.Domain.DTOs.Reservaciones;
+using Proyecto_Turismo.Infrastructure.Contexts;
 using Proyecto_Turismo.UI.Models.ViewModels;
+using Proyecto_Turismo.UI.Models.ViewModels.AccountModels;
 
 namespace Proyecto_Turismo.UI.Controllers
 {
@@ -12,20 +16,33 @@ namespace Proyecto_Turismo.UI.Controllers
         private readonly IClienteService _clienteService;
         private readonly IPaqueteService _paqueteService;
         private readonly IHabitacionService _habitacionService;
+        private readonly ApplicationIdentityDbContext _identityContext;
 
         public ReservationController(IReservacionService reservacionService,IClienteService clienteService, 
-            IPaqueteService paqueteService, IHabitacionService habitacionService)
+            IPaqueteService paqueteService, IHabitacionService habitacionService,
+            ApplicationIdentityDbContext identityContext)
         {
             _reservacionService = reservacionService;
             _clienteService = clienteService;
             _paqueteService = paqueteService;
             _habitacionService = habitacionService;
+            _identityContext = identityContext;
         }
         public IActionResult Index()
         {
-            var reservation = _reservacionService.GetAll();
-            return View(reservation);
+            var reservaciones = _reservacionService.GetAll().ToList();
+            var habitaciones = _habitacionService.GetAll().ToList();
+            var paquetes = _paqueteService.GetAll().ToList();
+
+            var reservacionesVM = reservaciones.Select(r => new ReservacionViewModel
+            {
+                Reservacion = r,
+                UsuarioEmail = _identityContext.Users.FirstOrDefault(u => u.Id == r.UserId)?.Email
+            }).ToList();
+
+            return View(reservacionesVM);
         }
+
 
         [HttpGet]
         public IActionResult Create()

@@ -39,14 +39,14 @@ namespace Proyecto_Turismo.Domain.Entities
         [Required]
         public bool Activa { get; set; }
 
-        public static Reservacion Create(int idhabitaciones, int idpaquete, /*string userid,*/ DateTime fechainicio, DateTime fechafin)
+        public static Reservacion Create(int idhabitaciones, int idpaquete, string userid, DateTime fechainicio, DateTime fechafin)
         {
             return
                 new Reservacion()
                 {
                     IdHabitaciones = idhabitaciones,
                     IdPaquete = idpaquete,
-                    //UserId = userid,
+                    UserId = userid,
                     FechaInicio = fechainicio,
                     FechaFin = fechafin,
                     Activa = true

@@ -1,1 +1,39 @@
-﻿
+﻿@model IEnumerable<ReservacionViewModel>
+
+@{
+    ViewBag.Title = "Lista de Reservaciones";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre de Habitación</th>
+            <th>Paquete</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha Fin</th>
+            <th>Activa</th>
+            <th>Email del Usuario</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Reservacion.Habitacion</td>
+                <td>@item.Reservacion.Paquete</td>
+                <td>@item.Reservacion.FechaInicio.ToString("dd/MM/yyyy")</td>
+                <td>@item.Reservacion.FechaFin.ToString("dd/MM/yyyy")</td>
+                <td>@(item.Reservacion.Activa ? "Activa" : "Desactivada")</td>
+                <td>@item.UsuarioEmail</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Reservacion.Id })" class="btn btn-primary">Editar</a>
+                    <a href="@Url.Action("Delete", new { id = item.Reservacion.Id })" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

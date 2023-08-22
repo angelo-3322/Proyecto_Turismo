@@ -12,11 +12,11 @@ namespace Proyecto_Turismo.Domain.DTOs.Paquetes
         public CreatePackageDTO() { } 
 
         [Required]
-        [StringLength(30, MinimumLength = 10)]
+        [StringLength(30, MinimumLength = 5)]
         public string Nombre { get; set; }
 
         [Required]
-        [StringLength(35, MinimumLength = 10)]
+        [StringLength(35, MinimumLength = 5)]
         public string Descripcion { get; set; }
 
         [Required]
