@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ListHotelRoomDTO>
 
 <h2>Habitaciones Disponibles</h2>
-
+<a asp-action="Cindex" class="btn btn-secondary">Volver</a>
 <div class="container">
     @foreach (var habitacion in Model)
     {
@@ -14,7 +14,7 @@
                 <p>Número de habitaciones: @habitacion.NumeroHabitaciones</p>
                 <p>Capacidad: @habitacion.Capacidad</p>
                 <p>Precio: @habitacion.Precio.ToString("C")</p>
-                <a href="@Url.Action("Reservar", new { id = habitacion.Id })" class="btn btn-primary">Reservar</a>
+                <a href="@Url.Action("Reservar", "Reservation", new { id = @habitacion.Id })" class="btn btn-primary">Reservar</a>
             </div>
         </div>
     }

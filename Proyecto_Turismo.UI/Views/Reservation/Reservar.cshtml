@@ -1,0 +1,53 @@
+﻿@*@model CreateReservationModel
+
+<h2>Reservación</h2>
+
+<div class="container">
+    <input type="hidden" asp-for="@Model.Habitacion.Id" />
+    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
+    <h4>Número de habitación: @Model.Habitacion.NumeroHabitaciones</h4>
+    <p>Descripción: @Model.Habitacion.TipoHabitacion</p>
+    <p>Capacidad: @Model.Habitacion.Capacidad</p>
+    <form method="post" action="@Url.Action("CrearReservacion")">
+        <div class="form-group">
+            <label for="paquete">Paquete</label>
+            <select class="form-control" id="paquete" name="PaqueteSeleccionado">
+                @foreach (var paquete in Model.PaquetesDisponibles)
+                {
+                    <option value="@paquete.Id">@paquete.Nombre</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="fechaInicio">Fecha de inicio</label>
+            <input type="date" class="form-control" id="fechaInicio" name="FechaInicio" required>
+        </div>
+        <div class="form-group">
+            <label for="fechaFin">Fecha de fin</label>
+            <input type="date" class="form-control" id="fechaFin" name="FechaFin" required>
+        </div>
+        <div class="form-group">
+            <label for="dias">Días</label>
+            <input type="text" class="form-control" id="dias" name="Dias" readonly>
+        </div>
+        <div class="form-group">
+            <label for="total">Total</label>
+            <input type="text" class="form-control" id="total" name="Total" readonly>
+        </div>
+        <button type="submit" class="btn btn-primary">Reservar</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("fechaInicio").addEventListener("change", calcularTotal);
+    document.getElementById("fechaFin").addEventListener("change", calcularTotal);
+
+    function calcularTotal() {
+        var fechaInicio = new Date(document.getElementById("fechaInicio").value);
+        var fechaFin = new Date(document.getElementById("fechaFin").value);
+        var dias = Math.floor((fechaFin - fechaInicio) / (1000 * 60 * 60 * 24)) + 1;
+        document.getElementById("dias").value = dias;
+        document.getElementById("total").value = dias * @Model.Habitacion.Precio;
+    }
+</script>
+*@

@@ -21,7 +21,7 @@ namespace Proyecto_Turismo.Application.Services
         public EditHotelRoomDTO Get(int id)
         {
             Habitacion room = _repository.Get(s => s.Id == id);
-            return new EditHotelRoomDTO(room.Id, room.NumeroHabitaciones, room.TipoHabitacion, room.Capacidad, room.Precio,room.Disponible,room.Imagen);
+            return new EditHotelRoomDTO(room.Id,room.NumeroHabitaciones, room.TipoHabitacion, room.Capacidad, room.Precio,room.Disponible,room.Imagen);
         }
 
         public IEnumerable<ListHotelRoomDTO> GetAll()

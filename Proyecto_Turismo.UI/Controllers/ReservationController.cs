@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Services;
+using Proyecto_Turismo.Domain.DTOs.Habitaciones;
 using Proyecto_Turismo.Domain.DTOs.Reservaciones;
 using Proyecto_Turismo.Infrastructure.Contexts;
 using Proyecto_Turismo.UI.Models.ViewModels;
@@ -50,37 +51,52 @@ namespace Proyecto_Turismo.UI.Controllers
         }
 
 
-        [HttpGet]
-        public IActionResult Create()
-        {
-            var model = new CreateReservationViewModel();
+        //[HttpGet("/Reservation/Reservar/{id}")]
+        //public IActionResult Reservar([FromRoute] int roomId)
+        //{
+        //    var room = _habitacionService.Get(roomId);
+        //    var packages = _paqueteService.GetAll().Where(p =>
+        //     (p.Nombre.Contains("Familiar") && room.Capacidad >= 4) ||
+        //     (!p.Nombre.Contains("Familiar") && room.Capacidad <= 2)
+        //     ).ToList();
+        //    var model = new CreateReservationModel
+        //    {
+        //        Habitacion = new EditHotelRoomDTO
+        //        {
+        //            Id = room.Id,
+        //            NumeroHabitaciones = room.NumeroHabitaciones,
+        //            TipoHabitacion = room.TipoHabitacion,
+        //            Capacidad = room.Capacidad,
+        //            Precio = room.Precio,
+        //            Disponible = room.Disponible,
+        //            Imagen = room.Imagen
 
-            model.Clients = _clienteService.GetAll().ToList();
-            model.Rooms = _habitacionService.GetAll().ToList();
-            model.Packages = _paqueteService.GetAll().ToList();
-            
-            return View(model);
-        }
+        //        },
+        //        PaquetesDisponibles = packages.ToList(),
+        //    };
 
-        [HttpPost]
-        public IActionResult Create(CreateReservationViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = _reservacionService.Create(model.Reservations);
-                if (result.IsSuccess)
-                {
-                    return RedirectToAction(nameof(Index));
-                }
+        //    return View(model);
+        //}
 
-                ModelState.AddModelError(string.Empty, result.Error);
-            }
-            model.Clients = _clienteService.GetAll().ToList();
-            //model.Packages = _paqueteService.GetAll().ToList();
-            //model.Rooms = _habitacionService.GetAll().ToList();
+        //[HttpPost]
+        //public IActionResult Reservar(CreateReservationViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var result = _reservacionService.Create(model.Reservations);
+        //        if (result.IsSuccess)
+        //        {
+        //            return RedirectToAction(nameof(Index));
+        //        }
 
-            return View(model);
-        }
+        //        ModelState.AddModelError(string.Empty, result.Error);
+        //    }
+        //    model.Clients = _clienteService.GetAll().ToList();
+        //    model.Packages = _paqueteService.GetAll().ToList();
+        //    model.Rooms = _habitacionService.GetAll().ToList();
+
+        //    return View(model);
+        //}
 
         [HttpGet("/reservation/edit/{id}")]
         public IActionResult Edit([FromRoute] int id)

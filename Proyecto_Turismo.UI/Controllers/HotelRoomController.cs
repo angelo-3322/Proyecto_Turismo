@@ -54,7 +54,7 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(model);
         }
 
-        [HttpGet("/hotelroom/edit/{id}")]
+        [HttpGet("/HotelRoom/Edit/{id}")]
         public IActionResult Edit([FromRoute] int id)
         {
             var room = _habitacionService.Get(id);
@@ -75,8 +75,8 @@ namespace Proyecto_Turismo.UI.Controllers
         }
 
 
-        [HttpPost("/hotelroom/edit/{id}")]
-        public async Task<IActionResult> Edit([FromRoute] int id, EditHotelRoomViewModel model)
+        [HttpPost("/HotelRoom/Edit/{id}")]
+        public IActionResult Edit([FromRoute] int id, EditHotelRoomViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Proyecto_Turismo.UI.Controllers
                 {
                     using (var memoryStream = new MemoryStream())
                     {
-                        await model.ImageFile.CopyToAsync(memoryStream);
+                        model.ImageFile.CopyToAsync(memoryStream);
                         imageBytes = memoryStream.ToArray();
                     }
                 }

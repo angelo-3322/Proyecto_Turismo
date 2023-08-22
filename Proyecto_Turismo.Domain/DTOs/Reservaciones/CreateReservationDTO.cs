@@ -9,7 +9,7 @@ namespace Proyecto_Turismo.Domain.DTOs.Reservaciones
         [ForeignKey("Habitacion")]
         public int IdHabitaciones { get;  set; }
 
-        [Required]
+
         [ForeignKey("Paquete")]
         public int IdPaquete { get;  set; }
 
