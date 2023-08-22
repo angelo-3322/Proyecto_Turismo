@@ -116,8 +116,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Reservation/Cindex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cQ2luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Reservation/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Cindex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxDaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Create.cshtml]
@@ -130,6 +138,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/_RestaurantInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxfUmVzdGF1cmFudEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Shared/Error.cshtml]

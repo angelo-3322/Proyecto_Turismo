@@ -17,10 +17,11 @@ namespace Proyecto_Turismo.Application.Contracs.Services
 
         IEnumerable<ListRestaurantDTO> GetAll();
 
-        Result<int> Create(CreateRestaurantDTO dto);
+        Result<int> Create(CreateRestaurantDTO dto); 
 
         Result Edit(EditRestaurantDTO dto);
 
         Result Delete(int id);
+        List<ListRestaurantDTO> GetByMenu(int menuId);
     }
 }

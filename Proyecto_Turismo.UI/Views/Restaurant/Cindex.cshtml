@@ -1,0 +1,29 @@
+﻿@model ClientesMenusModel
+
+<div>
+    <h2>Seleccione un menú:</h2>
+    <select id="menu-select" onchange="loadRestaurantAndProducts()">
+        <option value="">- Selecciona un menú -</option>
+        @foreach (var menu in Model.Menus)
+        {
+            <option value="@menu.Value">@menu.Text</option>
+        }
+    </select>
+</div>
+
+<div id="restaurant-info"></div>
+<div id="product-list"></div>
+
+<script>
+    function loadRestaurantAndProducts() {
+        const menuId = document.getElementById("menu-select").value;
+        if (!menuId) return;
+
+        fetch(`/LoadRestaurantAndProducts/${menuId}`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("restaurant-info").innerHTML = data;
+            });
+
+    }
+</script>

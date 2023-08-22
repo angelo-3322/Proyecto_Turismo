@@ -1,0 +1,22 @@
+﻿@model IEnumerable<ListHotelRoomDTO>
+
+<h2>Habitaciones Disponibles</h2>
+
+<div class="container">
+    @foreach (var habitacion in Model)
+    {
+        <div class="row mb-4">
+            <div class="col-4">
+                <img src="data:image/jpeg;base64,@Convert.ToBase64String(habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
+            </div>
+            <div class="col-8">
+                <h4>@habitacion.TipoHabitacion</h4>
+                <p>Número de habitaciones: @habitacion.NumeroHabitaciones</p>
+                <p>Capacidad: @habitacion.Capacidad</p>
+                <p>Precio: @habitacion.Precio.ToString("C")</p>
+                <a href="@Url.Action("Reservar", new { id = habitacion.Id })" class="btn btn-primary">Reservar</a>
+            </div>
+        </div>
+    }
+</div>
+

@@ -21,7 +21,7 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr id="row-@item.Reservacion.Id">
                 <td>@item.Reservacion.Habitacion</td>
                 <td>@item.Reservacion.Paquete</td>
                 <td>@item.Reservacion.FechaInicio.ToString("dd/MM/yyyy")</td>
@@ -29,11 +29,31 @@
                 <td>@(item.Reservacion.Activa ? "Activa" : "Desactivada")</td>
                 <td>@item.UsuarioEmail</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = item.Reservacion.Id })" class="btn btn-primary">Editar</a>
-                    <a href="@Url.Action("Delete", new { id = item.Reservacion.Id })" class="btn btn-danger">Eliminar</a>
+                    <button onclick="deleteReservation(@item.Reservacion.Id)" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<script>
+    function deleteReservation(id) {
+        if (window.confirm("¿Estás seguro de que deseas eliminar esta reservación?")) {
+            fetch(`/Reservacion/Delete/${id}`, {
+                method: 'DELETE'
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("Reservación eliminada con éxito");
+                        // eliminando la fila de la reservación.
+                        document.getElementById(`row-${id}`).remove();
+                    } else {
+                        alert("Error al eliminar la reservación");
+                    }
+                });
+        }
+    }
+</script>
 

@@ -15,12 +15,51 @@ namespace Proyecto_Turismo.UI.Controllers
     {
         private readonly IRestauranteService _restauranteService;
         private readonly IMenuService _menuService;
+        private readonly IProductoService _productoService;
 
-        public RestaurantController(IRestauranteService restauranteService,IMenuService menuService)
+        public RestaurantController(IRestauranteService restauranteService,IMenuService menuService, IProductoService productoService)
         {
             _restauranteService = restauranteService;
             _menuService = menuService;
+            _productoService = productoService;
         }
+
+        public IActionResult Cindex()
+        {
+            var model = new ClientesMenusModel
+            {
+                Menus = _menuService.GetAll().Select(m => new SelectListItem
+                {
+                    Value = m.Id.ToString(),
+                    Text = m.Nombre
+                }).ToList()
+            };
+
+            return View(model);
+        }
+
+        [HttpGet("LoadRestaurantAndProducts/{menuId}")]
+        public IActionResult LoadRestaurantAndProducts(int menuId)
+        {
+            var restaurante = _restauranteService.GetByMenu(menuId);
+            var productos = _productoService.GetByMenu(menuId);
+
+            var model = new ClientesMenusModel
+            {
+                Productos = productos.ToList(),
+                Restaurante = restaurante.ToList()
+            };
+
+            return PartialView("_RestaurantInfo", model);
+        }
+
+        //[HttpGet("LoadProducts/{menuId}")]
+        //public IActionResult LoadProducts(int menuId)
+        //{
+        //    var productos = _productoService.GetByMenu(menuId);
+        //    return PartialView("_ProductList", productos);
+        //}
+
         public IActionResult Index()
         {
             var restaurantes = _restauranteService.GetAll();

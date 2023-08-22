@@ -1,4 +1,5 @@
-﻿using Proyecto_Turismo.Application.Components;
+﻿using Microsoft.EntityFrameworkCore;
+using Proyecto_Turismo.Application.Components;
 using Proyecto_Turismo.Application.Contracs.Repositories;
 using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Domain.DTOs.Producto;
@@ -97,5 +98,19 @@ namespace Proyecto_Turismo.Application.Services
                 p.IdMenu
             ));
         }
+
+        public List<ListProductoDTO> GetByMenu(int menuId)
+        {
+            var prod = _repository.GetAll().Where(p => p.IdMenu == menuId).ToList();
+            return prod.ConvertAll(p => new ListProductoDTO
+            (
+                p.Id,
+                p.Nombre,
+                p.Descripcion,
+                p.Precio,
+                p.IdMenu
+            ));
+        }
+
     }
 }

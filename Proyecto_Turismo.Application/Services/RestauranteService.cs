@@ -3,6 +3,7 @@ using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Contracts.Repositories;
 using Proyecto_Turismo.Domain.DTOs.Cliente;
 using Proyecto_Turismo.Domain.DTOs.Facturas;
+using Proyecto_Turismo.Domain.DTOs.Producto;
 using Proyecto_Turismo.Domain.DTOs.Restaurante;
 using Proyecto_Turismo.Domain.Entities;
 
@@ -100,8 +101,16 @@ namespace Proyecto_Turismo.Application.Services
             }
         }
 
-
-
+        public List<ListRestaurantDTO> GetByMenu(int menuId)
+        {
+            var prod = _repository.GetAll().Where(p => p.IdMenu == menuId).ToList();
+            return prod.ConvertAll(p => new ListRestaurantDTO
+            (
+                p.Id,
+                p.Nombre,
+                p.IdMenu
+            ));
+        }
 
     }
 }

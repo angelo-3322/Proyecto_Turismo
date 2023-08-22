@@ -43,6 +43,12 @@ namespace Proyecto_Turismo.UI.Controllers
             return View(reservacionesVM);
         }
 
+        public IActionResult Cindex()
+        {
+            var rooms = _habitacionService.GetAll();
+            return View(rooms);
+        }
+
 
         [HttpGet]
         public IActionResult Create()
@@ -109,5 +115,25 @@ namespace Proyecto_Turismo.UI.Controllers
             }
             return View(model);
         }
+
+        [HttpDelete]
+        [Route("Reservacion/Delete/{id:int}")]
+        public IActionResult Delete(int id)
+        {
+            if (id <= 0)
+            {
+                return Json(new { success = false, message = "ID inválido." });
+            }
+
+            var result = _reservacionService.Delete(id);
+
+            if (!result.IsSuccess)
+            {
+                return Json(new { success = false, message = result.Error });
+            }
+
+            return Json(new { success = true });
+        }
+
     }
 }
