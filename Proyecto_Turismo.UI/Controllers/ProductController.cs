@@ -51,6 +51,7 @@ namespace Proyecto_Turismo.UI.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var result = _productoService.Create(model.Products);
                 if (result.IsSuccess)
                 {

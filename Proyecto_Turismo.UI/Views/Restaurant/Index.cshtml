@@ -16,12 +16,14 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr id="row-@item.Restaurante.Id">
                 <td>@item.Restaurante.Nombre</td>
                 <td>@item.NombreMenu</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Restaurante.Id" class="btn btn-warning btn-sm">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.Restaurante.Id" class="btn btn-danger btn-sm">Eliminar</a>
+                    <button onclick="deleteRes(@item.Restaurante.Id)" class="btn btn-danger">
+                        <i class="fas fa-trash"></i> Eliminar
+                    </button>
                 </td>
             </tr>
         }
@@ -31,3 +33,25 @@
 <div class="d-flex justify-content-between mt-3">
     <a asp-action="Create" class="btn btn-primary">Crear Nuevo Restaurante</a>
 </div>
+
+@section Scripts {
+    <script>
+        function deleteRes(id) {
+            if (window.confirm("¿Estás seguro de que deseas eliminar este Restaurante?")) {
+                fetch(`/restaurant/delete/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert("Restaurante eliminado con éxito");
+                            // eliminando la fila del menú.
+                            document.getElementById(`row-${id}`).remove();
+                        } else {
+                            alert("Error al eliminar el restaurante");
+                        }
+                    });
+            }
+        }
+    </script>
+}

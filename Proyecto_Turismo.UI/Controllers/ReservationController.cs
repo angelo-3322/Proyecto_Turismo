@@ -5,9 +5,11 @@ using Proyecto_Turismo.Application.Contracs.Services;
 using Proyecto_Turismo.Application.Services;
 using Proyecto_Turismo.Domain.DTOs.Habitaciones;
 using Proyecto_Turismo.Domain.DTOs.Reservaciones;
+using Proyecto_Turismo.Domain.Entities;
 using Proyecto_Turismo.Infrastructure.Contexts;
 using Proyecto_Turismo.UI.Models.ViewModels;
 using Proyecto_Turismo.UI.Models.ViewModels.AccountModels;
+using System.Security.Claims;
 
 namespace Proyecto_Turismo.UI.Controllers
 {
@@ -29,6 +31,36 @@ namespace Proyecto_Turismo.UI.Controllers
             _habitacionService = habitacionService;
             _identityContext = identityContext;
         }
+
+
+        public IActionResult MyReservations()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var reservaciones = _reservacionService.GetAll().Where(r => r.UserId == userId).ToList();
+            var habitaciones = _habitacionService.GetAll().ToList();
+
+            var viewModel = new MyReservationsViewModel
+            {
+                Reservations = reservaciones.Select(r =>
+                {
+                    var habitacion = habitaciones.FirstOrDefault(h => h.Id == r.Id);
+                    var imagen = habitaciones.FirstOrDefault(h => h.NumeroHabitaciones == r.Habitacion);
+
+                    return new MyReservationsViewModel.ReservationDetails
+                    {
+                        HabitacionImagen = imagen?.Imagen,
+                        NumeroHabitacion = r.Habitacion,
+                        FechaInicio = r.FechaInicio,
+                        FechaFin = r.FechaFin,
+                        UsuarioEmail = _identityContext.Users.FirstOrDefault(u => u.Id == r.UserId)?.Email
+                    };
+                }).ToList()
+            };
+
+            return View(viewModel);
+        }
+
+
         public IActionResult Index()
         {
             var reservaciones = _reservacionService.GetAll().ToList();
@@ -51,52 +83,60 @@ namespace Proyecto_Turismo.UI.Controllers
         }
 
 
-        //[HttpGet("/Reservation/Reservar/{id}")]
-        //public IActionResult Reservar([FromRoute] int roomId)
-        //{
-        //    var room = _habitacionService.Get(roomId);
-        //    var packages = _paqueteService.GetAll().Where(p =>
-        //     (p.Nombre.Contains("Familiar") && room.Capacidad >= 4) ||
-        //     (!p.Nombre.Contains("Familiar") && room.Capacidad <= 2)
-        //     ).ToList();
-        //    var model = new CreateReservationModel
-        //    {
-        //        Habitacion = new EditHotelRoomDTO
-        //        {
-        //            Id = room.Id,
-        //            NumeroHabitaciones = room.NumeroHabitaciones,
-        //            TipoHabitacion = room.TipoHabitacion,
-        //            Capacidad = room.Capacidad,
-        //            Precio = room.Precio,
-        //            Disponible = room.Disponible,
-        //            Imagen = room.Imagen
+        [HttpGet("/Reservation/Reservar/{id}")]
+        public IActionResult Reservar([FromRoute] int id)
+        {
+            var room = _habitacionService.Get(id);
+            var packages = _paqueteService.GetAll().Where(p =>
+             (p.Nombre.Contains("Familiar") && room.Capacidad >= 4) ||
+             (!p.Nombre.Contains("Familiar") && room.Capacidad <= 2)
+             ).ToList();
+            var model = new CreateReservationModel
+            {
+                Habitacion = new EditHotelRoomDTO
+                {
+                    Id = room.Id,
+                    NumeroHabitaciones = room.NumeroHabitaciones,
+                    TipoHabitacion = room.TipoHabitacion,
+                    Capacidad = room.Capacidad,
+                    Precio = room.Precio,
+                    Disponible = room.Disponible,
+                    Imagen = room.Imagen
 
-        //        },
-        //        PaquetesDisponibles = packages.ToList(),
-        //    };
+                },
+                PaquetesDisponibles = packages.ToList(),
+            };
 
-        //    return View(model);
-        //}
+            return View(model);
+        }
 
-        //[HttpPost]
-        //public IActionResult Reservar(CreateReservationViewModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var result = _reservacionService.Create(model.Reservations);
-        //        if (result.IsSuccess)
-        //        {
-        //            return RedirectToAction(nameof(Index));
-        //        }
+        [HttpPost]
+        public IActionResult Reservar(CreateReservationModel model)
+        {
+            //if (ModelState.IsValid)
+            //{
+                var userau = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                var reservation = new CreateReservationDTO
+                {
+                    IdHabitaciones = model.Habitacion.Id,
+                    IdPaquete = model.PaqueteSeleccionado,
+                    UserId = userau,
+                    FechaInicio = model.FechaInicio,
+                    FechaFin = model.FechaFin,
+                    Activa = true
+                    //Dias = model.Dias,
+                    //Total = model.Total
+                };
+                var result = _reservacionService.Create(reservation);
+                if (result.IsSuccess)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
 
-        //        ModelState.AddModelError(string.Empty, result.Error);
-        //    }
-        //    model.Clients = _clienteService.GetAll().ToList();
-        //    model.Packages = _paqueteService.GetAll().ToList();
-        //    model.Rooms = _habitacionService.GetAll().ToList();
-
-        //    return View(model);
-        //}
+                ModelState.AddModelError(string.Empty, result.Error);
+            //}
+            return View(model);
+        }
 
         [HttpGet("/reservation/edit/{id}")]
         public IActionResult Edit([FromRoute] int id)

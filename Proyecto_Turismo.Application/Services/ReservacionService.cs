@@ -46,7 +46,8 @@ namespace Proyecto_Turismo.Application.Services
                     dto.IdPaquete,
                     dto.UserId,
                     dto.FechaInicio,
-                    dto.FechaFin
+                    dto.FechaFin,
+                    dto.Activa
                 );
 
             try

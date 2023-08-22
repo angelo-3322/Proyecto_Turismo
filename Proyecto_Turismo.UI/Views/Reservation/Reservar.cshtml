@@ -1,14 +1,21 @@
-﻿@*@model CreateReservationModel
+﻿@model CreateReservationModel
 
 <h2>Reservación</h2>
 
 <div class="container">
-    <input type="hidden" asp-for="@Model.Habitacion.Id" />
-    <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
+    @if (Model.Habitacion.Imagen != null)
+    {
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
+    }
+    else
+    {
+        <img src="~/img/alone.jpeg" alt="Imagen de la habitación" class="img - fluid" />
+    }
     <h4>Número de habitación: @Model.Habitacion.NumeroHabitaciones</h4>
     <p>Descripción: @Model.Habitacion.TipoHabitacion</p>
     <p>Capacidad: @Model.Habitacion.Capacidad</p>
-    <form method="post" action="@Url.Action("CrearReservacion")">
+    <form method="post" asp-action="Reservar">
+        <input type="hidden" asp-for="Habitacion.Id" />
         <div class="form-group">
             <label for="paquete">Paquete</label>
             <select class="form-control" id="paquete" name="PaqueteSeleccionado">
@@ -19,12 +26,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="fechaInicio">Fecha de inicio</label>
-            <input type="date" class="form-control" id="fechaInicio" name="FechaInicio" required>
+            <label asp-for="FechaInicio">Fecha de inicio</label>
+            <input type="date" class="form-control" id="fechaInicio" name="FechaInicio" asp-for="FechaInicio" required>
         </div>
         <div class="form-group">
-            <label for="fechaFin">Fecha de fin</label>
-            <input type="date" class="form-control" id="fechaFin" name="FechaFin" required>
+            <label asp-for="FechaFin">Fecha de fin</label>
+            <input type="date" class="form-control" id="fechaFin" name="FechaFin" asp-for="FechaFin" required>
         </div>
         <div class="form-group">
             <label for="dias">Días</label>
@@ -50,4 +57,3 @@
         document.getElementById("total").value = dias * @Model.Habitacion.Precio;
     }
 </script>
-*@

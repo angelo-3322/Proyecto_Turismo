@@ -5,6 +5,7 @@
 <div class="container">
     @foreach (var habitacion in Model)
     {
+        <input type="hidden" asp-for="@habitacion.Id"/>
         <div class="row mb-4">
             <div class="col-4">
                 <img src="data:image/jpeg;base64,@Convert.ToBase64String(habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
@@ -14,9 +15,10 @@
                 <p>Número de habitaciones: @habitacion.NumeroHabitaciones</p>
                 <p>Capacidad: @habitacion.Capacidad</p>
                 <p>Precio: @habitacion.Precio.ToString("C")</p>
-                <a href="@Url.Action("Reservar", "Reservation", new { id = @habitacion.Id })" class="btn btn-primary">Reservar</a>
+                <a asp-controller="Reservation" asp-action="Reservar" asp-route-id="@habitacion.Id" class="btn btn-primary">Reservar</a>
             </div>
         </div>
     }
 </div>
+
 
