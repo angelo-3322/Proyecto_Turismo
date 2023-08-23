@@ -3,39 +3,39 @@
 @{
     ViewBag.Title = "Paquetes";
 }
+<link href="~/css/restaurant2.css" rel="stylesheet" />
+<div class="container read_container">
 
-<h2>Paquetes</h2>
+    <h1>Paquetes</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Paquete</a>
-</p>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr id="row-@item.Id">
-                <td>@item.Nombre</td>
-                <td>@item.Descripcion</td>
-                <td>@item.Precio</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
-                    <button onclick="deletePaquete(@item.Id)" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Eliminar
-                    </button>
-                </td>
+    <a asp-action="Create" class="btn btn-outline-success">Crear Nuevo Paquete</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.Id">
+                    <td>@item.Nombre</td>
+                    <td>@item.Descripcion</td>
+                    <td>@item.Precio</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary">Editar</a>
+                        <button onclick="deletePaquete(@item.Id)" class="btn btn-outline-danger">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <script>
     function deletePaquete(id) {

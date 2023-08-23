@@ -5,24 +5,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Proyecto_Turismo.Persistence.Migrations
 {
-    public partial class CreateDbSchema : Migration
+    public partial class initialmigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Clientes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    Telefono = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Clientes", x => x.Id);
-                });
+            
 
             migrationBuilder.CreateTable(
                 name: "Habitaciones",
@@ -34,7 +21,8 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     TipoHabitacion = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     Capacidad = table.Column<int>(type: "int", nullable: false),
                     Precio = table.Column<float>(type: "real", nullable: false),
-                    Disponible = table.Column<bool>(type: "bit", nullable: false)
+                    Disponible = table.Column<bool>(type: "bit", nullable: false),
+                    Imagen = table.Column<byte[]>(type: "varbinary(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,26 +58,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Imagenes",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DatosImagen = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
-                    IdHabitacion = table.Column<int>(type: "int", nullable: false),
-                    HabitacionId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Imagenes", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Imagenes_Habitaciones_HabitacionId",
-                        column: x => x.HabitacionId,
-                        principalTable: "Habitaciones",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Productos",
                 columns: table => new
                 {
@@ -118,17 +86,17 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
-                    IdMenu = table.Column<int>(type: "int", nullable: false),
-                    menuId = table.Column<int>(type: "int", nullable: true)
+                    IdMenu = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Restaurante", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Restaurante_Menus_menuId",
-                        column: x => x.menuId,
+                        name: "FK_Restaurante_Menus_IdMenu",
+                        column: x => x.IdMenu,
                         principalTable: "Menus",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -139,7 +107,7 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdHabitaciones = table.Column<int>(type: "int", nullable: false),
                     IdPaquete = table.Column<int>(type: "int", nullable: false),
-                    IdCliente = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FechaInicio = table.Column<DateTime>(type: "datetime2", nullable: false),
                     FechaFin = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Activa = table.Column<bool>(type: "bit", nullable: false)
@@ -147,12 +115,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Reservaciones", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Reservaciones_Clientes_IdCliente",
-                        column: x => x.IdCliente,
-                        principalTable: "Clientes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Reservaciones_Habitaciones_IdHabitaciones",
                         column: x => x.IdHabitaciones,
@@ -194,19 +156,9 @@ namespace Proyecto_Turismo.Persistence.Migrations
                 column: "IdReservacion");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Imagenes_HabitacionId",
-                table: "Imagenes",
-                column: "HabitacionId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Productos_menuId",
                 table: "Productos",
                 column: "menuId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Reservaciones_IdCliente",
-                table: "Reservaciones",
-                column: "IdCliente");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reservaciones_IdHabitaciones",
@@ -219,18 +171,18 @@ namespace Proyecto_Turismo.Persistence.Migrations
                 column: "IdPaquete");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Restaurante_menuId",
+                name: "IX_Restaurante_IdMenu",
                 table: "Restaurante",
-                column: "menuId");
+                column: "IdMenu");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Facturas");
+                name: "Clientes");
 
             migrationBuilder.DropTable(
-                name: "Imagenes");
+                name: "Facturas");
 
             migrationBuilder.DropTable(
                 name: "Productos");
@@ -243,9 +195,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "Menus");
-
-            migrationBuilder.DropTable(
-                name: "Clientes");
 
             migrationBuilder.DropTable(
                 name: "Habitaciones");

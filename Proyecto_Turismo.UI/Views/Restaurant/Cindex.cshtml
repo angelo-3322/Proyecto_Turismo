@@ -1,18 +1,23 @@
 ﻿@model ClientesMenusModel
 
-<div>
-    <h2>Seleccione un menú:</h2>
-    <select id="menu-select" onchange="loadRestaurantAndProducts()">
-        <option value="">- Selecciona un menú -</option>
-        @foreach (var menu in Model.Menus)
-        {
-            <option value="@menu.Value">@menu.Text</option>
-        }
-    </select>
+<link href="~/css/restaurant3.css" rel="stylesheet" />
+
+<div class="container read_container">
+    <div class="input_create">
+        <h2 style="padding: 1.5rem 0;">Seleccione un menú:</h2>
+        <select id="menu-select" onchange="loadRestaurantAndProducts()">
+            <option value="">- Selecciona un menú -</option>
+            @foreach (var menu in Model.Menus)
+            {
+                <option value="@menu.Value">@menu.Text</option>
+            }
+        </select>
+    </div>
+
+    <div id="restaurant-info"></div>
+    <div id="product-list"></div>
 </div>
 
-<div id="restaurant-info"></div>
-<div id="product-list"></div>
 
 <script>
     function loadRestaurantAndProducts() {

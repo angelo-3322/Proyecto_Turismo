@@ -12,8 +12,8 @@ using Proyecto_Turismo.Persistence.Contexts;
 namespace Proyecto_Turismo.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230802214500_CreateDbSchema")]
-    partial class CreateDbSchema
+    [Migration("20230822210711_initialmigration")]
+    partial class initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -88,6 +88,9 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.Property<bool>("Disponible")
                         .HasColumnType("bit");
 
+                    b.Property<byte[]>("Imagen")
+                        .HasColumnType("varbinary(max)");
+
                     b.Property<int>("NumeroHabitaciones")
                         .HasColumnType("int");
 
@@ -102,30 +105,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Habitaciones");
-                });
-
-            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Imagen", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<byte[]>("DatosImagen")
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<int?>("HabitacionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdHabitacion")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("HabitacionId");
-
-                    b.ToTable("Imagenes");
                 });
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Menu", b =>
@@ -222,18 +201,17 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.Property<DateTime>("FechaInicio")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdCliente")
-                        .HasColumnType("int");
-
                     b.Property<int>("IdHabitaciones")
                         .HasColumnType("int");
 
                     b.Property<int>("IdPaquete")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("IdCliente");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdHabitaciones");
 
@@ -258,12 +236,9 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<int?>("menuId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("menuId");
+                    b.HasIndex("IdMenu");
 
                     b.ToTable("Restaurante");
                 });
@@ -279,19 +254,10 @@ namespace Proyecto_Turismo.Persistence.Migrations
                     b.Navigation("Reservacion");
                 });
 
-            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Imagen", b =>
-                {
-                    b.HasOne("Proyecto_Turismo.Domain.Entities.Habitacion", "Habitacion")
-                        .WithMany("Imagenes")
-                        .HasForeignKey("HabitacionId");
-
-                    b.Navigation("Habitacion");
-                });
-
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Producto", b =>
                 {
                     b.HasOne("Proyecto_Turismo.Domain.Entities.Menu", "menu")
-                        .WithMany()
+                        .WithMany("Productos")
                         .HasForeignKey("menuId");
 
                     b.Navigation("menu");
@@ -299,12 +265,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Reservacion", b =>
                 {
-                    b.HasOne("Proyecto_Turismo.Domain.Entities.Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("IdCliente")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Proyecto_Turismo.Domain.Entities.Habitacion", "Habitacion")
                         .WithMany()
                         .HasForeignKey("IdHabitaciones")
@@ -317,8 +277,6 @@ namespace Proyecto_Turismo.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Cliente");
-
                     b.Navigation("Habitacion");
 
                     b.Navigation("Paquete");
@@ -326,16 +284,20 @@ namespace Proyecto_Turismo.Persistence.Migrations
 
             modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Restaurante", b =>
                 {
-                    b.HasOne("Proyecto_Turismo.Domain.Entities.Menu", "menu")
-                        .WithMany()
-                        .HasForeignKey("menuId");
+                    b.HasOne("Proyecto_Turismo.Domain.Entities.Menu", "Menu")
+                        .WithMany("Restaurantes")
+                        .HasForeignKey("IdMenu")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("menu");
+                    b.Navigation("Menu");
                 });
 
-            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Habitacion", b =>
+            modelBuilder.Entity("Proyecto_Turismo.Domain.Entities.Menu", b =>
                 {
-                    b.Navigation("Imagenes");
+                    b.Navigation("Productos");
+
+                    b.Navigation("Restaurantes");
                 });
 #pragma warning restore 612, 618
         }

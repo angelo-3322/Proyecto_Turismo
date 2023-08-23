@@ -13,19 +13,19 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row">
                 <div class="col-3">
-                    <input type="email" class="form-control input_email" asp-for="@Model.Email" placeholder="Email" />
+                    <input type="email" class="form-control input_email" asp-for="@Model.Email" placeholder="Correo" />
                     <span asp-validation-for="@Model.Email" class="text-danger"></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <input type="password" asp-for="@Model.Password" class="form-control input_password" placeholder="Password" />
+                    <input type="password" asp-for="@Model.Password" class="form-control input_password" placeholder="Contraseña" />
                     <span asp-validation-for="@Model.Password" class="text-danger"></span>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <input type="password" asp-for="@Model.ConfirmPassword" class="form-control input_password" placeholder="Confirm Password" />
+                    <input type="password" asp-for="@Model.ConfirmPassword" class="form-control input_password" placeholder="Confirmar Contraseña" />
                     <span asp-validation-for="@Model.ConfirmPassword" class="text-danger"></span>
 @*                    <button id="viewPassword" type="button" class="btn btn-default"><i class="fa-solid fa-eye"></i></button>*@
                 </div>
@@ -37,7 +37,7 @@
                     </button>
                 </div>
             </div>
-            <input type="hidden" asp-for="@Model.Role" value="Comun" />
+            <input type="hidden" asp-for="@Model.Role" value="Admin" />
         </form>
     </div>
 </div>

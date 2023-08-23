@@ -1,11 +1,13 @@
 ﻿@model IEnumerable<ListHotelRoomDTO>
-
-<h2>Habitaciones Disponibles</h2>
-<a asp-action="Cindex" class="btn btn-secondary">Volver</a>
-<div class="container">
+@{
+    ViewBag.Title = "Reservas";
+}
+<link href="~/css/restaurant2.css" rel="stylesheet" />
+<div class="container read_container">
+    <h1>Habitaciones Disponibles</h1>
     @foreach (var habitacion in Model)
     {
-        <input type="hidden" asp-for="@habitacion.Id"/>
+        <input type="hidden" asp-for="@habitacion.Id" />
         <div class="row mb-4">
             <div class="col-4">
                 <img src="data:image/jpeg;base64,@Convert.ToBase64String(habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
@@ -15,7 +17,8 @@
                 <p>Número de habitaciones: @habitacion.NumeroHabitaciones</p>
                 <p>Capacidad: @habitacion.Capacidad</p>
                 <p>Precio: @habitacion.Precio.ToString("C")</p>
-                <a asp-controller="Reservation" asp-action="Reservar" asp-route-id="@habitacion.Id" class="btn btn-primary">Reservar</a>
+                <a asp-controller="Reservation" asp-action="Reservar" asp-route-id="@habitacion.Id" class="btn btn-outline-success">Reservar</a>
+                <a asp-action="Cindex" class="btn btn-outline-secondary">Volver</a>
             </div>
         </div>
     }

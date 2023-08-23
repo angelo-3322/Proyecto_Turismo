@@ -1,36 +1,42 @@
 ﻿@model MyReservationsViewModel
+@{
+    ViewBag.Title = "Mis reservaciones";
+}
+<link href="~/css/restaurant2.css" rel="stylesheet" />
+<div class="container read_container">
 
-<h2>Mis Reservaciones</h2>
+    <h1>Mis Reservaciones</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Imagen de la Habitación</th>
-            <th>Número de Habitación</th>
-            <th>Fecha de Inicio</th>
-            <th>Fecha de Fin</th>
-            <th>Email del Usuario</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var reserva in Model.Reservations)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @if (reserva.HabitacionImagen != null)
-                    {
-                        <img src="data:image/jpeg;base64,@Convert.ToBase64String(reserva.HabitacionImagen)" alt="Imagen de la habitación" width="500" height="500" />
-                    }
-                    else
-                    {
-                        <img src="~/img/alone.jpeg" alt="Imagen de la habitación" class="img - fluid" />
-                    }
-                </td>
-                <td>@reserva.NumeroHabitacion</td>
-                <td>@reserva.FechaInicio.ToShortDateString()</td>
-                <td>@reserva.FechaFin.ToShortDateString()</td>
-                <td>@reserva.UsuarioEmail</td>
+                <th>Imagen de la Habitación</th>
+                <th>Número de Habitación</th>
+                <th>Fecha de Inicio</th>
+                <th>Fecha de Fin</th>
+                <th>Email del Usuario</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var reserva in Model.Reservations)
+            {
+                <tr>
+                    <td>
+                        @if (reserva.HabitacionImagen != null)
+                        {
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(reserva.HabitacionImagen)" alt="Imagen de la habitación" width="500" height="500" />
+                        }
+                        else
+                        {
+                            <img src="~/img/alone.jpeg" alt="Imagen de la habitación" class="img - fluid" />
+                        }
+                    </td>
+                    <td>@reserva.NumeroHabitacion</td>
+                    <td>@reserva.FechaInicio.ToShortDateString()</td>
+                    <td>@reserva.FechaFin.ToShortDateString()</td>
+                    <td>@reserva.UsuarioEmail</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

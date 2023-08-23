@@ -3,34 +3,40 @@
     ViewData["Title"] = "Editar Producto";
 }
 
-<h1>@ViewData["Title"]</h1>
+<link rel="stylesheet" href="~/css/product.css" />
 
-<form asp-action="Edit" asp-route-id="@Model.Product.Id" method="post">
-    <input type="hidden" asp-for="Product.Id" />
-    <div class="form-group">
-        <label asp-for="Product.Nombre"></label>
-        <input asp-for="Product.Nombre" class="form-control" />
-        <span asp-validation-for="Product.Nombre" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Product.Descripcion"></label>
-        <input asp-for="Product.Descripcion" class="form-control" />
-        <span asp-validation-for="Product.Descripcion" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Product.Precio"></label>
-        <input asp-for="Product.Precio" class="form-control" />
-        <span asp-validation-for="Product.Precio" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Product.IdMenu">Menu</label>
-        <select asp-for="Product.IdMenu" asp-items="@(new SelectList(Model.Menus, "Id", "Nombre"))" class="form-control">
-        </select>
-        <span asp-validation-for="Product.IdMenu" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar cambios</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+<div class="container edit_container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form asp-action="Edit" asp-route-id="@Model.Product.Id" method="post">
+        <input type="hidden" asp-for="Product.Id" />
+        <div class="form-group input_edit">
+            <label asp-for="Product.Nombre"></label>
+            <input asp-for="Product.Nombre" class="form-control" />
+            <span asp-validation-for="Product.Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group input_edit">
+            <label asp-for="Product.Descripcion"></label>
+            <input asp-for="Product.Descripcion" class="form-control" />
+            <span asp-validation-for="Product.Descripcion" class="text-danger"></span>
+        </div>
+        <div class="form-group input_edit">
+            <label asp-for="Product.Precio"></label>
+            <input asp-for="Product.Precio" class="form-control" />
+            <span asp-validation-for="Product.Precio" class="text-danger"></span>
+        </div>
+        <div class="form-group input_edit">
+            <label asp-for="Product.IdMenu">Menu</label>
+            <select asp-for="Product.IdMenu" asp-items="@(new SelectList(Model.Menus, "Id", "Nombre"))" class="form-control">
+            </select>
+            <span asp-validation-for="Product.IdMenu" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Guardar cambios</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+    </form>
+</div>
+
+
 
 @section Scripts {
     @{

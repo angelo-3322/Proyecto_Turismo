@@ -29,7 +29,7 @@ h1 {
     margin-bottom: 30px;
 }
 
-    .input_create > input, .input_edit > input, .input_edit > select {
+    .input_create > input, .input_edit > input, .input_edit > select, .input_create > textarea, .input_edit > textarea, .input_create > select {
         border: 1px solid #F1F1F1;
         box-shadow: 0px 2px 6px 0px #00000026 inset;
         border-radius: 8px;

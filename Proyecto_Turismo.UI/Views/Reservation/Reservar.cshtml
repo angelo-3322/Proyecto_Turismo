@@ -1,8 +1,12 @@
 ﻿@model CreateReservationModel
+@{
+    ViewBag.Title = "Crear Reservacion";
+}
+<link href="~/css/restaurant2.css" rel="stylesheet" />
+<div class="container create_container">
 
-<h2>Reservación</h2>
+    <h1>Reservación</h1>
 
-<div class="container">
     @if (Model.Habitacion.Imagen != null)
     {
         <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.Habitacion.Imagen)" alt="Imagen de la habitación" class="img-fluid" />
@@ -11,12 +15,14 @@
     {
         <img src="~/img/alone.jpeg" alt="Imagen de la habitación" class="img - fluid" />
     }
-    <h4>Número de habitación: @Model.Habitacion.NumeroHabitaciones</h4>
-    <p>Descripción: @Model.Habitacion.TipoHabitacion</p>
-    <p>Capacidad: @Model.Habitacion.Capacidad</p>
+    <h4 style="font-family: 'Playfair Display', serif; padding-top: 2rem;">
+        Número de habitación: @Model.Habitacion.NumeroHabitaciones
+    </h4>
+    <p style="font-family: 'Playfair Display', serif; padding-top: 1rem;">Descripción: @Model.Habitacion.TipoHabitacion</p>
+    <p style="font-family: 'Playfair Display', serif; padding-top: 1rem;">Capacidad: @Model.Habitacion.Capacidad</p>
     <form method="post" asp-action="Reservar">
         <input type="hidden" asp-for="Habitacion.Id" />
-        <div class="form-group">
+        <div class="form-group input_create">
             <label for="paquete">Paquete</label>
             <select class="form-control" id="paquete" name="PaqueteSeleccionado">
                 @foreach (var paquete in Model.PaquetesDisponibles)
@@ -25,23 +31,23 @@
                 }
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group input_create">
             <label asp-for="FechaInicio">Fecha de inicio</label>
             <input type="date" class="form-control" id="fechaInicio" name="FechaInicio" asp-for="FechaInicio" required>
         </div>
-        <div class="form-group">
+        <div class="form-group input_create">
             <label asp-for="FechaFin">Fecha de fin</label>
             <input type="date" class="form-control" id="fechaFin" name="FechaFin" asp-for="FechaFin" required>
         </div>
-        <div class="form-group">
+        <div class="form-group input_create">
             <label for="dias">Días</label>
             <input type="text" class="form-control" id="dias" name="Dias" readonly>
         </div>
-        <div class="form-group">
+        <div class="form-group input_create">
             <label for="total">Total</label>
             <input type="text" class="form-control" id="total" name="Total" readonly>
         </div>
-        <button type="submit" class="btn btn-primary">Reservar</button>
+        <button type="submit" class="btn btn-outline-success">Reservar</button>
     </form>
 </div>
 

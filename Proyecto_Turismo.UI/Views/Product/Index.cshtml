@@ -3,40 +3,45 @@
     ViewData["Title"] = "Productos";
 }
 
-<h1>Productos</h1>
+<link rel="stylesheet" href="~/css/product.css" />
 
-<a href="@Url.Action("Create", "Product")" class="btn btn-primary mb-3">Agregar Nuevo Producto</a>
+<div class="container read_container">
+    <h1>Productos</h1>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-            <th>Menú</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var productViewModel in Model)
-        {
-            <tr id="row-@productViewModel.Producto.Id">
-                <td>@productViewModel.Producto.Nombre</td>
-                <td>@productViewModel.Producto.Descripcion</td>
-                <td>@productViewModel.Producto.Precio</td>
-                <td>@productViewModel.NombreMenu</td>
-                <td>
-                    <a href="@Url.Action("Edit", "Product", new { id = productViewModel.Producto.Id })" class="btn btn-warning">
-                        <i class="fas fa-edit"></i> Editar
-                    </a>
-                    <button onclick="deleteProduct(@productViewModel.Producto.Id)" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Eliminar
-                    </button>
-                </td>
+    <a href="@Url.Action("Create", "Product")" class="btn btn-outline-success mb-3">Agregar Nuevo Producto</a>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Menú</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var productViewModel in Model)
+            {
+                <tr id="row-@productViewModel.Producto.Id">
+                    <td>@productViewModel.Producto.Nombre</td>
+                    <td>@productViewModel.Producto.Descripcion</td>
+                    <td>@productViewModel.Producto.Precio</td>
+                    <td>@productViewModel.NombreMenu</td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Product", new { id = productViewModel.Producto.Id })" class="btn btn-outline-primary">
+                            <i class="fas fa-edit"></i> Editar
+                        </a>
+                        <button onclick="deleteProduct(@productViewModel.Producto.Id)" class="btn btn-outline-danger">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
 
 <script>
     function deleteProduct(id) {

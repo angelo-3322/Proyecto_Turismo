@@ -9,217 +9,217 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Proyecto_Turismo.UI
 build_property.RootNamespace = Proyecto_Turismo.UI
-build_property.ProjectDir = C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI\
+build_property.ProjectDir = D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.UI\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto\Turismo-Canatico-prototipo\Proyecto_Turismo.UI
+build_property.MSBuildProjectDirectory = D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Home/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Account/Home/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxIb21lXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Home/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Account/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Home/Restaurant.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Account/Home/Restaurant.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxIb21lXFJlc3RhdXJhbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Login.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Account/Register.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Client/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Client/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Facture/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Facture/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Facture/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Facture/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdHVyZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Home/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Home/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Home/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Home/Restaurant.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Home/Restaurant.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXN0YXVyYW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/HotelRoom/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/HotelRoom/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxSb29tXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/HotelRoom/Edit.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/HotelRoom/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxSb29tXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/HotelRoom/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/HotelRoom/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG90ZWxSb29tXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Menu/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Menu/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Menu/Edit.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Menu/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Menu/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Package/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Package/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Package/Edit.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Package/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Package/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Package/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Package/Packages.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Package/Packages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxQYWNrYWdlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Product/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Product/Edit.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Product/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Reservation/Cindex.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Reservation/Cindex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cQ2luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Reservation/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Reservation/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Reservation/MyReservations.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Reservation/MyReservations.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cTXlSZXNlcnZhdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Reservation/Reservar.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Reservation/Reservar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YXRpb25cUmVzZXJ2YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Cindex.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Restaurant/Cindex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxDaW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Restaurant/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Edit.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Restaurant/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Restaurant/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Restaurant/_RestaurantInfo.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Restaurant/_RestaurantInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdGF1cmFudFxfUmVzdGF1cmFudEluZm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Shared/Error.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/_ViewImports.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/_ViewStart.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Account/Login.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xBY2NvdW50XExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Account/Register.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xBY2NvdW50XFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Client/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Client/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xDbGllbnRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Client/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xDbGllbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Home/Create.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Home/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xIb21lXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Home/Index.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Home/Restaurant.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Home/Restaurant.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xIb21lXFJlc3RhdXJhbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Package/Packages.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Package/Packages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xQYWNrYWdlXFBhY2thZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Shared/Error.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xTaGFyZWRcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xTaGFyZWRcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/_ViewImports.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/_ViewStart.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/Views/Shared/_Layout.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-09s585ht3q
 
-[C:/Users/Andiel/Documents/Trabajos_de_la_U/cuatrimestre\#7/Progra-avanzada-web/Proyecto/Turismo-Canatico-prototipo/Proyecto_Turismo.UI/wwwroot/Views/Shared/_Layout.cshtml]
+[D:/repos VS2022/Proyecto_Turismo/Proyecto_Turismo.UI/wwwroot/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = d3d3cm9vdFxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-kbsddv9uj6

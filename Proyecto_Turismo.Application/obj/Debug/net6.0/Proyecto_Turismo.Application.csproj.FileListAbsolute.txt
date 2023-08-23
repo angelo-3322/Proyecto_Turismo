@@ -73,3 +73,18 @@ C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Pr
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto-V2\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Domain.pdb
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto-V2\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.CopyComplete
 C:\Users\Andiel\Documents\Trabajos_de_la_U\cuatrimestre#7\Progra-avanzada-web\Proyecto-V2\Proyecto_Turismo.Application\obj\Debug\net6.0\ref\Proyecto_Turismo.Application.dll
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Application.deps.json
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Application.dll
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Application.pdb
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Domain.dll
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\bin\Debug\net6.0\Proyecto_Turismo.Domain.pdb
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.AssemblyReference.cache
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.AssemblyInfoInputs.cache
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.AssemblyInfo.cs
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.CoreCompileInputs.cache
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.csproj.CopyComplete
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.dll
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\refint\Proyecto_Turismo.Application.dll
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\Proyecto_Turismo.Application.pdb
+D:\repos VS2022\Proyecto_Turismo\Proyecto_Turismo.Application\obj\Debug\net6.0\ref\Proyecto_Turismo.Application.dll

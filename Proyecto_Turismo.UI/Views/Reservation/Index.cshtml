@@ -2,41 +2,43 @@
 
 @{
     ViewBag.Title = "Lista de Reservaciones";
-}
+}<link href="~/css/restaurant2.css" rel="stylesheet" />
+<div class="container read_container">
 
-<h2>@ViewBag.Title</h2>
+    <h1>@ViewBag.Title</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Nombre de Habitación</th>
-            <th>Paquete</th>
-            <th>Fecha de Inicio</th>
-            <th>Fecha Fin</th>
-            <th>Activa</th>
-            <th>Email del Usuario</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr id="row-@item.Reservacion.Id">
-                <td>@item.Reservacion.Habitacion</td>
-                <td>@item.Reservacion.Paquete</td>
-                <td>@item.Reservacion.FechaInicio.ToString("dd/MM/yyyy")</td>
-                <td>@item.Reservacion.FechaFin.ToString("dd/MM/yyyy")</td>
-                <td>@(item.Reservacion.Activa ? "Activa" : "Desactivada")</td>
-                <td>@item.UsuarioEmail</td>
-                <td>
-                    <button onclick="deleteReservation(@item.Reservacion.Id)" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Eliminar
-                    </button>
-                </td>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre de Habitación</th>
+                <th>Paquete</th>
+                <th>Fecha de Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Activa</th>
+                <th>Email del Usuario</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr id="row-@item.Reservacion.Id">
+                    <td>@item.Reservacion.Habitacion</td>
+                    <td>@item.Reservacion.Paquete</td>
+                    <td>@item.Reservacion.FechaInicio.ToString("dd/MM/yyyy")</td>
+                    <td>@item.Reservacion.FechaFin.ToString("dd/MM/yyyy")</td>
+                    <td>@(item.Reservacion.Activa ? "Activa" : "Desactivada")</td>
+                    <td>@item.UsuarioEmail</td>
+                    <td>
+                        <button onclick="deleteReservation(@item.Reservacion.Id)" class="btn btn-outline-danger">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 <script>
     function deleteReservation(id) {
         if (window.confirm("¿Estás seguro de que deseas eliminar esta reservación?")) {

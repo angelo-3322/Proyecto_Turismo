@@ -1,39 +1,46 @@
 ﻿@model ClientesMenusModel
 
-<div class="card">
-    <div class="card-header">
-        <h3 class="card-title">Restaurante</h3>
+<link href="~/css/restaurant3.css" rel="stylesheet" />
+
+<div class="container read_container">
+    <div class="card">
+        <div class="card-header">
+            <h3 style="margin-bottom: 0.5rem;" class="card-title">Restaurante</h3>
+        </div>
+        @foreach (var restaurante in Model.Restaurante)
+        {
+            <div class="card-body" style="font-family: 'Roboto', sans-serif; margin: 0 0.5rem;">
+                <h5>@restaurante.Nombre</h5>
+            </div>
+        }
     </div>
-    @foreach (var restaurante in Model.Restaurante){
-    <div class="card-body">
-        <h4>@restaurante.Nombre</h4>
+
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3 class="card-title">Productos</h3>
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var producto in Model.Productos)
+                    {
+                        <tr>
+                            <td>@producto.Nombre</td>
+                            <td>@producto.Descripcion</td>
+                            <td>@producto.Precio</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
-    }
 </div>
 
-<div class="card mt-3">
-    <div class="card-header">
-        <h3 class="card-title">Productos</h3>
-    </div>
-    <div class="card-body">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var producto in Model.Productos)
-                {
-                    <tr>
-                        <td>@producto.Nombre</td>
-                        <td>@producto.Descripcion</td>
-                        <td>@producto.Precio</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-</div>
+

@@ -3,35 +3,39 @@
     ViewBag.Title = "Crear Producto";
 }
 
-<h2>Crear Producto</h2>
+<link rel="stylesheet" href="~/css/product.css" />
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label for="Nombre">Nombre:</label>
-        <input asp-for="Products.Nombre" class="form-control" id="Nombre" required />
-        <span asp-validation-for="Products.Nombre" class="text-danger"></span>
-    </div>
+<div class="container create_container">
+    <h1>Crear Producto</h1>
 
-    <div class="form-group">
-        <label for="Descripcion">Descripción:</label>
-        <input asp-for="Products.Descripcion" class="form-control" id="Descripcion" required />
-        <span asp-validation-for="Products.Descripcion" class="text-danger"></span>
-    </div>
+    <form asp-action="Create" method="post">
+        <div class="form-group input_create">
+            <label for="Nombre">Nombre:</label>
+            <input asp-for="Products.Nombre" class="form-control" id="Nombre" required />
+            <span asp-validation-for="Products.Nombre" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="Precio">Precio:</label>
-        <input asp-for="Products.Precio" class="form-control" id="Precio" required />
-        <span asp-validation-for="Products.Precio" class="text-danger"></span>
-    </div>
+        <div class="form-group input_create">
+            <label for="Descripcion">Descripción:</label>
+            <input asp-for="Products.Descripcion" class="form-control" id="Descripcion" required />
+            <span asp-validation-for="Products.Descripcion" class="text-danger"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="IdMenu">Menú:</label>
-        <select asp-for="Products.IdMenu" asp-items="@(new SelectList(Model.Menus, "Id", "Nombre"))" class="form-control" id="IdMenu" required>
-            <option value="">Selecciona un menú</option>
-        </select>
-        <span asp-validation-for="Products.IdMenu" class="text-danger"></span>
-    </div>
+        <div class="form-group input_create">
+            <label for="Precio">Precio:</label>
+            <input asp-for="Products.Precio" class="form-control" id="Precio" required />
+            <span asp-validation-for="Products.Precio" class="text-danger"></span>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Crear</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+        <div class="form-group input_create">
+            <label for="IdMenu">Menú:</label>
+            <select asp-for="Products.IdMenu" asp-items="@(new SelectList(Model.Menus, "Id", "Nombre"))" class="form-control" id="IdMenu" required>
+                <option value="">Selecciona un menú</option>
+            </select>
+            <span asp-validation-for="Products.IdMenu" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Crear Producto</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">Volver</a>
+    </form>
+</div>

@@ -1,72 +1,77 @@
 ﻿@model IEnumerable<ListHotelRoomDTO>
 @using Proyecto_Turismo.UI.Helpers;
 
-<h1>Habitaciones de Hotel</h1>
+<link rel="stylesheet" href="~/css/hotelRoom.css" />
 
-<a href="@Url.Action("Create", "HotelRoom")" class="btn btn-primary mb-3">Agregar Nueva Habitación</a>
+<div class="container read_container">
+    <h1>Habitaciones de Hotel</h1>
 
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Número de Habitaciones</th>
-            <th>Tipo de Habitación</th>
-            <th>Capacidad</th>
-            <th>Precio</th>
-            <th>Disponible</th>
-            <th>Imagenes</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var room in Model)
-        {
-           <tr id="row-@room.Id">
-                <td>@room.NumeroHabitaciones</td>
-                <td>@room.TipoHabitacion</td>
-                <td>@room.Capacidad</td>
-                <td>@room.Precio</td>
-                <td>@room.Disponible</td>
-                <td>
-                    @if (room.Imagen != null)
-                    {
-                        var mimeType = ImageHelper.GetImageMimeType(room.Imagen);
-                        if (mimeType != null)
-                        {
-                            var imageBase64 = Convert.ToBase64String(room.Imagen);
-                            var imgSrc = String.Format("data:{0};base64,{1}", mimeType, imageBase64);
-                            <img src="@imgSrc" width="300" height="300" />
-                        }
-                    }
-                </td>
-                <td>
-                    <a href="@Url.Action("Edit", "HotelRoom", new { id = room.Id })" class="btn btn-warning">
-                        <i class="fas fa-edit"></i> Editar
-                    </a>
-                    <button onclick="deleteRoom(@room.Id)" class="btn btn-danger">
-                        <i class="fas fa-trash"></i> Eliminar
-                    </button>
-                </td>
+    <a href="@Url.Action("Create", "HotelRoom")" class="btn btn-outline-success mb-3">Agregar Nueva Habitación</a>
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Número de Habitaciones</th>
+                <th>Tipo de Habitación</th>
+                <th>Capacidad</th>
+                <th>Precio</th>
+                <th>Disponible</th>
+                <th>Imagenes</th>
+                <th>Acciones</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var room in Model)
+            {
+                <tr id="row-@room.Id">
+                    <td>@room.NumeroHabitaciones</td>
+                    <td>@room.TipoHabitacion</td>
+                    <td>@room.Capacidad</td>
+                    <td>@room.Precio</td>
+                    <td>@room.Disponible</td>
+                    <td>
+                        @if (room.Imagen != null)
+                        {
+                            var mimeType = ImageHelper.GetImageMimeType(room.Imagen);
+                            if (mimeType != null)
+                            {
+                                var imageBase64 = Convert.ToBase64String(room.Imagen);
+                                var imgSrc = String.Format("data:{0};base64,{1}", mimeType, imageBase64);
+                                <img src="@imgSrc" width="300" height="300" />
+                            }
+                        }
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "HotelRoom", new { id = room.Id })" class="btn btn-outline-primary">
+                            <i class="fas fa-edit"></i> Editar
+                        </a>
+                        <button onclick="deleteRoom(@room.Id)" class="btn btn-outline-danger">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
-<script>
-    function deleteRoom(id) {
-        if (window.confirm("¿Estás seguro de que deseas eliminar esta habitación?")) {
-            fetch(`/hotelroom/delete/${id}`, {
-                method: 'DELETE'
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert("Habitación eliminada con éxito");
-                        // eliminando la fila de la habitación.
-                        document.getElementById(`row-${id}`).remove();
-                    } else {
-                        alert("Error al eliminar la habitación");
-                    }
-                });
+    <script>
+        function deleteRoom(id) {
+            if (window.confirm("¿Estás seguro de que deseas eliminar esta habitación?")) {
+                fetch(`/hotelroom/delete/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert("Habitación eliminada con éxito");
+                            // eliminando la fila de la habitación.
+                            document.getElementById(`row-${id}`).remove();
+                        } else {
+                            alert("Error al eliminar la habitación");
+                        }
+                    });
+            }
         }
-    }
-</script>
+    </script>
+
+</div>
